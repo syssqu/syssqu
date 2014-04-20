@@ -4,10 +4,32 @@ ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
+
+gem 'foundation-rails'
+gem 'will_paginate'
+gem 'foundation-will_paginate'
+gem 'faker'
+gem "slim"
+gem "slim-rails"
+gem 'devise'
+gem 'bcrypt'
+
+# PDF
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
+
+group :test do
+	gem 'selenium-webdriver'
+	gem 'capybara'
+	gem 'factory_girl_rails'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

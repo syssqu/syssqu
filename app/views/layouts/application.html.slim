@@ -1,0 +1,21 @@
+doctype html
+/![if IE 9] <html class="lt-ie10" lang="en" 
+/![if IE 10] <html class="ie10" lang="en"
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    title == content_for?(:title) ? yield(:title) : "Untitled"
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tag
+    = render 'layouts/shim'
+body
+
+  = render 'layouts/header'
+  == yield
+  = render 'layouts/footer'
+
+  = javascript_include_tag "application"

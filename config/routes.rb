@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  match '/service',    to: 'static_pages#service',    via: 'get'
+  match '/company_profile',    to: 'static_pages#company_profile',    via: 'get'
+  match '/company_policy',    to: 'static_pages#company_policy',    via: 'get'
+  match '/staff_profile',    to: 'static_pages#staff_profile',    via: 'get'
+  match '/access',    to: 'static_pages#access',    via: 'get'
+  match '/contact',    to: 'static_pages#contact',    via: 'get'
+  match '/news',    to: 'static_pages#news',    via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

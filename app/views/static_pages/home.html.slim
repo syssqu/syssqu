@@ -1,0 +1,79 @@
+br
+.row
+  .large-12.columns
+    /! Desktop Slider
+    .hide-for-small
+      #featured
+        img alt=("slide image") src=("http://placehold.it/1000x400&text=Slide Image") 
+          /!
+            | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
+            | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
+    /! End Desktop Slider
+    /! Mobile Header
+    .row
+      .small-12.show-for-small
+        br
+          img src=("http://placehold.it/1000x600&text=For Small Screens") /
+    /! End Mobile Header
+br
+  / .row
+  /   .large-12.columns
+  /     .row
+  /       /! Thumbnails
+  /       .large-3.small-6.columns
+  /         img src="http://placehold.it/250x250&text=Thumbnail" /
+  /         h6.panel Description
+  /       .large-3.small-6.columns
+  /         img src="http://placehold.it/250x250&text=Thumbnail" /
+  /         h6.panel Description
+  /       .large-3.small-6.columns
+  /         img src="http://placehold.it/250x250&text=Thumbnail" /
+  /         h6.panel Description
+  /       .large-3.small-6.columns
+  /         img src="http://placehold.it/250x250&text=Thumbnail" /
+  /         h6.panel Description
+        /! End Thumbnails
+  .row
+    .large-12.columns
+      .row
+        /! Content
+        .large-8.columns
+          .panel.radius
+            .row
+              .large-12.small-12.columns
+                h4 ニュース news
+                hr/
+                section 
+                  | 2014.05.19 
+                  = link_to image_tag("news_press.png", alt: "press")
+                  a href="news/20140327.html"
+                    |  本社移転しました。
+                section 
+                  | 2014.04.01 
+                  = link_to image_tag("news_press.png", alt: "press")
+                  a href="news/20140327.html"
+                    |  来春社員募集中 応募方法はこちら
+                section 
+                  | 2013.08.01 
+                  = link_to image_tag("news_info.png", alt: "info")
+                  |  おかげ様で30期を迎えました。
+                br
+                br
+                br
+                / h5.subheader
+                /   | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+                / .show-for-small align="center" 
+                /   a.small.radius.button href="#"  Call To Action!
+                /   br
+                /     a.small.radius.button href="#"  Call To Action!
+              / .large-6.small-6.columns
+              /   p
+              /     | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+        .large-4.columns.hide-for-small
+          h4 Get In Touch!
+          hr/
+          a.large.button.expand href="#" 
+            | Call To Action!
+          a.large.button.expand href="#" 
+            | Call To Action!
+        /! End Content
