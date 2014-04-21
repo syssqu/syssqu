@@ -1,8 +1,12 @@
+br
 .row
   .large-12.columns
+    
     /! Navigation
     nav.top-bar data-topbar="" 
       ul.title-area
+        li
+          = link_to image_tag("logo.png", alt: "press"), root_path
         /! Title Area
         li.name
           h1
@@ -11,11 +15,11 @@
           a href="#" 
             span menu
       section.top-bar-section
-        ul.left
+        ul.right
           li
             =link_to "会社概要", company_profile_path
           li
-            =link_to "サービス", service_path
+            =link_to "サービス", service_path, class: "service"
           li
             =link_to "企業理念", company_policy_path
           li
@@ -24,10 +28,4 @@
             =link_to "アクセス", access_path
           li
             =link_to "お問い合わせ", contact_path
-        ul.right
-          li.search
-            form
-              input type="search" 
-          li.has-button
-            a.small.button href="#"  Search
     /! End Navigation
