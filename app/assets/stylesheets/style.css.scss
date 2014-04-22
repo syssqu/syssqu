@@ -2,26 +2,26 @@
 section p.press{ background:url("../images/news_press.png") no-repeat;}
 
 
-label.right{ padding-right: 10px;}
-
-nav.top-bar li a.service{ background:url("news_press.png") no-repeat;margin-right:10px;}
-
 @mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 10px;}
 
-.title{ width: 300px; height: 38px; padding: 10px; margin-bottom: 10px; @include _left_block;}
+.title{ width: 360px; height: 38px; padding: 10px; margin-bottom: 10px; @include _left_block;}
 
-.profile_key{ width: 110px; float: left; margin-bottom: 10px; @include _left_block}
-.profile_value{ width: 300px; float: left; margin-bottom: 30px;}
-
-
-.clearfix:after{ content: ''; display: block; clear: both;}
-.clearfix{ zoom: 1; /* for IE6/7 */}
-
-/*  サブページ共通
+/*  ページ共通 
 -------------------------------------------------------------*/
-#sub section.main{background:#FFF;padding:15px 50px;zoom:1;}
-#sub section.main h3{font-size:14px;border-left:5px solid #000;padding:3px 5px;margin-bottom:15px;}
-#sub section.main p{font-size:14px;margin-bottom:15px;}
+article section.main{background:#FFF;padding:15px 50px;zoom:1;}
+article section.main h3{font-size:14px;padding:3px 5px;margin-bottom:15px; @include _left_block;}
+article section.main p{font-size:14px;margin-bottom:15px;}
+
+/*  profile.html
+-------------------------------------------------------------*/
+
+article.profile .title{width: 110px;}
+article.profile .content{width: 295px; height: 38px; padding: 10px; margin-bottom: 40px; }
+article.profile .box{width:412px;}
+article.profile .box section{margin-bottom:15px;}
+
+
+
 
 /*  executive.html
 -------------------------------------------------------------*/
@@ -30,3 +30,20 @@ article.executive h3 strong{color:#333;font-size:20px;font-weight:normal;margin-
 article.executive img{display:block;float:left;}
 article.executive .main p{width:440px;float:right;}
 article.executive .main section{position:relative;margin-bottom:0px;zoom:1;}
+
+
+/*  contact.html
+-------------------------------------------------------------*/
+article.contact h2{background:url("../images/contact/contact_title.gif") 33px 28px no-repeat #FFF;}
+article.contact p.lead{background:url("../images/contact/contact_lead.gif") center right no-repeat;width:520px;height:40px;top:30px;}
+article.contact section.kiyaku{border:1px solid #DDD;padding:30px;height:300px;overflow-y:scroll;}
+article.contact section.kiyaku h4{font-size:13px;}
+article.contact section.kiyaku small{margin-left:20px;font-weight:normal;font-size:13px;}
+article.contact .box_left{width:400px;float:left;}
+article.contact .box_right{width:400px;float:right;}
+article.contact input{width:400px;font-size:15px;border:none;background:#FCFBF8;padding:10px 5px;border-radius:6px;box-shadow: 0 0 10px 1px #f3f2ef inset;border:1px solid #f3f2ef;}
+article.contact textarea{width:400px;font-size:15px;border:none;background:#FCFBF8;padding:10px 5px;border-radius:6px;box-shadow: 0 0 10px 1px #f3f2ef inset;border:1px solid #f3f2ef;}
+article.contact section.button{text-align:center;margin-bottom:30px;clear:both;padding-top:50px;}
+article.contact section.button a{display:inline-block;width:180px;padding:16px 0;text-align:center;font-weight:bold;background:#000;color:#FFF;border-radius:6px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .1s ease;transition:all .2s ease;}
+article.contact section.button a.back{background:#999;}
+article.contact section.button a:hover{text-decoration:none;opacity:0.7;}

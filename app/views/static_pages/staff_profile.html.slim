@@ -1,11 +1,13 @@
 article#sub.staff_profile
   .row
     .large-12.columns
-      nav
-        p
-          =link_to "トップ", root_path
-          | ＞
-          strong スタッフ紹介
+      dl.sub-nav
+        dt =link_to "トップ", root_path
+        dd >
+        dd.active
+          a href="#"  スタッフ紹介
+  .row
+    .large-12.columns
       .panel.radius.clearfix
         section.main
           section
