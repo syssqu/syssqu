@@ -1,20 +1,32 @@
 
-section p.press{background:url("../images/news_press.png") no-repeat;}
+section p.press{ background:url("../images/news_press.png") no-repeat;}
 
 
-label.right{padding-right: 10px;}
-/* h5{border-left: 6px solid yellowgreen;padding-left: 10px;} */
+label.right{ padding-right: 10px;}
 
-nav.top-bar li a.service{background:url("news_press.png") no-repeat;margin-right:10px;}
+nav.top-bar li a.service{ background:url("news_press.png") no-repeat;margin-right:10px;}
 
-.profile_key{width: 110px; border-left: 6px solid yellowgreen;padding-left: 10px; float:left; margin-bottom: 10px;}
-.profile_value{width: 300px; float:left; margin-bottom: 30px;}
+@mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 10px;}
 
-.clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-.clearfix {
-    zoom: 1; /* for IE6/7 */
-}
+.title{ width: 300px; height: 38px; padding: 10px; margin-bottom: 10px; @include _left_block;}
+
+.profile_key{ width: 110px; float: left; margin-bottom: 10px; @include _left_block}
+.profile_value{ width: 300px; float: left; margin-bottom: 30px;}
+
+
+.clearfix:after{ content: ''; display: block; clear: both;}
+.clearfix{ zoom: 1; /* for IE6/7 */}
+
+/*  サブページ共通
+-------------------------------------------------------------*/
+#sub section.main{background:#FFF;padding:15px 50px;zoom:1;}
+#sub section.main h3{font-size:14px;border-left:5px solid #000;padding:3px 5px;margin-bottom:15px;}
+#sub section.main p{font-size:14px;margin-bottom:15px;}
+
+/*  executive.html
+-------------------------------------------------------------*/
+article.executive h3{color:#9DA53F;font-weight:normal;position:absolute;top:280px;left:0;}
+article.executive h3 strong{color:#333;font-size:20px;font-weight:normal;margin-left:10px;}
+article.executive img{display:block;float:left;}
+article.executive .main p{width:440px;float:right;}
+article.executive .main section{position:relative;margin-bottom:0px;zoom:1;}

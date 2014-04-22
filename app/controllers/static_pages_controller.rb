@@ -22,4 +22,7 @@ class StaticPagesController < ApplicationController
 
   def news
   end
+
+  def executive
+  end
 end

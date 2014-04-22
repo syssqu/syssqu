@@ -1,2 +1,19 @@
-h1 StaticPages#staff_profile
-p Find me in app/views/static_pages/staff_profile.html.slim
+article#sub.staff_profile
+  .row
+    .large-12.columns
+      nav
+        p
+          =link_to "トップ", root_path
+          | ＞
+          strong スタッフ紹介
+      .panel.radius.clearfix
+        section.main
+          section
+            .title 役員紹介
+            p 弊社役員から、“お客様”と“社会”に向けたメッセージ（約束）です。
+            p = link_to '役員紹介はこちら', executive_path
+          br
+          section
+            .title 社員紹介
+            p システム・スクゥェアーの仲間を紹介します。
+            p = link_to '社員紹介はこちら', executive_path

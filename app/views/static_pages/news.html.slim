@@ -1,2 +1,10 @@
-h1 StaticPages#news
-p Find me in app/views/static_pages/news.html.slim
+article#sub.news
+  .row
+    .large-12.columns
+      nav
+        p
+          =link_to "トップ", root_path
+          | ＞
+          strong ニュース
+      .panel.radius.clearfix
+        .title ニュース

@@ -39,7 +39,7 @@
 // Global
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: #FAFAFA;
 $body-font-color: #333;
 $body-font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 // $body-font-weight: normal;
@@ -803,12 +803,14 @@ $body-font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-se
 
 // We use these to control the background and border styles
 // $panel-bg: scale-color(#fff, $lightness: -5%);
+$panel-bg: #fff;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
 // We use this % to control how much we darken things on hover
 // $panel-function-factor: -11%;
 // $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
+$panel-border-color: #fff;
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
@@ -1197,7 +1199,7 @@ $topbar-link-color: #000;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-hover: #272727;
+$topbar-link-bg-hover: #E62F18;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
