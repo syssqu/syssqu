@@ -2,7 +2,6 @@
 
 #初期設定(ページを読み込んだ時に実行する関数)
 initialize = ->
-  alert "sss"
   
   # 緯度・経度変数
   latlng = new google.maps.LatLng(34.689059, 135.506004)
@@ -22,9 +21,13 @@ initialize = ->
     # 地図タイプ
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
-  
+  alert "aaa"
+
   #地図オブジェクト生成
   map = new google.maps.Map(document.getElementById("map"), myOptions)
+
+  alert document.getElementById("map")
+  alert map
   
   # ストリートビューオブジェクト生成
   pano = new google.maps.StreetViewPanorama(document.getElementById("pano"),
@@ -41,8 +44,7 @@ initialize = ->
   # マップとストリートビューを一致させる為の記述
   map.setStreetView pano
   return
-map = undefined
-pano = undefined
+
 # function initialize()
 # ページを読み込んだ時にinitialize()を実行
 google.maps.event.addDomListener window, "load", initialize
