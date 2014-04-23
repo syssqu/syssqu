@@ -21,30 +21,27 @@ initialize = ->
     # 地図タイプ
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
-  alert "aaa"
-
+  
   #地図オブジェクト生成
   map = new google.maps.Map(document.getElementById("map"), myOptions)
-
-  alert document.getElementById("map")
-  alert map
   
   # ストリートビューオブジェクト生成
-  pano = new google.maps.StreetViewPanorama(document.getElementById("pano"),
+  view = new google.maps.StreetViewPanorama(document.getElementById("view"),
     position: map.getCenter()
   )
   
   # ストリートビューオブジェクト詳細設定
-  pano.setPov
+  view.setPov
     heading: 20
     pitch: 0
     zoom: 0.5
 
   
   # マップとストリートビューを一致させる為の記述
-  map.setStreetView pano
+  map.setStreetView view
   return
-
+map = undefined
+view = undefined
 # function initialize()
 # ページを読み込んだ時にinitialize()を実行
 google.maps.event.addDomListener window, "load", initialize

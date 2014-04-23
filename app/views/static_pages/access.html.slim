@@ -1,22 +1,24 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd.active
+        a href="#"  アクセス
 article.access
-  .row
-    .large-12.columns
-      dl.sub-nav
-        dt =link_to "トップ", root_path
-        dd >>
-        dd.active
-          a href="#"  アクセス
   .row
     .large-12.columns 
       .panel.radius.clearfix
-        section.map
-          h2 地図
-          a href="http://maps.google.com/maps?q=大阪市中央区伏見町2丁目1-1"  地図アプリで見る
-          #map ロード中です。お待ち下さい...
-        section.pano
-          h2 ストリートビュー
-          #pano
-        section.address
+        .container
+          .large-6.columns
+            h2
+              | 地図
+              a href="http://maps.google.com/maps?q=大阪市中央区伏見町2丁目1-1"  地図アプリで見る
+            #map ロード中です。お待ち下さい...
+          .large-6.columns
+            h2 ストリートビュー
+            #view
+        section.address_access
           h2 住所、アクセス方法
           p
             | 〒541-0044

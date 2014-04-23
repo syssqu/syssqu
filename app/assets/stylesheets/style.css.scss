@@ -10,8 +10,10 @@ h2{@include _section;width:800px;color:#333;font-size:20px;font-weight:normal;}
 
 /*  ページ共通 
 -------------------------------------------------------------*/
-article section{background:#fff;padding:15px 50px;zoom:1;}
+article section{background:#fff;padding:15px 50px;}
 article section p{font-size:14px;margin-bottom:15px;}
+article .container{background:#fff;padding:15px 50px;}
+article .container p{font-size:14px;margin-bottom:15px;}
 
 /*  profile.html
 -------------------------------------------------------------*/
@@ -28,8 +30,8 @@ article.executive p{font-size:14px;margin-bottom:15px;}
 
 /*  contact.html
 -------------------------------------------------------------*/
-article.contact section{border:1px solid #DDD;padding:30px;height:320px;overflow-y:scroll;}
-article.contact section h2 {height: 46px; margin-bottom: 30px;}
+article.inquiry section{border:1px solid #DDD;padding:30px;height:320px;overflow-y:scroll;}
+article.inquiry section h2 {height: 46px; margin-bottom: 30px;}
 
 
 
@@ -39,3 +41,11 @@ article.contact section.button{text-align:center;margin-bottom:30px;clear:both;p
 article.contact section.button a{display:inline-block;width:180px;padding:16px 0;text-align:center;font-weight:bold;background:#000;color:#FFF;border-radius:6px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .1s ease;transition:all .2s ease;}
 article.contact section.button a.back{background:#999;}
 article.contact section.button a:hover{text-decoration:none;opacity:0.7;}
+
+/*  contact.html  
+-------------------------------------------------------------*/
+article.access .container{padding:15px 35px;}
+article.access h2 a{display:none;}
+article.access #map{width:400px;height:360px;}
+article.access #view{width:400px;height:360px;margin-bottom: 20px;}
+article.access .address_access{clear:both;margin-bottom:0px;}
