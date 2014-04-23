@@ -1,7 +1,6 @@
 br
 .row
   .large-12.columns
-    
     /! Navigation
     nav.top-bar data-topbar="" 
       ul.title-area
@@ -12,9 +11,6 @@ br
         li.name
           h1
             =link_to "SYSTEM SQUARE", root_path
-        li.toggle-topbar.menu-icon
-          a href="#" 
-            span menu
       section.top-bar-section
         ul.right
           li
@@ -22,11 +18,11 @@ br
           li
             =link_to "サービス", service_path
           li
-            =link_to "企業理念", company_policy_path
-          li
             =link_to "スタッフ紹介", staff_profile_path
+          li
+            =link_to "採用情報", recruit_path
           li
             =link_to "アクセス", access_path
           li
-            =link_to "お問い合わせ", contact_path
+            =link_to "お問い合わせ", inquiry_path
     /! End Navigation

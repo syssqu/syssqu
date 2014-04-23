@@ -25,4 +25,7 @@ class StaticPagesController < ApplicationController
 
   def executive
   end
+
+  def recruit
+  end
 end

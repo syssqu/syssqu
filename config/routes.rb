@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   match '/company_policy',    to: 'static_pages#company_policy',    via: 'get'
   match '/staff_profile',    to: 'static_pages#staff_profile',    via: 'get'
   match '/access',    to: 'static_pages#access',    via: 'get'
-  match '/contact',    to: 'static_pages#contact',    via: 'get'
+  match '/inquiry',    to: 'static_pages#inquiry',    via: 'get'
   match '/news',    to: 'static_pages#news',    via: 'get'
   match '/executive', to: 'static_pages#executive', via: 'get'
+  match '/recruit', to: 'static_pages#recruit', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,17 +1,18 @@
 .row
   .large-12.columns
     /! Desktop Slider
-    ul.example-orbit data-orbit="" 
+    ul data-orbit="" data-options="pause_on_hover: false;animation_speed:600;"
+      /! 1000x300
       li
-        = image_tag("topImage.JPG", alt: "slide 1")
+        = image_tag("test_bg1.png", alt: "slide 1")
         .orbit-caption
           | Caption One.
-      li.active
-        = image_tag("topImage.gif", alt: "slide 2")
+      li
+        = image_tag("test_bg2.png", alt: "slide 2")
         .orbit-caption
           | Caption Two.
       li
-        = image_tag("CIMG0424_old.JPG", alt: "slide 3")
+        = image_tag("test_bg3.png", alt: "slide 3")
         .orbit-caption
           | Caption Three.
     / .hide-for-small
@@ -28,23 +29,6 @@
     /       img src=("http://placehold.it/1000x600&text=For Small Screens") /
     /! End Mobile Header
 br
-  / .row
-  /   .large-12.columns
-  /     .row
-  /       /! Thumbnails
-  /       .large-3.small-6.columns
-  /         img src="http://placehold.it/250x250&text=Thumbnail" /
-  /         h6.panel Description
-  /       .large-3.small-6.columns
-  /         img src="http://placehold.it/250x250&text=Thumbnail" /
-  /         h6.panel Description
-  /       .large-3.small-6.columns
-  /         img src="http://placehold.it/250x250&text=Thumbnail" /
-  /         h6.panel Description
-  /       .large-3.small-6.columns
-  /         img src="http://placehold.it/250x250&text=Thumbnail" /
-  /         h6.panel Description
-        /! End Thumbnails
   .row
     .large-12.columns
       .row
@@ -60,11 +44,6 @@ br
                   = link_to image_tag("news_press.png", alt: "press")
                   a href="news/20140327.html"
                     |  本社移転しました。
-                section 
-                  | 2014.04.01 
-                  = link_to image_tag("news_press.png", alt: "press")
-                  a href="news/20140327.html"
-                    |  来春社員募集中 応募方法はこちら
                 section 
                   | 2013.08.01 
                   = link_to image_tag("news_info.png", alt: "info")
@@ -84,8 +63,9 @@ br
         .large-4.columns.hide-for-small
           h4 Get In Touch!
           hr/
-          a.large.button.expand href="#" 
-            | Call To Action!
+          h6
+            a.large.button.expand href="#" 
+              | システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。 
           a.large.button.expand href="#" 
             | Call To Action!
         /! End Content
