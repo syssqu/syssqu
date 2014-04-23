@@ -2,6 +2,7 @@
 
 #初期設定(ページを読み込んだ時に実行する関数)
 initialize = ->
+  alert "sss"
   
   # 緯度・経度変数
   latlng = new google.maps.LatLng(34.689059, 135.506004)
