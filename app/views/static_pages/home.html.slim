@@ -1,71 +1,69 @@
-.row
-  .large-12.columns
-    /! Desktop Slider
-    ul data-orbit="" data-options="pause_on_hover: false;animation_speed:600;"
-      /! 1000x300
-      li
-        = image_tag("test_bg1.png", alt: "slide 1")
-        .orbit-caption
-          | Caption One.
-      li
-        = image_tag("test_bg2.png", alt: "slide 2")
-        .orbit-caption
-          | Caption Two.
-      li
-        = image_tag("test_bg3.png", alt: "slide 3")
-        .orbit-caption
-          | Caption Three.
-    / .hide-for-small
-    /   #featured
-    /     img alt=("slide image") src=("http://placehold.it/1000x400&text=Slide Image") 
-    /       /!
-    /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
-    /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
-    / /! End Desktop Slider
-    / /! Mobile Header
-    / .row
-    /   .small-12.show-for-small
-    /     br
-    /       img src=("http://placehold.it/1000x600&text=For Small Screens") /
-    /! End Mobile Header
-br
+article.home
   .row
-    .large-12.columns
-      .row
-        /! Content
-        .large-8.columns
-          .panel.radius
-            .row
-              .large-12.small-12.columns
-                h4 ニュース news
-                hr/
-                section 
-                  | 2014.05.19 
-                  = link_to image_tag("news_press.png", alt: "press")
-                  a href="news/20140327.html"
-                    |  本社移転しました。
-                section 
-                  | 2013.08.01 
-                  = link_to image_tag("news_info.png", alt: "info")
-                  |  おかげ様で30期を迎えました。
-                br
-                br
-                br
-                / h5.subheader
-                /   | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-                / .show-for-small align="center" 
-                /   a.small.radius.button href="#"  Call To Action!
-                /   br
-                /     a.small.radius.button href="#"  Call To Action!
-              / .large-6.small-6.columns
-              /   p
-              /     | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-        .large-4.columns.hide-for-small
-          h4 Get In Touch!
-          hr/
-          h6
+    .large-12.columns.clearfix
+      /! Desktop Slider
+      ul data-orbit="" data-options="pause_on_hover: false;animation_speed:600;"
+        /! 1000x300
+        li
+          = image_tag("top_image1.png", alt: "システムスクゥェアー役割")
+          .orbit-caption
+            | システムスクゥェアー役割
+        li
+          = image_tag("top_image2.png", alt: "システムスクゥェアー社員")
+          .orbit-caption
+            | システムスクゥェアー社員
+        li
+          = image_tag("test_bg3.png", alt: "slide 3")
+          .orbit-caption
+            | Caption Three.
+      / .hide-for-small
+      /   #featured
+      /     img alt=("slide image") src=("http://placehold.it/1000x400&text=Slide Image") 
+      /       /!
+      /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
+      /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
+      / /! End Desktop Slider
+      / /! Mobile Header
+      / .row
+      /   .small-12.show-for-small
+      /     br
+      /       img src=("http://placehold.it/1000x600&text=For Small Screens") /
+      /! End Mobile Header
+  br
+    .row
+      .large-12.columns
+        .row
+          /! Content
+          .large-8.columns
+            .panel.radius
+              .row
+                .large-12.small-12.columns
+                  h6 ニュース news
+                  hr/
+                  .new_container 
+                    | 2014.05.19 
+                    span.radius.label プレリリース
+                    a href="news/20140327.html"
+                      |  本社移転しました。
+                  .new_container 
+                    | 2013.08.01 
+                    span.success.radius.label ニュース
+                    |  おかげ様で30期を迎えました。
+                  / h5.subheader
+                  /   | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+                  / .show-for-small align="center" 
+                  /   a.small.radius.button href="#"  Call To Action!
+                  /   br
+                  /     a.small.radius.button href="#"  Call To Action!
+                / .large-6.small-6.columns
+                /   p
+                /     | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+          .large-4.columns.hide-for-small
+            h4 Get In Touch!
+            hr/
+            h6
+              a.large.button.expand href="#" 
+                | システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。 
             a.large.button.expand href="#" 
-              | システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。 
-          a.large.button.expand href="#" 
-            | Call To Action!
-        /! End Content
+              | Call To Action!
+          /! End Content
