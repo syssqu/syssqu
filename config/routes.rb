@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match '/news',    to: 'static_pages#news',    via: 'get'
   match '/executive', to: 'static_pages#executive', via: 'get'
   match '/recruit', to: 'static_pages#recruit', via: 'get'
+  match '/member', to: 'static_pages#member', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
