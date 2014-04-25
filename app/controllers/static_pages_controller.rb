@@ -51,7 +51,7 @@ class StaticPagesController < ApplicationController
     @entry = Entry.new(params[:entry])
 
     if @entry.valid?
-      @mail = SendMailer.send_entry(params).deliver
+      @mail = SendMailer.send_entry(params[:entry]).deliver
 
       flash[:success] = 'エントリが完了しました。'
       

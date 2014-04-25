@@ -7,6 +7,11 @@
       dd >>
       dd.active
         a href="#"  "新卒採用　募集要項"
+.row
+  .large-12.columns
+    - flash.each do |key, value|
+      .alert-box.success.radius data-alert=""
+        = value
 article.entry    
   .row
     .large-12.columns
@@ -78,6 +83,6 @@ article.entry
                   .small-2.columns
                     label.left.inline 自己PR *
                   .small-10.columns
-                    = text_area :pr, 'placeholder' => "ご記入下さい。 "
+                    = f.text_area :pr, 'placeholder' => "ご記入下さい。 "
             = f.submit "エントリする", class: "button radius"
               
