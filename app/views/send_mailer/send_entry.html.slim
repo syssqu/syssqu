@@ -1,0 +1,17 @@
+h3 採用募集メール
+
+h5 氏名（漢字）
+p #{@info[:family_name]} #{@info[:first_name]}
+
+h5 氏名（フリガナ）
+p #{@info[:kana_family_name]} #{@info[:kana_first_name]}
+
+h5 性別
+p #{@info[:gender] == "man" ? "男" : "女"}
+
+h5 生年月日
+p #{@info[:birth_year]}年#{@info[:birth_month]}月#{@info[:birth_day]}日
+
+h5 自己PR
+p #{@info[:pr]} #{@info[:pr]}
+

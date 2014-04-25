@@ -13,6 +13,7 @@ gem "slim"
 gem "slim-rails"
 gem 'devise'
 gem 'bcrypt'
+gem 'i18n_generators'
 
 # PDF
 gem 'wkhtmltopdf-binary'

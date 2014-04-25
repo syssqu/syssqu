@@ -15,6 +15,9 @@ article section p{font-size:14px;margin-bottom:15px;}
 article .container{background:#fff;padding:15px 50px;}
 article .container p{font-size:14px;margin-bottom:15px;}
 
+article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
+article.entry li.bullet-item {color:#D91A1A;}
+
 /*  profile.html
 -------------------------------------------------------------*/
 article.home .new_container{margin-bottom:1px;}
@@ -31,6 +34,20 @@ article.company_profile .large_height{height: 120px; padding: 10px;}
 /*  executive.html
 -------------------------------------------------------------*/
 article.executive p{font-size:14px;margin-bottom:15px;}
+
+/*  fresh.html
+-------------------------------------------------------------*/
+article.fresh table {border:0;}
+article.fresh table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
+article.fresh table .large_width{width: 200px;}
+article.fresh table td strong{color:#3D3932;}
+
+/*  career.html
+-------------------------------------------------------------*/
+article.career table {border:0;}
+article.career table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
+article.career table .large_width{width: 200px;}
+article.career table td strong{color:#3D3932;}
 
 /*  contact.html
 -------------------------------------------------------------*/

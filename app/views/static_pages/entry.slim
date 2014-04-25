@@ -1,0 +1,83 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd =link_to "採用情報", recruit_path
+      dd >>
+      dd.active
+        a href="#"  "新卒採用　募集要項"
+article.entry    
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          h2 新卒採用　エントリ
+          = form_for @entry, url: {:action => 'mail_send'} do |f|
+            = render 'shared/error_messages', object: f.object
+            .row
+              .small-8
+                label 
+                  strong 個人情報
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 氏名 ( 漢字 )
+                  .small-1.columns
+                    label.right.inline 性
+                  .small-4.columns
+                    = f.text_field :family_name
+                  .small-1.columns
+                    label.right.inline 名
+                  .small-4.columns
+                    = f.text_field :first_name
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 氏名 ( フリガナ )
+                  .small-1.columns
+                    label.right.inline セイ
+                  .small-4.columns
+                    = f.text_field :kana_family_name
+                  .small-1.columns
+                    label.right.inline メイ
+                  .small-4.columns
+                    = f.text_field :kana_first_name
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 性別
+                  .small-10.columns
+                    = f.radio_button :gender, :man
+                    label for="man"  男
+                    = f.radio_button :gender, :woman
+                    label for="woman"  女
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 生年月日 *
+                  .small-1.columns
+                    = f.select :birth_year, @_birth_year, include_blank: true
+                  .small-1.columns
+                    | 年
+                  .small-1.columns
+                    = f.select :birth_month, @_birth_month, :include_blank => true
+                  .small-1.columns
+                    | 月
+                  .small-1.columns
+                    = f.select :birth_day, @_birth_day, :include_blank => true
+                  .small-1.columns
+                    | 日
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 自己PR *
+                  .small-10.columns
+                    = text_area :pr, 'placeholder' => "ご記入下さい。 "
+            = f.submit "エントリする", class: "button radius"
+              

@@ -1,0 +1,40 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt = link_to "トップ", root_path
+      dd >>
+      dt = link_to "スタッフ紹介", staff_profile_path
+      dd >>
+      dd = link_to "役員紹介", executive_path
+      dd.active
+        a href="#" 社員紹介
+article.memger
+  .row
+    .large-12.columns
+      .panel.radius
+        a.small.button data-orbit-link="headline-1" 
+          | Goto Slide 1
+        a.small.button data-orbit-link="headline-2" 
+          | Goto Slide 2
+        a.small.button data-orbit-link="headline-3" 
+          | Goto Slide 3
+        ul.example-orbit-content data-orbit="" 
+          li data-orbit-slide="headline-1" 
+            div
+              = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
+              h2 Headline 1
+              h3 Subheadline
+          li data-orbit-slide="headline-2" 
+            div
+              h2 Headline 2
+              h3 Subheadline
+          li data-orbit-slide="headline-3" 
+            div
+              h2 Headline 3
+              h3 Subheadline
+  
+
+          
+          
+
+

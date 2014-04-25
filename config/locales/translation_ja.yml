@@ -1,0 +1,10 @@
+ ja:
+   activerecord:
+     models:
+       entry: エントリ
+
+     attributes:
+       entry:
+         family_name: 性
+         first_name: 名
+         gender: 性別

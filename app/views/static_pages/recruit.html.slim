@@ -1,20 +1,26 @@
-article#sub.news
-  .row
-    .large-12.columns
-      dl.sub-nav
-        dt =link_to "トップ", root_path
-        dd >>
-        dd.active
-          a href="#"  採用情報
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd.active
+        a href="#"  採用情報
+article.recruit
   .row
     .large-12.columns
       .panel.radius.clearfix
         section
-          h2 新卒の皆様へ
-          p 弊社役員から、“お客様”と“社会”に向けたメッセージ（約束）です。
-          p = link_to '役員紹介はこちら', executive_path
+          h2 新卒採用
+          .large-2.columns
+            .left = link_to '募集要項', fresh_path
+          .large-2.columns
+            .left = link_to 'エントリ', entry_path
+          .large-8.columns
         br
         section
-          h2 経験者の皆様へ
-          p システム・スクゥェアーの仲間を紹介します。
-          p = link_to '社員紹介はこちら', executive_path
+          h2 キャリア採用
+          .large-2.columns
+            .left = link_to '募集要項', career_path
+          .large-2.columns
+            .left = link_to 'エントリ', entry_path
+          .large-8.columns

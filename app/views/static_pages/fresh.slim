@@ -1,0 +1,68 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd =link_to "採用情報", recruit_path
+      dd >>
+      dd.active
+        a href="#"  "新卒採用　募集要項"
+article.fresh
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          h2 新卒採用　募集要項
+          table
+            tbody
+              tr
+                td.large_width
+                  strong 募集職種
+                td
+                  | Web系、組込み系、Open系、制御系 ＳＥ／ＰＧ
+                  br
+                  | ネットワーク・サーバー系エンジニア
+              tr
+                td
+                  strong 応募資格
+                td 25歳以下の新卒予定者
+              tr
+                td
+                  strong 給与
+                td
+                  | 短大／専門卒 185,000円 (各種手当有り)
+                  br
+                  | 大学卒 197.000円 (各種手当有り)
+              tr
+                td
+                  strong 昇給
+                td 1回／年(4月)
+              tr
+                td
+                  strong 賞与
+                td 2回／年(7月・12月)
+              tr
+                td
+                  strong 勤務時間
+                td 9：00〜18：00(8時間労働)
+              tr
+                td
+                  strong 休日・休暇
+                td
+                  | 完全週休2日制(土・日) 祝日 夏期休暇 年末・年始休暇
+                  br
+                  | 有給休暇 慶弔休暇 その他特別休暇
+              tr
+                td
+                  strong 勤務地
+                td 大阪本社
+              tr
+                td
+                  strong 選考方法
+                td 筆記試験(一般常識)・適正テスト・面接
+              tr
+                td
+                  strong 選考場所
+                td 大阪本社
+          = link_to "エントリする", entry_path, {class: "button radius"}
+              
