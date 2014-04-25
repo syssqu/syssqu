@@ -4,6 +4,7 @@ class Entry
   include ActiveModel::Validations
   include ActiveModel::Conversion
   extend ActiveModel::Naming
+  extend ActiveModel::Translation
    
   attr_accessor :family_name, :first_name, :kana_family_name, :kana_first_name,
                 :gender, :birth_year, :birth_month, :birth_day, :pr
