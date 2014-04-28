@@ -5,13 +5,13 @@ class StaticPagesController < ApplicationController
   def service
   end
 
-  def company_profile
+  def profile_company
   end
 
-  def company_policy
+  def policy
   end
 
-  def staff_profile
+  def profile_staff
   end
 
   def access
@@ -59,6 +59,12 @@ class StaticPagesController < ApplicationController
     else
       render 'static_pages/entry'
     end
+  end
+
+  def history
+  end
+
+  def jouhouhogo
   end
 
   private

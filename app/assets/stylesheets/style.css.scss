@@ -1,7 +1,4 @@
 
-section p.press{ background:url("../images/news_press.png") no-repeat;}
-
-
 @mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 10px;}
 @mixin _section{width: 360px; height: 38px; padding: 10px; margin-bottom: 10px; @include _left_block;}
 
@@ -15,21 +12,27 @@ article section p{font-size:14px;margin-bottom:15px;}
 article .container{background:#fff;padding:15px 50px;}
 article .container p{font-size:14px;margin-bottom:15px;}
 
-article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
-article.entry li.bullet-item {color:#D91A1A;}
-
-/*  profile.html
+/*  home.html
 -------------------------------------------------------------*/
 article.home .new_container{margin-bottom:1px;}
 
 /*  profile.html
 -------------------------------------------------------------*/
-article.company_profile .container{background:#FFF;padding:15px 50px;zoom:1;}
-article.company_profile .title{width: 110px;}
-article.company_profile .content{width: 295px; height: 38px; padding: 10px; margin-bottom: 40px; }
-article.company_profile .box{width:412px;}
-article.company_profile .box section{margin-bottom:15px;}
-article.company_profile .large_height{height: 120px; padding: 10px;}
+article.profile_company .container{background:#FFF;padding:15px 50px;zoom:1;}
+article.profile_company .title{width: 110px;}
+article.profile_company .content{width: 295px; height: 38px; padding: 10px; margin-bottom: 40px; }
+article.profile_company .box{width:412px;}
+article.profile_company .box section{margin-bottom:15px;}
+article.profile_company .large_height{height: 120px; padding: 10px;}
+
+/*  history.html
+-------------------------------------------------------------*/
+article.profile_history .container{background:#FFF;padding:15px 50px;zoom:1;}
+article.profile_history .title{width: 110px;}
+article.profile_history .content{width: 295px; height: 38px; padding: 10px; margin-bottom: 40px; }
+article.profile_history .box{width:412px;}
+article.profile_history .box section{margin-bottom:15px;}
+article.profile_history .large_height{height: 120px; padding: 10px;}
 
 /*  executive.html
 -------------------------------------------------------------*/
@@ -54,15 +57,6 @@ article.career table td strong{color:#3D3932;}
 article.inquiry section{border:1px solid #DDD;padding:30px;height:320px;overflow-y:scroll;}
 article.inquiry section h2 {height: 46px; margin-bottom: 30px;}
 
-
-
-article.contact input{width:400px;font-size:15px;border:none;background:#FCFBF8;padding:10px 5px;border-radius:6px;box-shadow: 0 0 10px 1px #f3f2ef inset;border:1px solid #f3f2ef;}
-article.contact textarea{width:400px;font-size:15px;border:none;background:#FCFBF8;padding:10px 5px;border-radius:6px;box-shadow: 0 0 10px 1px #f3f2ef inset;border:1px solid #f3f2ef;}
-article.contact section.button{text-align:center;margin-bottom:30px;clear:both;padding-top:50px;}
-article.contact section.button a{display:inline-block;width:180px;padding:16px 0;text-align:center;font-weight:bold;background:#000;color:#FFF;border-radius:6px;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .1s ease;transition:all .2s ease;}
-article.contact section.button a.back{background:#999;}
-article.contact section.button a:hover{text-decoration:none;opacity:0.7;}
-
 /*  contact.html  
 -------------------------------------------------------------*/
 article.access .container{padding:15px 35px;}
@@ -70,3 +64,8 @@ article.access h2 a{display:none;}
 article.access #map{width:400px;height:360px;}
 article.access #s_view{width:400px;height:360px;margin-bottom: 20px;}
 article.access .address_access{clear:both;margin-bottom:0px;}
+
+/*  entry.html
+-------------------------------------------------------------*/
+article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
+article.entry li.bullet-item {color:#D91A1A;}

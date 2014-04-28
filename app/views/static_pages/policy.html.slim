@@ -1,13 +1,17 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd
+        = link_to "会社概要", profile_company_path
+      dd |
+      dd.active
+        a href="#"  企業理念
+      dd |
+      dd
+        = link_to "沿革", history_path
 article.policy
-  .row
-    .large-12.columns
-      dl.sub-nav
-        dt =link_to "トップ", root_path
-        dd >>
-        dd
-          = link_to "会社概要", company_profile_path
-        dd.active
-          a href="#"  企業理念
   .row
     .large-12.columns
       .panel.radius.clearfix

@@ -44,4 +44,5 @@ map = undefined
 s_view = undefined
 # function initialize()
 # ページを読み込んだ時にinitialize()を実行
-google.maps.event.addDomListener window, "load", initialize
+google.maps.event.addDomListener window, 'page:change', initialize
+#$(document).on('page:change', initialize)
