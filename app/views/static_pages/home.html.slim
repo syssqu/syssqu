@@ -1,9 +1,10 @@
+/ トップページ
 article.home
   .row
     .large-12.columns.clearfix
       /! Desktop Slider
-      ul data-orbit="" data-options="pause_on_hover: false;animation_speed:600;"
-        /! 1000x300
+      ul data-orbit="" data-options="pause_on_hover:false;timer_speed:3800;animation_speed:600;"
+        /! 画像サイズは1000x300
         li
           = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
           .orbit-caption
@@ -13,22 +14,9 @@ article.home
           .orbit-caption
             | システム・スクゥェアー社員
         li
-          = image_tag("test_bg3.png", alt: "slide 3")
+          = image_tag("top_image3.png", alt: "社内からの風景")
           .orbit-caption
             | Caption Three.
-      / .hide-for-small
-      /   #featured
-      /     img alt=("slide image") src=("http://placehold.it/1000x400&text=Slide Image") 
-      /       /!
-      /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
-      /         | <img src="http://placehold.it/1000x400&amp;text=Slide Image" alt="slide image"
-      / /! End Desktop Slider
-      / /! Mobile Header
-      / .row
-      /   .small-12.show-for-small
-      /     br
-      /       img src=("http://placehold.it/1000x600&text=For Small Screens") /
-      /! End Mobile Header
   br
   .row
     .large-12.columns
@@ -49,15 +37,6 @@ article.home
                   | 2013.08.01 
                   span.success.radius.label ニュース
                   |  おかげ様で30期を迎えました。
-                / h5.subheader
-                /   | Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
-                / .show-for-small align="center" 
-                /   a.small.radius.button href="#"  Call To Action!
-                /   br
-                /     a.small.radius.button href="#"  Call To Action!
-              / .large-6.small-6.columns
-              /   p
-              /     | Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
         .large-4.columns.hide-for-small
           h6
             = link_to image_tag("recruit_banner.png", alt: "システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。"), recruit_path

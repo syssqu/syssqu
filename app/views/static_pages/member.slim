@@ -1,3 +1,4 @@
+/ 社員紹介ページ
 .row
   .large-12.columns
     dl.sub-nav
@@ -13,27 +14,28 @@ article.memger
   .row
     .large-12.columns
       .panel.radius
-        a.small.button data-orbit-link="headline-1" 
-          | Goto Slide 1
-        a.small.button data-orbit-link="headline-2" 
-          | Goto Slide 2
+        = link_to image_tag("x_xxxxx.jpg", alt: "システム・スクゥェアーの使命", size: "64x64"), class: "small button", 'data-orbit-link' => "headline-1"
+        a.small.button data-orbit-link="headline-2"
+          img alt="イラスト２" height="64" src="y_yyyyy.jpg" width="64"
         a.small.button data-orbit-link="headline-3" 
           | Goto Slide 3
         ul.example-orbit-content data-orbit="" 
           li data-orbit-slide="headline-1" 
             div
-              = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
+              = image_tag("x_xxxxx.jpg", alt: "システム・スクゥェアーの使命")
               h2 Headline 1
               h3 Subheadline
           li data-orbit-slide="headline-2" 
             div
+              = image_tag("y_yyyyy.jpg", alt: "システム・スクゥェアーの使命")
               h2 Headline 2
               h3 Subheadline
           li data-orbit-slide="headline-3" 
             div
+              = image_tag("z_zzzzz.jpg", alt: "システム・スクゥェアーの使命")
               h2 Headline 3
               h3 Subheadline
-  
+      img alt="イラスト２" src="/app/assets/images/z_zzzzz.jpg"
 
           
           
