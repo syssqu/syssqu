@@ -1,24 +1,23 @@
-nav.top-bar data-topbar="" 
-  ul.title-area
-    li.name
-      h1
-        a href="#"  My Site
-    /! Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-    li.toggle-topbar.menu-icon
-      a href="#" 
-        span Menu
-  section.top-bar-section
-    /! Right Nav Section
-    ul.right
-      li.active
-        a href="#"  Right Button Active
-      li.has-dropdown
-        a href="#"  Right Button Dropdown
-        ul.dropdown
+br
+.row
+  .large-12.columns
+    /! Navigation
+    nav.top-bar data-topbar="" 
+      ul.title-area
+        li
+          = link_to image_tag("systemsquare_logo.png", alt: "SystemSquare"), root_path
+      section.top-bar-section
+        ul.right
           li
-            a href="#"  First link in dropdown
-    /! Left Nav Section
-    ul.left
-      li
-        a href="#"  Left Nav Button
-
+            = link_to "会社概要", profile_company_path
+          li
+            = link_to "サービス", service_path
+          li
+            = link_to "スタッフ紹介", profile_staff_path
+          li
+            = link_to "採用情報", recruit_path
+          li
+            = link_to "アクセス", access_path
+          li
+            = link_to "お問い合わせ", inquiry_path
+    /! End Navigation
