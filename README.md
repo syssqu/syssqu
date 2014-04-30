@@ -26,3 +26,17 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+# SYSTEM SQUARE　ホームページ
+
+これは、以下のためのサンプルアプリケーションです。
+[*Ruby on Rails Tutorial*](http://railstutorial.jp/)
+by [Michael Hartl](http://michaelhartl.com/).
+
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  ccccccccccccccccccccccccccccccc
+  ddddddddddddddddddddddddddddddd
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
