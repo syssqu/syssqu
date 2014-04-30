@@ -1,35 +1,34 @@
 # SYSTEM SQUARE　ホームページ
 
-* service
-    サービスページ
+* サービスページ　service
+    
 
-* profile_company
-    会社概要ページ
+* 会社概要ページ　profile_company 
 
-* policy
+* 企業理念ページ　policy
 
-* profile_staff
+* スタッフ紹介ページ　profile_staff
 
-* access
+* アクセスページ　access
 
-* inquiry
+* 問い合わせページ　inquiry
 
-* news
+* ニュースページ　news
 
-* executive
+* 役員紹介　executive
 
-* recruit
+* 採用情報　recruit
 
-* member
+* スタッフ紹介　member
 
-* fresh
+* 新人採用　fresh
 
-* career
+* キャリア採用　career
 
-* entry
+* エントリページ　entry
 
-* mail_send
+* メール送信　mail_send
 
-* history
+* 沿革　history
 
-* jouhouhogo
+* 個人情報保護方針　jouhouhogo
