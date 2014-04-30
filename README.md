@@ -1,42 +1,35 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-
 # SYSTEM SQUARE　ホームページ
 
-これは、以下のためのサンプルアプリケーションです。
-[*Ruby on Rails Tutorial*](http://railstutorial.jp/)
-by [Michael Hartl](http://michaelhartl.com/).
+* service
+    サービスページ
 
+* profile_company
+    会社概要ページ
 
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-  ccccccccccccccccccccccccccccccc
-  ddddddddddddddddddddddddddddddd
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+* policy
+
+* profile_staff
+
+* access
+
+* inquiry
+
+* news
+
+* executive
+
+* recruit
+
+* member
+
+* fresh
+
+* career
+
+* entry
+
+* mail_send
+
+* history
+
+* jouhouhogo
