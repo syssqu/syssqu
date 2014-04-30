@@ -1,14 +1,16 @@
 # SYSTEM SQUARE　ホームページ
 
-* service
-    サービスページ
+* サービスページ service
+    
 
-* profile_company
-    会社概要ページ
+* 会社概要ページ profile_company 
 
-* policy
+* 企業理念ページ
+　　* policy
 
 * profile_staff
+
+スタッフ紹介ページ
 
 * access
 
