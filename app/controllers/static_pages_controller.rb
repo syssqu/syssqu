@@ -38,6 +38,12 @@ class StaticPagesController < ApplicationController
   def career
   end
 
+  def inquiry_page
+
+    @entry = Entry.new
+
+  end
+
   def entry
 
     @entry = Entry.new
@@ -60,6 +66,25 @@ class StaticPagesController < ApplicationController
       render 'static_pages/entry'
     end
   end
+
+  # def inquiry_send
+
+  #   @entry = Entry.new
+
+  #   # setting_birth_info
+
+  #   # @entry = Entry.new(params[:entry])
+
+  #   # if @entry.valid?
+  #   #   @mail = SendMailer.send_entry(params[:entry]).deliver
+
+  #   #   flash[:success] = '送信完了しました。'
+      
+  #   #   redirect_to entry_url
+  #   # else
+  #   #   render 'static_pages/inquiry_send'
+  #   # end
+  # end
 
   def history
   end
