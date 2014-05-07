@@ -76,8 +76,102 @@ article.entry
                     | 月
                   .small-1.columns
                     = f.select :birth_day, @_birth_day, :include_blank => true
-                  .small-1.columns
+                  .small-5.columns
                     | 日
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline メールアドレス *
+                  .small-2.columns
+                    | メール
+                  .small-8.columns
+                    = f.text_field :email
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    | メール（確認）
+                  .small-8.columns
+                    = f.text_field :email_confirmation
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 住所 *
+                  .small-2.columns
+                    | 〒
+                  .small-8.columns
+                    = f.text_field :postal_code
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    | 都道府県 *
+                  .small-8.columns
+                    = f.select :prefecture, @_prefecture, :include_blank => true
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    | 市区町村 *
+                  .small-8.columns
+                    = f.text_field :city
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    | 番地
+                  .small-8.columns
+                    = f.text_field :house_number
+
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    | 建物
+                  .small-8.columns
+                    = f.text_field :building
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 電話番号 *
+                  .small-2.columns
+                    |
+                  .small-8.columns
+                    = f.text_field :phone
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 最終学歴
+                  .small-10.columns
+                    | (大学名、専門学校名、学部、学科、主な専門分野)
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-10.columns
+                    = f.text_area :gakureki
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 志望動機
+                  .small-10.columns
+                    = f.text_area :motive
             .row
               .small-12
                 .row
