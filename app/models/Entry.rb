@@ -28,8 +28,8 @@ class Entry
                     format:   { with: VALID_EMAIL_REGEX },
                     uniqueness: false
   #　住所
-  VALID_ADDRESS_REGEX = /1-9\-/
-  validates :postal_code, presence: true,
+  VALID_ADDRESS_REGEX = /\A^[0-9\-]*$\z/
+  validates :postal_code, presence: true, length: { maximum: 8 },
                           format: {with: VALID_ADDRESS_REGEX } 
   validates :prefecture, presence: true
   validates :city, presence: true, length: { maximum: 80 }
@@ -37,13 +37,13 @@ class Entry
   validates :building, length: { maximum: 80 }
 
   #　電話
-  VALID_PHONE_REGEX = /1-9/
+  VALID_PHONE_REGEX = /\A^[0-9\-]*$\z/
   validates :phone, presence: true,length: { maximum: 13 },
                     format:   {with: VALID_PHONE_REGEX }
 
   validates :gakureki, presence: true, length: { maximum: 600 }
   validates :motive, presence: true, length: { maximum: 600 }
-  validates :career, presence: true, length: { maximum: 600 }
+  # validates :career, presence: true, length: { maximum: 600 }
   validates :pr, presence: true, length: { maximum: 600 }
    
   def initialize(attributes = {})

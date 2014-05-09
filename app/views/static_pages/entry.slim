@@ -1,4 +1,5 @@
 / エントリページ
+require 'date'
 .row
   .large-12.columns
     dl.sub-nav
@@ -25,11 +26,12 @@ article.entry
               .small-8
                 label 
                   strong 個人情報
+            / 氏名============================
             .row
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 氏名 ( 漢字 )
+                    label.left.inline 氏名 ( 漢字 ) *
                   .small-1.columns
                     label.right.inline 性
                   .small-4.columns
@@ -42,7 +44,7 @@ article.entry
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 氏名 ( フリガナ )
+                    label.left.inline 氏名 ( フリガナ ) *
                   .small-1.columns
                     label.right.inline セイ
                   .small-4.columns
@@ -51,16 +53,18 @@ article.entry
                     label.right.inline メイ
                   .small-4.columns
                     = f.text_field :kana_first_name
+            / 性別============================
             .row
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 性別
+                    label.left.inline 性別 *
                   .small-10.columns
                     = f.radio_button :gender, :man
                     label for="man"  男
                     = f.radio_button :gender, :woman
                     label for="woman"  女
+            / 生年月日============================
             .row
               .small-12
                 .row
@@ -69,22 +73,25 @@ article.entry
                   .small-1.columns
                     = f.select :birth_year, @_birth_year, include_blank: true
                   .small-1.columns
-                    | 年
+                    label.inline 年
                   .small-1.columns
                     = f.select :birth_month, @_birth_month, :include_blank => true
                   .small-1.columns
-                    | 月
+                    label.inline 月
                   .small-1.columns
+                    / select id="select1"
+                    /   option value="1"
                     = f.select :birth_day, @_birth_day, :include_blank => true
                   .small-5.columns
-                    | 日
+                    label.inline 日
+            / メールアドレス============================
             .row
               .small-12
                 .row
                   .small-2.columns
                     label.left.inline メールアドレス *
                   .small-2.columns
-                    | メール
+                    label.inline メール
                   .small-8.columns
                     = f.text_field :email
             .row
@@ -93,16 +100,17 @@ article.entry
                   .small-2.columns
                     label.left.inline
                   .small-2.columns
-                    | メール（確認）
+                    label.inline メール（確認） *
                   .small-8.columns
                     = f.text_field :email_confirmation
+            / 住所============================
             .row
               .small-12
                 .row
                   .small-2.columns
                     label.left.inline 住所 *
                   .small-2.columns
-                    | 〒
+                    label.inline 郵便番号 *
                   .small-8.columns
                     = f.text_field :postal_code
             .row
@@ -111,7 +119,7 @@ article.entry
                   .small-2.columns
                     label.left.inline
                   .small-2.columns
-                    | 都道府県 *
+                    label.inline 都道府県 *
                   .small-8.columns
                     = f.select :prefecture, @_prefecture, :include_blank => true
             .row
@@ -120,7 +128,7 @@ article.entry
                   .small-2.columns
                     label.left.inline
                   .small-2.columns
-                    | 市区町村 *
+                    label.inline 市区町村 *
                   .small-8.columns
                     = f.text_field :city
             .row
@@ -129,7 +137,7 @@ article.entry
                   .small-2.columns
                     label.left.inline
                   .small-2.columns
-                    | 番地
+                    label.inline 番地
                   .small-8.columns
                     = f.text_field :house_number
 
@@ -139,9 +147,10 @@ article.entry
                   .small-2.columns
                     label.left.inline
                   .small-2.columns
-                    | 建物
+                    label.inline 建物
                   .small-8.columns
                     = f.text_field :building
+            / 電話番号============================
             .row
               .small-12
                 .row
@@ -151,27 +160,24 @@ article.entry
                     |
                   .small-8.columns
                     = f.text_field :phone
+            / 最終学歴============================
             .row
               .small-12
                 .row
                   .small-2.columns
                     label.left.inline 最終学歴
                   .small-10.columns
-                    | (大学名、専門学校名、学部、学科、主な専門分野)
-            .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline
-                  .small-10.columns
-                    = f.text_area :gakureki
+                    label 大学名、専門学校名、学部、学科、主な専門分野
+                    = f.text_area :gakureki, 'placeholder' => "ご記入下さい。 "
+            / 志望動機============================
             .row
               .small-12
                 .row
                   .small-2.columns
                     label.left.inline 志望動機
                   .small-10.columns
-                    = f.text_area :motive
+                    = f.text_area :motive, 'placeholder' => "ご記入下さい。 "
+            / 自己PR============================
             .row
               .small-12
                 .row
