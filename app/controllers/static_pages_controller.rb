@@ -40,7 +40,7 @@ class StaticPagesController < ApplicationController
 
   def inquiry_page
 
-    @entry = Entry.new
+    @inquiry = Inquiry.new
 
   end
 
@@ -67,24 +67,20 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  # def inquiry_send
+  def inquiry_send
 
-  #   @entry = Entry.new
+    @inquiry = Inquiry.new(params[:inquiry])
 
-  #   # setting_birth_info
+    if @inquiry.valid?
+      @mail = SendMailer.send_inquiry(params[:inquiry]).deliver
 
-  #   # @entry = Entry.new(params[:entry])
-
-  #   # if @entry.valid?
-  #   #   @mail = SendMailer.send_entry(params[:entry]).deliver
-
-  #   #   flash[:success] = '送信完了しました。'
+      flash[:success] = '送信完了しました。'
       
-  #   #   redirect_to entry_url
-  #   # else
-  #   #   render 'static_pages/inquiry_send'
-  #   # end
-  # end
+      redirect_to inquiry_page_url
+    else
+      render 'static_pages/inquiry_page'
+    end
+  end
 
   def history
   end

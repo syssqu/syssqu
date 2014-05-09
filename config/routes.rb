@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   match '/history',            to: 'static_pages#history',          via: :get
   match '/jouhouhogo',         to: 'static_pages#jouhouhogo',       via: :get
   match '/inquiry_page',       to: 'static_pages#inquiry_page',     via: :get
-  # match '/inquiry_send', to: 'static_pages#inquiry_send', via: :post
+  match '/inquiry_send',       to: 'static_pages#inquiry_send',     via: :post
 
 
 

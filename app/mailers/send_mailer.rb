@@ -8,6 +8,13 @@ class SendMailer < ActionMailer::Base
   #
   def send_entry(info)
     @info = info
-    mail to: "njsekay@gmail.com"
+    mail to: "syssqu@gmail.com"
   end
+
+  def send_inquiry(info)
+    @info = info
+    mail to: "syssqu@gmail.com"
+  end
+
 end
+

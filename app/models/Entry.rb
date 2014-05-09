@@ -2,9 +2,9 @@
 #activerecordを継承していないモデル
 class Entry
   include ActiveModel::Validations # モデルオブジェクトとして振る舞うようにする
-  include ActiveModel::Conversion # バリデーション機能を使えるようにする
-  extend ActiveModel::Naming # オブジェクトをform_forで使えるようにする
-  extend ActiveModel::Translation # リデーション時のエラーメッセージに日本語の属性名を使用できるようにする
+  include ActiveModel::Conversion  # バリデーション機能を使えるようにする
+  extend  ActiveModel::Naming      # オブジェクトをform_forで使えるようにする
+  extend  ActiveModel::Translation # リデーション時のエラーメッセージに日本語の属性名を使用できるようにする
    
   attr_accessor :family_name, :first_name, :kana_family_name, :kana_first_name,
                 :gender, :birth_year, :birth_month, :birth_day, :pr, :mail, :mail_confirm, :inquiry
@@ -17,10 +17,7 @@ class Entry
   validates :birth_year,        presence: true
   validates :birth_month,       presence: true
   validates :birth_day,         presence: true
-  validates :inquiry,           presence: true, length: { maximum: 600 }
   validates :pr,                presence: true
-  validates :mail,              presence: true, length: { maximum: 90 }
-  validates :mail_confirm,      presence: true, length: { maximum: 90 }
    
   def initialize(attributes = {})
     self.attributes = attributes

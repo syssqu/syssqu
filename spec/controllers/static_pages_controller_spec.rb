@@ -16,16 +16,16 @@ describe StaticPagesController do
     end
   end
 
-  describe "GET 'company_profile'" do
+  describe "GET 'profile_company'" do
     it "returns http success" do
-      get 'company_profile'
+      get 'profile_company'
       response.should be_success
     end
   end
 
-  describe "GET 'company_policy'" do
+  describe "GET 'policy'" do
     it "returns http success" do
-      get 'company_policy'
+      get 'policy'
       response.should be_success
     end
   end
