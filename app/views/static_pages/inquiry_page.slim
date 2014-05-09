@@ -1,0 +1,76 @@
+/ お問い合わせ
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd.active
+        a href="#"  お問い合わせ
+.row
+  .large-12.columns
+    - flash.each do |key, value|
+      .alert-box.success.radius data-alert=""
+        = value
+article.entry    
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          h2 お問い合わせ
+          = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
+            = render 'shared/error_messages', object: f.object
+            .row
+              .small-8
+                label 
+                  strong 個人情報
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 氏名 ( 漢字 ) *
+                  .small-1.columns
+                    label.right.inline 姓
+                  .small-4.columns
+                    = f.text_field :family_name
+                  .small-1.columns
+                    label.right.inline 名
+                  .small-4.columns
+                    = f.text_field :first_name
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 氏名 ( フリガナ ) *
+                  .small-1.columns
+                    label.right.inline セイ
+                  .small-4.columns
+                    = f.text_field :kana_family_name
+                  .small-1.columns
+                    label.right.inline メイ
+                  .small-4.columns
+                    = f.text_field :kana_first_name
+
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline メールアドレス *
+                  .small-10.columns
+                    = f.text_field :mail
+
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline メールアドレス（ 確認用 ） *
+                  .small-10.columns
+                    = f.text_field :mail_confirmation
+
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline お問い合わせ内容 *
+                  .small-10.columns
+                    = f.text_area :inquiry, 'placeholder' => "ご記入下さい。"
+            = f.submit "送信する", class: "button radius"
