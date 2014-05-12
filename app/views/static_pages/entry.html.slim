@@ -1,4 +1,5 @@
 / エントリページ
+- require 'date'
 .row
   .large-12.columns
     dl.sub-nav
@@ -19,17 +20,18 @@ article.entry
       .panel.radius.clearfix
         .container
           h2 新卒採用　エントリ
-          = form_for @entry, url: {:action => 'mail_send'} do |f|
+          = form_for @entry, url: {:action => 'mail_send'},remote: true do |f|
             = render 'shared/error_messages', object: f.object
             .row
               .small-8
                 label 
                   strong 個人情報
+            / 氏名============================
             .row
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 氏名 ( 漢字 )
+                    label.left.inline 氏名 ( 漢字 ) *
                   .small-1.columns
                     label.right.inline 姓
                   .small-4.columns
@@ -42,7 +44,7 @@ article.entry
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 氏名 ( フリガナ )
+                    label.left.inline 氏名 ( フリガナ ) *
                   .small-1.columns
                     label.right.inline セイ
                   .small-4.columns
@@ -51,33 +53,132 @@ article.entry
                     label.right.inline メイ
                   .small-4.columns
                     = f.text_field :kana_first_name
+            / 性別============================
             .row
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 性別
+                    label.left.inline 性別 *
                   .small-10.columns
                     = f.radio_button :gender, :man
                     label for="man"  男
                     = f.radio_button :gender, :woman
                     label for="woman"  女
+            / 生年月日============================
             .row
               .small-12
                 .row
                   .small-2.columns
                     label.left.inline 生年月日 *
                   .small-1.columns
-                    = f.select :birth_year, @_birth_year, include_blank: true
+                    = f.select :birth_year, @_birth_year, :include_blank => true
                   .small-1.columns
-                    | 年
+                    label.inline 年
+                  .small-1.columns 
+                    = f.select :birth_month, @_birth_month,{:include_blank => true},{:id=>"day_select"}
+                    / = f.select :birth_month @_birth_month, include_blank: true, :onchange => remote_function(:url => {:action => "day_select"} with: f)
                   .small-1.columns
-                    = f.select :birth_month, @_birth_month, :include_blank => true
+                    label.inline 月
                   .small-1.columns
-                    | 月
-                  .small-1.columns
-                    = f.select :birth_day, @_birth_day, :include_blank => true
-                  .small-1.columns
-                    | 日
+                      = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"31day"}
+                      = f.select :birth_day, @_2m_birth_day, {:include_blank => true},{:id=>"29day"}
+                      
+                  .small-5.columns
+                    label.inline 日
+            / メールアドレス============================
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline メールアドレス *
+                  .small-2.columns
+                    label.inline メール
+                  .small-8.columns
+                    = f.text_field :email
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    label.inline メール（確認） *
+                  .small-8.columns
+                    = f.text_field :email_confirmation
+            / 住所============================
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 住所 *
+                  .small-2.columns
+                    label.inline 郵便番号 *
+                  .small-8.columns
+                    = f.text_field :postal_code
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    label.inline 都道府県 *
+                  .small-8.columns
+                    = f.select :prefecture, @_prefecture, :include_blank => true
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    label.inline 市区町村 *
+                  .small-8.columns
+                    = f.text_field :city
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    label.inline 番地
+                  .small-8.columns
+                    = f.text_field :house_number
+
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline
+                  .small-2.columns
+                    label.inline 建物
+                  .small-8.columns
+                    = f.text_field :building
+            / 電話番号============================
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 電話番号 *
+                  .small-2.columns
+                    |
+                  .small-8.columns
+                    = f.text_field :phone
+            / 最終学歴============================
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 最終学歴
+                  .small-10.columns
+                    label 大学名、専門学校名、学部、学科、主な専門分野
+                    = f.text_area :gakureki, 'placeholder' => "ご記入下さい。 "
+            / 志望動機============================
+            .row
+              .small-12
+                .row
+                  .small-2.columns
+                    label.left.inline 志望動機
+                  .small-10.columns
+                    = f.text_area :motive, 'placeholder' => "ご記入下さい。 "
+            / 自己PR============================
             .row
               .small-12
                 .row
