@@ -12,6 +12,24 @@ p #{@info[:gender] == "man" ? "男" : "女"}
 h5 生年月日
 p #{@info[:birth_year]}年#{@info[:birth_month]}月#{@info[:birth_day]}日
 
+h5 メールアドレス
+p #{@info[:email]}
+
+h5 メールアドレス（確認用）
+p #{@info[:email_confirmation]}
+
+h5 住所
+p #{@info[:postal_code]}　#{@info[:prefecture]}　#{@info[:city]}　#{@info[:house_number]}　#{@info[:building]}
+
+h5 電話番号
+p #{@info[:phone]}
+
+h5 最終学歴
+p #{@info[:gakureki]}
+
+h5 志望動機
+p #{@info[:motive]}
+
 h5 自己PR
 p #{@info[:pr]}
 

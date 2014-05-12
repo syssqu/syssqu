@@ -8,6 +8,9 @@
         a href="#"  会社概要
       dd |
       dd
+        = link_to "代表取締役からのメッセージ", executive_path
+      dd |
+      dd
         = link_to "企業理念", policy_path
       dd |
       dd
@@ -40,20 +43,22 @@ article.profile_company
               | 最寄り駅
               br
               | ・北浜駅（地下鉄/京阪）
+            .title.left 従業員数
+            .content.left 38名 ※2014年4月1日現在
           .box.left
             .title.left TEL
             .content.left 06-6222-9101
             .title.left FAX
             .content.left 06-6222-0955
-            .title.left 従業員数
-            .content.left 35名 ※2014年4月1日現在
             .title.left 事業内容
-            .content.large_height.left
+            .content.middle_height.left
               | システムインテグレーションサービス
               br
               | システム企画・設計
               br
               | アプリケーション開発
+            .left-margin-20
+              = image_tag("bldg.png", alt: "本社")
   .row
     .large-12.columns
       .panel.radius.clearfix

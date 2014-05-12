@@ -4,7 +4,7 @@
 initialize = ->
   
   # 緯度・経度変数
-  latlng = new google.maps.LatLng(34.689059, 135.506004)
+  latlng = new google.maps.LatLng(34.688947, 135.506578)
   
   # 地図のオプション設定変数
   myOptions =
@@ -32,9 +32,9 @@ initialize = ->
   
   # ストリートビューオブジェクト詳細設定
   s_view.setPov
-    heading: 20
-    pitch: 0
-    zoom: 0.5
+    heading: 310
+    pitch: 18
+    zoom: 1.1
 
   
   # マップとストリートビューを一致させる為の記述
