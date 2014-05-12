@@ -46,6 +46,14 @@ class StaticPagesController < ApplicationController
     setting_adress_info
   end
 
+  def day_select
+    @entry = Entry.find(params[:birth_year])
+    respond_to do |format|
+      format.slim {redirect_to @entry}
+      format.js
+    end
+  end
+
   def mail_send
     setting_birth_info
     setting_adress_info

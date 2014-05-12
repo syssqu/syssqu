@@ -1,6 +1,8 @@
 # coding: utf-8
 #activerecordを継承していないモデル
+require 'date'
 class Entry
+  include ActiveRecord
   include ActiveModel::Validations # モデルオブジェクトとして振る舞うようにする
   include ActiveModel::Conversion # バリデーション機能を使えるようにする
   extend ActiveModel::Naming # オブジェクトをform_forで使えるようにする
@@ -19,6 +21,7 @@ class Entry
   validates :gender,  presence: true
   validates :birth_year, presence: true
   validates :birth_month, presence: true
+  validates :birth_day, presence: true
   validates :birth_day, presence: true
   # メールアドレス
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
