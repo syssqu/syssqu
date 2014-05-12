@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #get "/change_day_select"
   match '/service',    to: 'static_pages#service',    via: :get
   match '/profile_company',    to: 'static_pages#profile_company',    via: :get
   match '/policy',    to: 'static_pages#policy',    via: :get
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   match '/mail_send', to: 'static_pages#mail_send', via: :post
   match '/history', to: 'static_pages#history', via: :get
   match '/jouhouhogo', to: 'static_pages#jouhouhogo', via: :get
+  match '/change_day_select', to: 'static_pages#change_day_select', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

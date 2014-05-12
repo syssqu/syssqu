@@ -12,4 +12,15 @@ ja:
          birth_year: 生年月日　年
          birth_month: 生年月日　月
          birth_day: 生年月日　日
+         email: メールアドレス
+         email_confirmation: メールアドレス（確認）
+         postal_code: 郵便番号
+         prefecture: 都道府県
+         city: 市区町村
+         house_number: 番地
+         building: 建物
+         phone: 電話番号
+         gakureki: 最終学歴
+         career: 職歴
+         motive: 志望動機
          pr: 自己PR
