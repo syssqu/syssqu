@@ -1,0 +1,20 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd.active
+        a href="#" お問い合わせ
+.row
+  .large-12.columns
+    - flash.each do |key, value|
+      .alert-box.success.radius data-alert=""
+        = value
+article.inquiry_send
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          h2 送信完了
+          = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
+            = render 'shared/error_messages', object: f.object

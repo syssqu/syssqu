@@ -1,0 +1,45 @@
+/ ニュースページ
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "トップ", root_path
+      dd >>
+      dd.active
+        a href="#"  サイトマップ
+article.sitemap
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        p
+          = link_to "トップページ", root_path
+        p 企業情報
+        ul.inline-list
+          li
+            = link_to "会社概要", profile_company_path
+          li
+            = link_to "代表取締役からのメッセージ", executive_path
+          li
+            = link_to "企業理念", policy_path
+          li
+            = link_to "沿革", history_path
+        p 事業内容
+        ul.inline-list
+          li
+            = link_to "事業内容", service_path
+          li
+            = link_to "開発実績", zisseki_path
+        p 採用情報
+        ul.inline-list
+          li
+            = link_to "新卒採用", fresh_path
+          li
+            = link_to "キャリア採用", career_path
+          li
+            = link_to "スタッフ紹介", member_path          
+        p 
+          = link_to "アクセス", access_path
+        p 
+          = link_to "お問い合わせ", inquiry_path
+        p 
+          = link_to "個人情報保護方針", jouhouhogo_path
+

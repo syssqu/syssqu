@@ -4,7 +4,7 @@ ja:
        entry: エントリ
      attributes:
        entry:
-         family_name: 氏名 ( 漢字 )　性
+         family_name: 氏名 ( 漢字 )　姓
          first_name: 氏名 ( 漢字 )　名
          kana_family_name: 氏名 ( フリガナ )　セイ
          kana_first_name: 氏名 ( フリガナ )　メイ

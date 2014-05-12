@@ -12,6 +12,7 @@
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import "foundation/functions";
 
+
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 
@@ -566,7 +567,7 @@ $body-font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-se
 // We use this to control the margins and padding of the inline list.
 // $inline-list-top-margin: 0;
 // $inline-list-opposite-margin: 0;
-// $inline-list-bottom-margin: rem-calc(17);
+$inline-list-bottom-margin: 0;
 // $inline-list-default-float-margin: rem-calc(-22);
 
 // $inline-list-padding: 0;
@@ -1207,7 +1208,7 @@ $topbar-link-bg-hover: #E62F18;
 // $topbar-link-padding: $topbar-height / 3;
 
 // $topbar-button-font-size: 0.75rem;
-/* $topbar-button-top: 7px; */
+// $topbar-button-top: 0px;
 
 // $topbar-dropdown-label-color: #777;
 // $topbar-dropdown-label-text-transform: uppercase;

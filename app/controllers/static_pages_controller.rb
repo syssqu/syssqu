@@ -38,6 +38,12 @@ class StaticPagesController < ApplicationController
   def career
   end
 
+  def inquiry_page
+
+    @inquiry = Inquiry.new
+
+  end
+
   def entry
 
     @entry = Entry.new
@@ -75,10 +81,34 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def inquiry_send
+
+    @inquiry = Inquiry.new(params[:inquiry])
+
+    if @inquiry.valid?
+      @mail = SendMailer.send_inquiry(params[:inquiry]).deliver
+
+      flash[:success] = '送信完了しました。'
+      
+      redirect_to inquiry_page_url
+    else
+      render 'static_pages/inquiry_page'
+    end
+  end
+
   def history
   end
 
   def jouhouhogo
+  end
+
+  def zisseki
+  end
+
+  def sitemap
+  end 
+
+  def contact
   end
 
   private
