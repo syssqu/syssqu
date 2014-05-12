@@ -6,6 +6,7 @@ ruby '2.0.0'
 gem 'rails', '4.1.0'
 
 gem 'foundation-rails'
+
 gem 'will_paginate'
 gem 'foundation-will_paginate'
 gem 'faker'
@@ -19,6 +20,16 @@ gem 'i18n_generators'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
 
+group :assets do
+  # Use SCSS for stylesheets
+  gem 'sass-rails', '~> 4.0.3'
+  # Use Uglifier as compressor for JavaScript assets
+  gem 'uglifier', '>= 1.3.0'
+  # Use CoffeeScript for .js.coffee assets and views
+  gem 'coffee-rails', '~> 4.0.0'
+  gem 'foundation-icons-sass-rails'
+end
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -31,12 +42,7 @@ group :test do
 	gem 'factory_girl_rails'
 end
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 

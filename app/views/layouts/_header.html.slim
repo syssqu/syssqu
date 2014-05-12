@@ -1,6 +1,14 @@
 br
 .row
   .large-12.columns
+    header
+      ul.inline-list.right
+        li
+          = link_to "サイトマップ", profile_company_path
+        li
+          = link_to "Home", root_path
+.row
+  .large-12.columns
     /! Navigation
     nav.top-bar data-topbar="" 
       ul.title-area
@@ -15,7 +23,7 @@ br
           li
             = link_to "会社概要", profile_company_path
           li
-            = link_to "サービス", service_path
+            = link_to "事業内容", service_path
           li
             = link_to "スタッフ紹介", profile_staff_path
           li
