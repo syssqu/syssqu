@@ -88,6 +88,9 @@ class StaticPagesController < ApplicationController
   def jouhouhogo
   end
 
+  def contact
+  end
+
   private
     def setting_birth_info()
       @_birth_year = (1900..2014).to_a

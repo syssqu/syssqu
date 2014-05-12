@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   match '/mail_send',          to: 'static_pages#mail_send',        via: :post
   match '/history',            to: 'static_pages#history',          via: :get
   match '/jouhouhogo',         to: 'static_pages#jouhouhogo',       via: :get
+  match '/contact',            to: 'static_pages#contact',          via: :get
   match '/inquiry_page',       to: 'static_pages#inquiry_page',     via: :get
   match '/inquiry_send',       to: 'static_pages#inquiry_send',     via: :post
 

@@ -1,28 +1,19 @@
 require 'spec_helper'
 
-describe "Static　pages" do
+describe "Static pages" do
+
+  subject { page }
 
   describe "Inquiry page" do
-  	it "should have the content 'お問い合わせ'" do
-  		visit inquiry_page_path
-  		expect(page).to have_content('お問い合わせ')
-  	end
+    before { visit inquiry_page_path }
+
+    it { should have_content('お問い合わせ') }
   end
 
   describe "Inquiry send" do
-  	it "should have the content '送信完了'" do
-  		visit inquiry_page_path
-  		expect(page).to have_content('送信完了')
-  	end
+    before { visit inquiry_page_path }
+
+    it { should have_content('お問い合わせ') }
   end
 
 end
-
-# has_content?
-# before visit "#"
-
-
-
-# capybara error
-  # capybara::ambiguous
-    # Ambiguous match, found 2 elements matching xpath "/html"
