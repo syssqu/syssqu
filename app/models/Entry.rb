@@ -4,9 +4,9 @@ require 'date'
 class Entry
   include ActiveRecord
   include ActiveModel::Validations # モデルオブジェクトとして振る舞うようにする
-  include ActiveModel::Conversion # バリデーション機能を使えるようにする
-  extend ActiveModel::Naming # オブジェクトをform_forで使えるようにする
-  extend ActiveModel::Translation # リデーション時のエラーメッセージに日本語の属性名を使用できるようにする
+  include ActiveModel::Conversion  # バリデーション機能を使えるようにする
+  extend  ActiveModel::Naming      # オブジェクトをform_forで使えるようにする
+  extend  ActiveModel::Translation # リデーション時のエラーメッセージに日本語の属性名を使用できるようにする
    
 
   attr_accessor :family_name, :first_name, :kana_family_name, :kana_first_name,
