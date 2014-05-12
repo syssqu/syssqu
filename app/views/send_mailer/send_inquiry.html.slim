@@ -1,0 +1,16 @@
+h3 お問い合わせメール
+
+h5 氏名（漢字）
+p #{@info[:family_name]} #{@info[:first_name]}
+
+h5 氏名（フリガナ）
+p #{@info[:kana_family_name]} #{@info[:kana_first_name]}
+
+h5 メールアドレス
+p #{@info[:mail]}
+
+h5 メールアドレス(確認用)
+p #{@info[:mail_confirmation]}
+
+h5 お問い合わせ内容
+p #{@info[:inquiry]}

@@ -7,7 +7,7 @@
       dd =link_to "採用情報", recruit_path
       dd >>
       dd.active
-        a href="#"  "新卒採用　募集要項"
+        a href="#"  新卒採用　募集要項
 .row
   .large-12.columns
     - flash.each do |key, value|
@@ -31,7 +31,7 @@ article.entry
                   .small-2.columns
                     label.left.inline 氏名 ( 漢字 )
                   .small-1.columns
-                    label.right.inline 性
+                    label.right.inline 姓
                   .small-4.columns
                     = f.text_field :family_name
                   .small-1.columns
@@ -84,6 +84,5 @@ article.entry
                   .small-2.columns
                     label.left.inline 自己PR *
                   .small-10.columns
-                    = f.text_area :pr, 'placeholder' => "ご記入下さい。 "
+                    = f.text_area :pr, 'placeholder' => "ご記入下さい。"
             = f.submit "エントリする", class: "button radius"
-              

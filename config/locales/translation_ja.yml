@@ -4,7 +4,7 @@ ja:
        entry: エントリ
      attributes:
        entry:
-         family_name: 氏名 ( 漢字 )　性
+         family_name: 氏名 ( 漢字 )　姓
          first_name: 氏名 ( 漢字 )　名
          kana_family_name: 氏名 ( フリガナ )　セイ
          kana_first_name: 氏名 ( フリガナ )　メイ
@@ -13,3 +13,17 @@ ja:
          birth_month: 生年月日　月
          birth_day: 生年月日　日
          pr: 自己PR
+
+# ja:
+#    activemodel:
+#      models:
+#        inquiry: お問い合わせ
+#      attributes:
+#        inquiry:
+#          family_name: 氏名 ( 漢字 )　性
+#          first_name: 氏名 ( 漢字 )　名
+#          kana_family_name: 氏名 ( フリガナ )　セイ
+#          kana_first_name: 氏名 ( フリガナ )　メイ
+#          mail: メール
+#          mail_confirm: メール( 確認用 )
+#          inquiry: お問い合わせ内容

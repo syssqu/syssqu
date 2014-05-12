@@ -84,3 +84,12 @@ article.access .address_access{clear:both;margin-bottom:0px;}
    ========================================================================== */
 article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.entry li.bullet-item {color:#D91A1A;}
+
+/* =============================================================================
+   お問い合わせページ、送信ぺージ
+   ========================================================================== */
+article.inquiry_page .alert-box.error{background:#D01E29;border-color:#D01E29;}
+article.inquiry_page li.bullet-item {color:#D91A1A;}
+
+article.inquiry_send .alert-box.error{background:#D01E29;border-color:#D01E29;}
+article.inquiry_send li.bullet-item {color:#D91A1A;}
