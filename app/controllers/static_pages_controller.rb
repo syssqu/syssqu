@@ -70,6 +70,9 @@ class StaticPagesController < ApplicationController
   def zisseki
   end
 
+  def sitemap    
+  end
+
   private
     def setting_birth_info()
       @_birth_year = (1900..2014).to_a

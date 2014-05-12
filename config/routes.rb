@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   match '/history', to: 'static_pages#history', via: :get
   match '/jouhouhogo', to: 'static_pages#jouhouhogo', via: :get
   match '/zisseki', to: 'static_pages#zisseki', via: :get
+  match '/sitemap', to: 'static_pages#sitemap', via: :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

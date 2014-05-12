@@ -2,14 +2,19 @@
 .row
   .large-12.columns
     dl.sub-nav
-      dt = link_to "トップ", root_path
+      dt =link_to "トップ", root_path
       dd >>
-      dt = link_to "スタッフ紹介", profile_staff_path
-      dd >>
-      dd.active
-        a href="#"  役員紹介
+      dd
+        = link_to "会社概要", profile_company_path
       dd |
-      dd = link_to "社員紹介", member_path
+      dd.active
+        a href="#"  代表取締役からのメッセージ
+      dd |
+      dd
+        = link_to "企業理念", policy_path
+      dd |
+      dd
+        = link_to "沿革", history_path
 article.executive
   .row
     .large-12.columns
