@@ -14,10 +14,10 @@ html lang="en"
     = javascript_include_tag "vendor/modernizr"
     = csrf_meta_tag
     = render 'layouts/shim'
-body
 
-  = render 'layouts/header'
-  == yield
-  = render 'layouts/footer'
+  body
+    = render 'layouts/header'
+    == yield
+    = render 'layouts/footer'
 
-  = javascript_include_tag "application"
+    = javascript_include_tag "application"

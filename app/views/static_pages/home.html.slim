@@ -3,20 +3,20 @@ article.home
   .row
     .large-12.columns.clearfix
       /! Desktop Slider
-      ul data-orbit="" data-options="pause_on_hover:false;timer_speed:3800;animation_speed:600;"
+      ul data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
         /! 画像サイズは1000x300
         li
           = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
           .orbit-caption
             | システム・スクゥェアーの使命
         li
-          = image_tag("top_image5.png", alt: "システム・スクゥェアー社員")
+          = image_tag("top_image3.png", alt: "システム・スクゥェアー社員")
+          .orbit-caption
+            | システム・スクゥェアーができること
+        li
+          = image_tag("top_image2.png", alt: "システム・スクゥェアーができること")
           .orbit-caption
             | システム・スクゥェアー社員
-        li
-          = image_tag("top_image3.png", alt: "社内からの風景")
-          .orbit-caption
-            | Caption Three.
   br
   .row
     .large-12.columns
