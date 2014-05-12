@@ -17,4 +17,3 @@ class SendMailer < ActionMailer::Base
   end
 
 end
-

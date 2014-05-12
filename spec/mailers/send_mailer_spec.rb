@@ -29,3 +29,7 @@ describe SendMailer do
     end
   end
 end
+
+
+# Argument error
+  # wrong number of argument

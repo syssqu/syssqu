@@ -15,4 +15,14 @@ describe "Static　pages" do
   		expect(page).to have_content('送信完了')
   	end
   end
+
 end
+
+# has_content?
+# before visit "#"
+
+
+
+# capybara error
+  # capybara::ambiguous
+    # Ambiguous match, found 2 elements matching xpath "/html"
