@@ -15,74 +15,98 @@
       dd |
       dd
         = link_to "沿革", history_path
-    | みなさまのお陰で創業30年目を迎えることができました。弊社の概要をご覧下さい。
-br
+    p
+      | みなさまのお陰で創業30年目を迎えることができました。弊社の概要をご覧下さい。
 article.profile_company
   .row
     .large-12.columns
       .panel.radius.clearfix
-        .container
-          .box.left
-            .title.left 社名
-            .content.left 株式会社システム・スクゥェアー　（SystemSquare Inc.）
-            .title.left 設立
-            .content.left 1984年9月
-            .title.left 資本金
-            .content.left 1,000万円
-            .title.left 代表者名
-            .content.left 代表取締役　川西 日吉
-            .title.left 所在地
-            .content.large_height.left
-              | 〒541-0044
-              br
-              | 大阪市中央区伏見町2丁目1-1
-              br
-              | 三井住友銀行高麗橋ビル7階
-              br
-              br
-              | 最寄り駅
-              br
-              | ・北浜駅（地下鉄/京阪）
-            .title.left 従業員数
-            .content.left 38名 ※2014年4月1日現在
-          .box.left
-            .title.left TEL
-            .content.left 06-6222-9101
-            .title.left FAX
-            .content.left 06-6222-0955
-            .title.left 事業内容
-            .content.middle_height.left
-              | システムインテグレーションサービス
-              br
-              | システム企画・設計
-              br
-              | アプリケーション開発
-            .left-margin-20
-              = image_tag("bldg.png", alt: "本社")
+        .row
+          section
+            .large-1.columns
+              h4.left 社名
+            .large-5.columns
+              p.left 株式会社システム・スクゥェアー　（SystemSquare Inc.）
+            .large-1.columns
+              h4.left 設立
+            .large-5.columns
+              p.left 1984年9月
+        .row
+          section
+            .large-1.columns
+              h4.left 資本金
+            .large-5.columns
+              p.left 1,000万円
+            .large-1.columns
+              h4.left FAX
+            .large-5.columns
+              p.left 06-6222-0955
+        .row
+          section
+            .large-1.columns
+              h4.left 代表者名
+            .large-5.columns
+              p.left 代表取締役　川西 日吉
+            .large-1.columns
+              h4.left TEL
+            .large-5.columns
+              p.left 06-6222-9101
+        .row
+          section
+            .large-1.columns
+              h4.left 従業員数
+            .large-5.columns
+              p.left 38名 ※2014年4月1日現在
+            .large-1.columns
+              h4.left 事業内容
+            .large-5.columns
+              p.left.lower
+                | システムインテグレーションサービス
+              p.left.lower
+                | システム企画・設計
+              p.left.lower
+                | アプリケーション開発
+        .row
+          section
+            .large-1.columns
+              .higher
+                h4.left 所在地
+            .large-5.columns
+              p.left.lower
+                | 〒541-0044
+              p.left.lower
+                | 大阪市中央区伏見町2丁目1-1
+              p.left.lower2
+                | 三井住友銀行高麗橋ビル7階
+              p.left.lower
+                | 最寄り駅
+              p.left.lower
+                | ・北浜駅（地下鉄/京阪）
+            .large-6.columns
+              = image_tag("bldg.png", alt: "本社")   
   .row
     .large-12.columns
       .panel.radius.clearfix
         .row
           .large-7.columns
-            .container
-              h2 主要取引先 （50音順）
-              ul.pricing-table
-                li.bullet-item 株式会社協和エクシオ
-                li.bullet-item 株式会社クリエイトラボ
-                li.bullet-item 株式会社クレオマーケティング
-                li.bullet-item 株式会社建設技術研究所
-                li.bullet-item 株式会社サトー
-                li.bullet-item サトーホールディング株式会社
-                li.bullet-item 株式会社スコ
-                li.bullet-item 株式会社シーイーシー
-                li.bullet-item ジャパン・フード&リカーアライアンス株式会社
-                li.bullet-item 積水成型工業株式会社
-                li.bullet-item セコム医療システム株式会社
-                li.bullet-item 株式会社ゼクシス
-                li.bullet-item トランスコスモス株式会社
-                li.bullet-item 株式会社トランスコスモス・テクノロジーズ
-                li.bullet-item 日東電工株式会社
-                li.bullet-item パナソニック株式会社
-                li.bullet-item 株式会社日立システムズ
-                li.bullet-item ユニシステム株式会社
-                li.bullet-item 株式会社リンクレア
+            h2 主要取引先 （50音順）
+            ul.pricing-table
+              li.bullet-item 株式会社協和エクシオ
+              li.bullet-item 株式会社クリエイトラボ
+              li.bullet-item 株式会社クレオマーケティング
+              li.bullet-item 株式会社建設技術研究所
+              li.bullet-item 株式会社サトー
+              li.bullet-item サトーホールディング株式会社
+              li.bullet-item 株式会社シスコ
+              li.bullet-item 株式会社シーイーシー
+              li.bullet-item ジャパン・フード&リカーアライアンス株式会社
+              li.bullet-item 積水成型工業株式会社
+              li.bullet-item セコム医療システム株式会社
+              li.bullet-item 株式会社ゼクシス
+              li.bullet-item トランスコスモス株式会社
+              li.bullet-item 株式会社トランスコスモス・テクノロジーズ
+              li.bullet-item 日東電工株式会社
+              li.bullet-item パナソニック株式会社
+              li.bullet-item 株式会社日立システムズ
+              li.bullet-item ユニシステム株式会社
+              li.bullet-item 株式会社リンクレア

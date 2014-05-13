@@ -31,14 +31,15 @@ article.home .new_container{margin-bottom:1px;}
 /* =============================================================================
    会社概要
    ========================================================================== */
-article.profile_company .container{background:#FFF;padding:1% 3%;zoom:1;}
-article.profile_company .title{width: 110px;padding: 10px;}
-article.profile_company .content{width: 295px; height: 38px; padding: 10px; margin-bottom: 40px; }
-article.profile_company .box{width:412px;}
-article.profile_company .box section{margin-bottom:15px;}
-article.profile_company .large_height{height: 120px; padding: 10px;}
-article.profile_company .middle_height{height: 80px; padding: 10px;}
-article.profile_company .left-margin-20{margin-left: 40px;}
+article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 110px;height: 40px;padding: 10px;margin-bottom: 20px; }
+article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
+article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
+article.profile_company .higher{height:140px;}
+article.profile_company .lower{height:20px;margin-bottom: 0px;}
+article.profile_company .lower2{height:20px;margin-bottom: 10px;}
+article.profile_company .content_high{width: 295px; height: 60px; padding: 10px; margin-bottom: 20px; }
+article.profile_company .content_high2{width: 295px; height: 100px; padding: 10px; margin-bottom: 20px; }
+article.profile_company img{margin-left:30px;}
 
 /* =============================================================================
    沿革
