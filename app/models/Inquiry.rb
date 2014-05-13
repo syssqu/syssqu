@@ -17,6 +17,7 @@ class Inquiry
   validates :mail,              presence: true, format: { with: VALID_EMAIL_REGEX }, length: { maximum: 90 }
   validates :mail_confirmation, presence: true, format: { with: VALID_EMAIL_REGEX }, length: { maximum: 90 }
   validates :inquiry,           presence: true, length: { maximum: 600 }
+  validates_confirmation_of     :mail
 
   def initialize(attributes = {})
     self.attributes = attributes
