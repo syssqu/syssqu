@@ -20,7 +20,7 @@ article.entry
       .panel.radius.clearfix
         .container
           h2 新卒採用　エントリ
-          = form_for @entry, url: {:action => 'mail_send'},remote: true do |f|
+          = form_for @entry, url: {:action => 'mail_send'} do |f|
             = render 'shared/error_messages', object: f.object
             .row
               .small-8
@@ -81,7 +81,9 @@ article.entry
                     label.inline 月
                   .small-1.columns
                       = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"31day"}
-                      = f.select :birth_day, @_2m_birth_day, {:include_blank => true},{:id=>"29day"}
+                      = f.select :birth_day, @_30birth_day, {:include_blank => true},{:id=>"30day"}
+                      = f.select :birth_day, @_2mu_birth_day, {:include_blank => true},{:id=>"29day"}
+                      = f.select :birth_day, @_2m_birth_day, {:include_blank => true},{:id=>"28day"}
                       
                   .small-5.columns
                     label.inline 日
