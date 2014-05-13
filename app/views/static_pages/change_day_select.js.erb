@@ -1,2 +1,21 @@
-
-document.getElementById('31day').style.display = "none";
+<% if @month == 2 %>
+	document.getElementById('31day').style.display = "none"
+	document.getElementById('30day').style.display = "none"
+	document.getElementById('29day').style.display = "none"
+	document.getElementById('28day').style.display = ""
+	<% if @year % 400 == 0 || (@year % 4 == 0 && @year % 100 != 0) %>
+		// alert(<%= @year %>);
+		document.getElementById('29day').style.display = ""
+		document.getElementById('28day').style.display = "none"
+	<% end %>
+<% elsif @month==4 || @month==6 || @month==9 || @month==11 %>
+	document.getElementById('31day').style.display = "none"
+	document.getElementById('30day').style.display = ""
+	document.getElementById('29day').style.display = "none"
+	document.getElementById('28day').style.display = "none"
+<% else %>
+	document.getElementById('31day').style.display = ""
+	document.getElementById('30day').style.display = "none"
+	document.getElementById('29day').style.display = "none"
+	document.getElementById('28day').style.display = "none"
+<% end %>
