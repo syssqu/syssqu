@@ -42,6 +42,9 @@ article.inquiry
             | メールアドレス：office@sys-square.co.jp
           
         br
-        br
-          = link_to "同意する", inquiry_page_path, {class: "button radius"}
+        .row
+          .small-6.small-centered.columns
+            = link_to "同意する", inquiry_page_path, {class: "button radius"}
+            |&nbsp;&nbsp;&nbsp;
+            = link_to "同意しない", :back, class: "button radius gray"
 
