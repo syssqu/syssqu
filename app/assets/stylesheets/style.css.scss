@@ -98,8 +98,12 @@ article.career table td strong{color:#3D3932;}
 /* =============================================================================
    お問い合わせ
    ========================================================================== */
-article.inquiry section{border:1px solid #DDD;padding:1%;height:320px;overflow-y:scroll;}
-article.inquiry section h2 {height: 46px; margin-bottom: 30px;}
+article.inquiry .container{border:1px solid #DDD;height:320px;overflow-y:scroll;}
+article.inquiry .container h2 {border-left: 6px solid #3E4C59;}
+article.inquiry section{padding:0px;margin-bottom: 20px;}
+article.inquiry section p{margin-bottom:0px;}
+article.inquiry section h6 {margin-bottom: 5px;}
+/* article.inquiry p{text-indent: 1em;} */
 
 /* =============================================================================
    アクセス
