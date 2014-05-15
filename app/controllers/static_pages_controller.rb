@@ -53,17 +53,19 @@ class StaticPagesController < ApplicationController
   end
 
   def change_day_select
-    # @entry_day = Entry.find_by(params[:id])
-    # respond_to do |format|
-    #   format.slim {redirect_to @entry}
-    #   format.js
-    # end
-   # session[:birth_day]=2
-    # birth_day = (1..29).to_a
-   # @_birth_day = (1..29).to_a
-   # @_birth_day = @_2m_birth_day
-   @year=params[:year].to_i
-   @month=params[:month].to_i
+    @year=params[:year].to_i
+    @month=params[:month].to_i
+    @_day=params[:day].to_i
+    
+    @_birth_day = (1..31).to_a
+    if @month == 2
+      @_birth_day = (1..28).to_a
+      if @year % 400 == 0 || (@year % 4 == 0 && @year % 100 != 0)
+        @_birth_day = (1..29).to_a
+      end
+    elsif @month==4 || @month==6 || @month==9 || @month==11
+      @_birth_day = (1..30).to_a
+    end
   end
 
   def mail_send
@@ -115,7 +117,7 @@ class StaticPagesController < ApplicationController
 
   private
     def setting_birth_info()
-      @_birth_year = (1900..2014).to_a
+      @_birth_year = (1960..2010).to_a
       @_birth_month = (1..12).to_a
       @_birth_day = (1..31).to_a
       @_30birth_day = (1..30).to_a

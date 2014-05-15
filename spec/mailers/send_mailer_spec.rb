@@ -5,7 +5,10 @@ describe SendMailer do
 
     let(:mail) { SendMailer.send_entry( { family_name: "aaa", first_name: "bbb", kana_family_name: "ccc",
                                           kana_first_name: "ddd", gender: "eee", birth_year: "fff",
-                                          birth_month: "ggg", birth_day: "hhh", pr: "iii" } ) }
+                                          birth_month: "ggg", birth_day: "hhh", email: "aaa@bb.c",
+                                          postal_code: "111-1111",prefecture: "大阪府", city: "大阪市",
+                                          house_number: "1-2-3",building: "大阪ビル",phone: "123-4567-8912",
+                                          gakureki: "iii",motive: "jjj", pr: "kkk" } ) }
 
     it "renders the headers" do
       mail.subject.should eq ("Send entry")
