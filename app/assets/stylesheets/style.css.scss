@@ -4,8 +4,8 @@
 @mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 1%;}
 @mixin _section{width: 360px; height: 38px; padding: 1%; margin-bottom: 10px; @include _left_block;}
 
-.title{@include _section;}
-h2{@include _section;width:800px;color:#333;font-size:20px;font-weight:normal;padding:10px;}
+.title{@include _section; border-left: 6px solid #02590F;}
+h2{@include _section;width:800px;color:#333;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;}
 .gray {background:#3E4C59;}
 
 article section{background:#fff;padding:1% 3%;}
@@ -127,6 +127,11 @@ article.entry li.bullet-item {color:#D91A1A;}
 article.inquiry_page .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.inquiry_page li.bullet-item {color:#D91A1A;}
 article.inquiry_page span{margin-left:10px;color:red;}
+
+/* =============================================================================
+   サイトマップ
+   ========================================================================== */
+article.sitemap li{margin-left:60px;}
 
 article.inquiry_send .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.inquiry_send li.bullet-item {color:#D91A1A;}
