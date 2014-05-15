@@ -44,10 +44,10 @@ class Entry
   validates :phone, presence: true,length: { maximum: 13 },
                     format:   {with: VALID_PHONE_REGEX }
 
-  validates :gakureki, presence: true, length: { maximum: 600 }
-  validates :motive, presence: true, length: { maximum: 600 }
+  validates :gakureki, length: { maximum: 600 }
+  validates :motive, length: { maximum: 600 }
   # validates :career, presence: true, length: { maximum: 600 }
-  validates :pr, presence: true, length: { maximum: 600 }
+  validates :pr, length: { maximum: 600 }
    
   def initialize(attributes = {})
     self.attributes = attributes
@@ -67,4 +67,5 @@ class Entry
 
   # form_forではオブジェクトが永続化済かどうかでsubmit先を分岐している為、persisted?メソッドで常にfalseを返す
   def persisted?; false; end
+
 end

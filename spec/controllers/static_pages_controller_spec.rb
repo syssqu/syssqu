@@ -58,4 +58,11 @@ describe StaticPagesController do
     end
   end
 
+  describe "Ajax GET 'change_day_select'" do
+    it "returns http success" do
+      xhr :get, :change_day_select
+      response.should be_success
+    end
+  end
+
 end
