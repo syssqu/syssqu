@@ -3,7 +3,7 @@ article.home
   .row
     .large-12.columns.clearfix
       /! Desktop Slider
-      ul data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
+      ul#top_image_slide data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
         /! 画像サイズは1000x300
         li
           = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
@@ -40,3 +40,4 @@ article.home
           h6
             = link_to image_tag("recruit_banner.png", alt: "システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。"), recruit_path
         /! End Content
+
