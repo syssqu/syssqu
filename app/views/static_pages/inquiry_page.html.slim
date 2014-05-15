@@ -17,60 +17,84 @@ article.inquiry_page
       .panel.radius.clearfix
         .container
           h2 お問い合わせ
+          p 以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
           = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
             = render 'shared/error_messages', object: f.object
-            .row
-              .small-8
-                label 
-                  strong 個人情報
-            .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline 氏名 ( 漢字 ) *
-                  .small-1.columns
-                    label.right.inline 姓
-                  .small-4.columns
-                    = f.text_field :family_name
-                  .small-1.columns
-                    label.right.inline 名
-                  .small-4.columns
-                    = f.text_field :first_name
-            .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline 氏名 ( フリガナ ) *
-                  .small-1.columns
-                    label.right.inline セイ
-                  .small-4.columns
-                    = f.text_field :kana_family_name
-                  .small-1.columns
-                    label.right.inline メイ
-                  .small-4.columns
-                    = f.text_field :kana_first_name
 
+            section
+              .row
+                .small-8
+                  label 
+                    strong 個人情報
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 ( 漢字 )
+                        span *
+                    .small-1.columns
+                      label.right.inline 姓
+                    .small-4.columns
+                      = f.text_field :family_name
+                    .small-1.columns
+                      label.right.inline 名
+                    .small-4.columns
+                      = f.text_field :first_name
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 ( フリガナ )
+                        span *
+                    .small-1.columns
+                      label.right.inline セイ
+                    .small-4.columns
+                      = f.text_field :kana_family_name
+                    .small-1.columns
+                      label.right.inline メイ
+                    .small-4.columns
+                      = f.text_field :kana_first_name
+            section
+              .row
+                .small-8
+                  label 
+                    strong 連絡先
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | メールアドレス
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.text_field :mail
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | メールアドレス（ 確認用 ）
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.text_field :mail_confirmation
+            section
+              .row
+                .small-8
+                  label 
+                    strong お問い合わせ内容
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | お問い合わせ内容
+                        span *
+                    .small-9.columns
+                      = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
             .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline メールアドレス *
-                  .small-10.columns
-                    = f.text_field :mail
-
-            .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline メールアドレス（ 確認用 ） *
-                  .small-10.columns
-                    = f.text_field :mail_confirmation
-
-            .row
-              .small-12
-                .row
-                  .small-2.columns
-                    label.left.inline お問い合わせ内容 *
-                  .small-10.columns
-                    = f.text_area :inquiry, 'placeholder' => "ご記入下さい。"
-            = f.submit "送信する", class: "button radius"
+              .small-6.small-centered.columns
+                = f.submit "入力を確認する", class: "button radius"
+                |&nbsp;&nbsp;&nbsp;
+                = link_to "戻る", :back, class: "button radius gray"

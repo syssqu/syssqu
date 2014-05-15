@@ -1,6 +1,5 @@
 @charset "UTF-8";/* $row-width: rem-calc(1000); */
 /* $total-columns: 12; */
-/* $topbar-button-top: 7px; */
 meta.foundation-version {
   font-family: "/5.2.2/"; }
 
@@ -2592,7 +2591,7 @@ label.error {
   color: #f04124; }
 
 .inline-list {
-  margin: 0 auto 1.0625rem auto;
+  margin: 0 auto 10 auto;
   margin-left: -1.375rem;
   margin-right: 0;
   padding: 0;
@@ -5274,7 +5273,8 @@ th.hide-for-touch {
   padding: 1%;
   margin-bottom: 10px;
   border-left: 6px solid yellowgreen;
-  padding-left: 1%; }
+  padding-left: 1%;
+  border-left: 6px solid #02590F; }
 
 h2 {
   width: 360px;
@@ -5285,9 +5285,13 @@ h2 {
   padding-left: 1%;
   width: 800px;
   color: #333;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: normal;
-  padding: 10px; }
+  padding: 10px;
+  font-weight: bold; }
+
+.gray {
+  background: #3E4C59; }
 
 article section {
   background: #fff;
@@ -5304,6 +5308,12 @@ article .container {
 article .container p {
   font-size: 14px;
   margin-bottom: 15px; }
+
+/* =============================================================================
+   トップページ
+   ========================================================================== */
+header a {
+  font-size: 10px; }
 
 /* =============================================================================
    ナビゲーション
@@ -5326,30 +5336,69 @@ article.home .new_container {
 /* =============================================================================
    会社概要
    ========================================================================== */
-article.profile_company .container {
-  background: #FFF;
-  padding: 1% 3%;
-  zoom: 1; }
-
-article.profile_company .title {
-  width: 110px;
-  padding: 10px; }
-
-article.profile_company .content {
-  width: 295px;
+article.profile_company h4 {
+  width: 360px;
   height: 38px;
+  padding: 1%;
+  margin-bottom: 10px;
+  border-left: 6px solid yellowgreen;
+  padding-left: 1%;
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
   padding: 10px;
-  margin-bottom: 40px; }
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px; }
 
-article.profile_company .box {
-  width: 412px; }
+article.profile_company p {
+  width: 295px;
+  height: 40px;
+  font-size: 14px;
+  text-indent: 1em;
+  padding: 10px;
+  margin-bottom: 20px; }
 
-article.profile_company .box section {
-  margin-bottom: 15px; }
+article.profile_company p {
+  width: 295px;
+  height: 40px;
+  font-size: 14px;
+  text-indent: 1em;
+  padding: 10px;
+  margin-bottom: 20px; }
 
-article.profile_company .large_height {
-  height: 120px;
-  padding: 10px; }
+article.profile_company .higher {
+  height: 140px; }
+
+article.profile_company .lower {
+  height: 20px;
+  margin-bottom: 0px; }
+
+article.profile_company .lower2 {
+  height: 20px;
+  margin-bottom: 10px; }
+
+article.profile_company .content_high {
+  width: 295px;
+  height: 60px;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+article.profile_company .content_high2 {
+  width: 295px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px; }
+
+article.profile_company img {
+  margin-left: 30px; }
+
+/* =============================================================================
+   企業理念
+   ========================================================================== */
+article.policy ol li {
+  font-size: 14px; }
 
 /* =============================================================================
    沿革
@@ -5397,6 +5446,19 @@ article.service table .large_width {
 
 article.service table td strong {
   color: #3D3932; }
+
+article.service p {
+  text-indent: 1em;
+  margin-bottom: 0px; }
+
+article.service ul li strong {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #4A5928; }
+
+article.service ul li {
+  font-size: 14px;
+  margin-bottom: 15px; }
 
 /* =============================================================================
    開発実績
@@ -5448,16 +5510,25 @@ article.career table td strong {
 /* =============================================================================
    お問い合わせ
    ========================================================================== */
-article.inquiry section {
+article.inquiry .container {
   border: 1px solid #DDD;
-  padding: 1%;
   height: 320px;
   overflow-y: scroll; }
 
-article.inquiry section h2 {
-  height: 46px;
-  margin-bottom: 30px; }
+article.inquiry .container h2 {
+  border-left: 6px solid #3E4C59; }
 
+article.inquiry section {
+  padding: 0px;
+  margin-bottom: 20px; }
+
+article.inquiry section p {
+  margin-bottom: 0px; }
+
+article.inquiry section h6 {
+  margin-bottom: 5px; }
+
+/* article.inquiry p{text-indent: 1em;} */
 /* =============================================================================
    アクセス
    ========================================================================== */
@@ -5480,6 +5551,9 @@ article.access .address_access {
   clear: both;
   margin-bottom: 0px; }
 
+article.access h6 {
+  font-size: 12px; }
+
 /* =============================================================================
    エントリ
    ========================================================================== */
@@ -5488,6 +5562,33 @@ article.entry .alert-box.error {
   border-color: #D01E29; }
 
 article.entry li.bullet-item {
+  color: #D91A1A; }
+
+/* =============================================================================
+   お問い合わせページ、送信ぺージ
+   ========================================================================== */
+article.inquiry_page .alert-box.error {
+  background: #D01E29;
+  border-color: #D01E29; }
+
+article.inquiry_page li.bullet-item {
+  color: #D91A1A; }
+
+article.inquiry_page span {
+  margin-left: 10px;
+  color: red; }
+
+/* =============================================================================
+   サイトマップ
+   ========================================================================== */
+article.sitemap li {
+  margin-left: 60px; }
+
+article.inquiry_send .alert-box.error {
+  background: #D01E29;
+  border-color: #D01E29; }
+
+article.inquiry_send li.bullet-item {
   color: #D91A1A; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -5506,3 +5607,4 @@ article.entry li.bullet-item {
 
 
  */
+/*@import 'foundation-icons';*/
