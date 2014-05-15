@@ -16,4 +16,10 @@ describe "Static pages" do
     it { should have_content('お問い合わせ') }
   end
 
+  describe "entry send" do
+  	before { visit entry_path }
+
+  	it { should have_content('新卒採用　エントリ') }
+  end
+
 end

@@ -60,10 +60,10 @@ article.entry
                   .small-2.columns
                     label.left.inline 性別 *
                   .small-10.columns
-                    = f.radio_button :gender, :man
-                    label for="man"  男
-                    = f.radio_button :gender, :woman
-                    label for="woman"  女
+                    label.left.inline style="width:20px;" = f.radio_button :gender, :man
+                    label.left.inline style="width:40px;" for="man"  男
+                    label.left.inline style="width:20px;" = f.radio_button :gender, :woman
+                    label.left.inline style="width:40px;" for="woman"  女
             / 生年月日============================
             .row
               .small-12
@@ -76,15 +76,10 @@ article.entry
                     label.inline 年
                   .small-1.columns 
                     = f.select :birth_month, @_birth_month,{:include_blank => true},{:id=>"day_select"}
-                    / = f.select :birth_month @_birth_month, include_blank: true, :onchange => remote_function(:url => {:action => "day_select"} with: f)
                   .small-1.columns
                     label.inline 月
                   .small-1.columns
-                      = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"31day"}
-                      = f.select :birth_day, @_30birth_day, {:include_blank => true},{:id=>"30day"}
-                      = f.select :birth_day, @_2mu_birth_day, {:include_blank => true},{:id=>"29day"}
-                      = f.select :birth_day, @_2m_birth_day, {:include_blank => true},{:id=>"28day"}
-                      
+                    = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"change_day"}
                   .small-5.columns
                     label.inline 日
             / メールアドレス============================
@@ -185,7 +180,7 @@ article.entry
               .small-12
                 .row
                   .small-2.columns
-                    label.left.inline 自己PR *
+                    label.left.inline 自己PR
                   .small-10.columns
                     = f.text_area :pr, 'placeholder' => "ご記入下さい。"
             = f.submit "エントリする", class: "button radius"
