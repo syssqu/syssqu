@@ -2827,12 +2827,11 @@ kbd {
     transform: rotate(360deg); } }
 
 /* Orbit Graceful Loading */
-.slideshow-wrapper {
-  position: relative; }
+.slideshow-wrapper { background: url(loading.gif) center center no-repeat; height: 450px; }
   .slideshow-wrapper ul {
     list-style-type: none;
     margin: 0; }
-    .slideshow-wrapper ul li,
+    .slideshow-wrapper ul li, { display: none; }
     .slideshow-wrapper ul li .orbit-caption {
       display: none; }
     .slideshow-wrapper ul li:first-child {
@@ -2843,7 +2842,7 @@ kbd {
       display: block; }
       .slideshow-wrapper .orbit-container li .orbit-caption {
         display: block; }
-  .slideshow-wrapper .preloader {
+  .preloader {
     display: block;
     width: 40px;
     height: 40px;
@@ -2859,6 +2858,43 @@ kbd {
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear; }
+
+/*  ul[data-orbit] {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul[data-orbit] li,
+  ul[data-orbit] .orbit-caption {
+    display: none;
+  }
+
+  ul[data-orbit] li:first-child { display: block; }
+
+  .orbit-container ul[data-orbit] li,
+  .orbit-container ul[data-orbit] .orbit-caption {
+    display: block;
+  }*/
+
+/*.slideshow-wrapper 
+  .preloader
+  ul data-options="animation:fade;" data-orbit="" 
+    li
+      = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
+      .orbit-caption
+        | システム・スクゥェアーの使命
+    li
+      = image_tag("top_image3.png", alt: "システム・スクゥェアー社員")
+      .orbit-caption
+        | システム・スクゥェアーができること
+    li
+      = image_tag("top_image2.png", alt: "システム・スクゥェアーができること")
+      .orbit-caption
+        | システム・スクゥェアー社員*/
+
+
+
 
 .orbit-container {
   overflow: hidden;
@@ -3079,6 +3115,7 @@ kbd {
   display: none; }
 .touch .orbit-bullets {
   display: none; }
+.hidden { display: none; }
 
 @media only screen and (min-width: 40.063em) {
   .touch .orbit-container .orbit-prev,
@@ -5501,8 +5538,5 @@ article.entry li.bullet-item {
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-
-
-
-
  */
+
