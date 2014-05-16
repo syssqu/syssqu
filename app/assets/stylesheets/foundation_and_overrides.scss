@@ -567,10 +567,10 @@ $body-font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, sans-se
 // We use this to control the margins and padding of the inline list.
 // $inline-list-top-margin: 0;
 // $inline-list-opposite-margin: 0;
-$inline-list-bottom-margin: 0;
-// $inline-list-default-float-margin: rem-calc(-22);
+$inline-list-bottom-margin: 10;
+//$inline-list-default-float-margin: rem-calc(-22);
 
-// $inline-list-padding: 0;
+//$inline-list-padding: 0;
 
 // We use this to control the overflow of the inline list.
 // $inline-list-overflow: hidden;

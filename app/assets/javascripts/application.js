@@ -16,3 +16,5 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){$("#top_image_slide").css("visibility","visible");});

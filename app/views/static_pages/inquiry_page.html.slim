@@ -2,7 +2,7 @@
 .row
   .large-12.columns
     dl.sub-nav
-      dt =link_to "トップ", root_path
+      dt =link_to "ホーム", root_path
       dd >>
       dd.active
         a href="#"  お問い合わせ
@@ -31,7 +31,7 @@ article.inquiry_page
                   .row
                     .small-2.columns
                       label.left.inline
-                        | 氏名 ( 漢字 )
+                        | 氏名 (漢字)
                         span *
                     .small-1.columns
                       label.right.inline 姓
@@ -46,7 +46,7 @@ article.inquiry_page
                   .row
                     .small-2.columns
                       label.left.inline
-                        | 氏名 ( フリガナ )
+                        | 氏名 (フリガナ)
                         span *
                     .small-1.columns
                       label.right.inline セイ
@@ -75,7 +75,7 @@ article.inquiry_page
                   .row
                     .small-3.columns
                       label.left.inline
-                        | メールアドレス（ 確認用 ）
+                        | メールアドレス (確認用)
                         span *
                     .small-5.small-pull-4.columns
                       = f.text_field :mail_confirmation
