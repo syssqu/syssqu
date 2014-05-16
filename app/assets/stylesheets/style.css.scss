@@ -120,7 +120,10 @@ article.access h6{font-size:12px;}
    ========================================================================== */
 article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.entry li.bullet-item {color:#D91A1A;}
+article.entry span{margin-left:10px;color:red;}
 
+article.entry span.example{margin-left:10px;color:blue;}
+article.entry span_aster{color:red;}
 /* =============================================================================
    お問い合わせページ、送信ぺージ
    ========================================================================== */

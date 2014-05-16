@@ -290,10 +290,20 @@ describe Entry do
 			end
 		end
 
+		describe "職歴ー" do
+			describe "職歴" do
+
+				describe "文字数制限" do
+					before { @entry.career="a"*601}
+					it { should_not be_valid }
+				end
+			end
+		end
+
 		describe "志望動機ー" do
 			describe "志望動機" do
 				describe "文字数制限" do
-					before { @entry.gakureki="a"*601}
+					before { @entry.motive="a"*601}
 					it { should_not be_valid }
 				end
 			end
@@ -303,7 +313,7 @@ describe Entry do
 			describe "自己PR" do
 
 				describe "文字数制限" do
-					before { @entry.gakureki="a"*601}
+					before { @entry.pr="a"*601}
 					it { should_not be_valid }
 				end
 			end
