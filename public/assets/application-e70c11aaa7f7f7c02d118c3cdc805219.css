@@ -5273,8 +5273,7 @@ th.hide-for-touch {
   padding: 1%;
   margin-bottom: 10px;
   border-left: 6px solid yellowgreen;
-  padding-left: 1%;
-  border-left: 6px solid #02590F; }
+  padding-left: 1%; }
 
 h2 {
   width: 360px;
@@ -5288,7 +5287,8 @@ h2 {
   font-size: 16px;
   font-weight: normal;
   padding: 10px;
-  font-weight: bold; }
+  font-weight: bold;
+  letter-spacing: 0.2em; }
 
 .gray {
   background: #3E4C59; }
@@ -5394,6 +5394,12 @@ article.profile_company .content_high2 {
 article.profile_company img {
   margin-left: 30px; }
 
+article.profile_company .container {
+  margin-left: 20px; }
+
+article.profile_company h2 {
+  font-weight: normal; }
+
 /* =============================================================================
    企業理念
    ========================================================================== */
@@ -5474,6 +5480,12 @@ article.executive p {
   margin-bottom: 15px; }
 
 /* =============================================================================
+   採用情報
+   ========================================================================== */
+article.recruit li {
+  margin-left: 40px; }
+
+/* =============================================================================
    新卒採用
    ========================================================================== */
 article.fresh table {
@@ -5488,7 +5500,10 @@ article.fresh table .large_width {
   width: 200px; }
 
 article.fresh table td strong {
-  color: #3D3932; }
+  color: #6E6E6E; }
+
+article.fresh h2 {
+  margin-bottom: 25px; }
 
 /* =============================================================================
    キャリア採用
@@ -5505,7 +5520,10 @@ article.career table .large_width {
   width: 200px; }
 
 article.career table td strong {
-  color: #3D3932; }
+  color: #6E6E6E; }
+
+article.fresh h2 {
+  margin-bottom: 25px; }
 
 /* =============================================================================
    お問い合わせ
@@ -5553,6 +5571,9 @@ article.access .address_access {
 
 article.access h6 {
   font-size: 12px; }
+
+article.access h2 {
+  font-weight: normal; }
 
 /* =============================================================================
    エントリ

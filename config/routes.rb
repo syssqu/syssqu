@@ -18,12 +18,14 @@ Rails.application.routes.draw do
   match '/jouhouhogo',         to: 'static_pages#jouhouhogo',        via: :get
   match '/contact',            to: 'static_pages#contact',           via: :get
   match '/inquiry_page',       to: 'static_pages#inquiry_page',      via: :get
+  match '/inquiry_confirm',    to: 'static_pages#inquiry_confirm',    via: :get
   match '/inquiry_send',       to: 'static_pages#inquiry_send',      via: :post
   match '/zisseki',            to: 'static_pages#zisseki',           via: :get
   match '/sitemap',            to: 'static_pages#sitemap',           via: :get
   match '/change_day_select',  to: 'static_pages#change_day_select', via: :get
   match '/career_entry',       to: 'static_pages#career_entry',      via: :get
   match '/entry_confirm',      to: 'static_pages#entry_confirm',     via: :post
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

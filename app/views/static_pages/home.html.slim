@@ -1,20 +1,20 @@
 / トップページ
 article.home
-  .row
+  .row#top_image_slide_area
     .large-12.columns.clearfix
       /! Desktop Slider
-      ul data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
+      ul#top_image_slide data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
         /! 画像サイズは1000x300
         li
           = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命")
           .orbit-caption
             | システム・スクゥェアーの使命
         li
-          = image_tag("top_image3.png", alt: "システム・スクゥェアー社員")
+          = image_tag("top_image3.png", alt: "システム・スクゥェアーにできること")
           .orbit-caption
-            | システム・スクゥェアーができること
+            | システム・スクゥェアーにできること
         li
-          = image_tag("top_image2.png", alt: "システム・スクゥェアーができること")
+          = image_tag("top_image2.png", alt: "システム・スクゥェアー社員")
           .orbit-caption
             | システム・スクゥェアー社員
   br
@@ -31,8 +31,7 @@ article.home
                 .new_container 
                   | 2014.05.19 
                   span.radius.label プレリリース
-                  a href="news/20140327.html"
-                    |  本社移転しました。
+                  = link_to "本社移転しました。", access_path
                 .new_container 
                   | 2013.08.01 
                   span.success.radius.label ニュース
@@ -41,3 +40,4 @@ article.home
           h6
             = link_to image_tag("recruit_banner.png", alt: "システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。"), recruit_path
         /! End Content
+
