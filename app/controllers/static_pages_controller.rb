@@ -50,6 +50,7 @@ class StaticPagesController < ApplicationController
 
     setting_birth_info
     setting_adress_info
+    setting_entry_info
 
     @_entry_id = "entry"
   end
@@ -60,6 +61,7 @@ class StaticPagesController < ApplicationController
 
     setting_birth_info
     setting_adress_info
+    setting_entry_info
 
     @_entry_id = "career_entry"
   end
@@ -87,7 +89,6 @@ class StaticPagesController < ApplicationController
     @entry = Entry.new(params[:entry])
 
     if @entry.valid?
-      
       # redirect_to entry_confirm_url
     else
       render 'static_pages/entry'
@@ -111,7 +112,11 @@ class StaticPagesController < ApplicationController
         redirect_to career_entry_url
       end
     else
-      render 'static_pages/entry'
+      if @_entry_id=='entry'
+        render 'static_pages/entry'
+      elsif @_entry_id=='career_entry'
+        render 'static_pages/career_entry'
+      end
     end
   end
 
