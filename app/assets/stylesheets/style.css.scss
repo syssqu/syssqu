@@ -14,9 +14,10 @@ article .container{background:#fff;padding:1% 3%;}
 article .container p{font-size:14px;margin-bottom:15px;}
 
 /* =============================================================================
-   トップページ
+   ヘッダー (サイトマップとホームへのリンク)
    ========================================================================== */
 header a{font-size: 10px;}
+header ul{margin-bottom:0px;}
 
 /* =============================================================================
    ナビゲーション
@@ -28,6 +29,8 @@ nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;ma
    トップページ
    ========================================================================== */
 article.home .new_container{margin-bottom:1px;}
+/* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
+article.home #top_image_slide{visibility:hidden};
 
 /* =============================================================================
    会社概要
@@ -67,7 +70,7 @@ article.service table {border:0;}
 article.service table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
 article.service table .large_width{width: 200px;}
 article.service table td strong{color:#3D3932;}
-article.service p{text-indent: 1em;margin-bottom:0px;}
+article.service p{/* text-indent: 1em; */margin-bottom:10px;}
 article.service ul li strong {font-size:14px;margin-bottom:15px;color:#4A5928;}
 article.service ul li {font-size:14px;margin-bottom:15px;}
 
