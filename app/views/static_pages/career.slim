@@ -2,7 +2,7 @@
 .row
   .large-12.columns
     dl.sub-nav
-      dt =link_to "トップ", root_path
+      dt =link_to "ホーム", root_path
       dd >>
       dd =link_to "採用情報", recruit_path
       dd >>
@@ -67,5 +67,5 @@ article.career
                 td
                   strong 選考場所
                 td 大阪本社
-          a.button.radius href="#"  エントリする
+          = link_to "エントリする", career_entry_path, {class: "button radius"}
               

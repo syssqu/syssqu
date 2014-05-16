@@ -65,4 +65,18 @@ describe StaticPagesController do
     end
   end
 
+  describe "GET 'entry'" do
+    it "returns http success" do
+      get 'entry'
+      response.should be_success
+    end
+  end
+
+  describe "GET 'career_entry'" do
+    it "returns http success" do
+      get 'career_entry'
+      response.should be_success
+    end
+  end
+
 end

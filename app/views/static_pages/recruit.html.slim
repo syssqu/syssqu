@@ -2,7 +2,7 @@
 .row
   .large-12.columns
     dl.sub-nav
-      dt =link_to "トップ", root_path
+      dt =link_to "ホーム", root_path
       dd >>
       dd.active
         a href="#"  採用情報
@@ -12,22 +12,20 @@ article.recruit
       .panel.radius.clearfix
         section
           h2 新卒採用
-          .large-2.columns
-            .left = link_to '募集要項', fresh_path
-          .large-2.columns
-            .left = link_to 'エントリ', entry_path
-          .large-8.columns
-        br
+          ul.inline-list
+            li
+              = link_to '募集要項', fresh_path
+            li
+              = link_to 'エントリ', entry_path
         section
           h2 キャリア採用
-          .large-2.columns
-            .left = link_to '募集要項', career_path
-          .large-2.columns
-            .left = link_to 'エントリ', entry_path
-          .large-8.columns
-        br
+          ul.inline-list
+            li
+              = link_to '募集要項', career_path
+            li
+              = link_to 'エントリ', career_entry_path
         section
           h2 社員紹介
-          .large-8.columns
-            .left = link_to 'システム・スクゥェアーの仲間を紹介します。', member_path
-          .large-4.columns
+          ul.inline-list
+            li
+              = link_to 'システム・スクゥェアーの仲間を紹介します。', member_path
