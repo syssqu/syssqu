@@ -44,6 +44,9 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def inquiry_confirm
+  end
+
   def entry
 
     @entry = Entry.new
