@@ -50,6 +50,18 @@ class StaticPagesController < ApplicationController
 
     setting_birth_info
     setting_adress_info
+
+    @_entry_id = "entry"
+  end
+
+  def career_entry
+
+    @entry = Entry.new
+
+    setting_birth_info
+    setting_adress_info
+
+    @_entry_id = "career_entry"
   end
 
   def change_day_select
@@ -68,6 +80,20 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def entry_confirm
+    setting_birth_info
+    setting_adress_info
+
+    @entry = Entry.new(params[:entry])
+
+    if @entry.valid?
+      
+      # redirect_to entry_confirm_url
+    else
+      render 'static_pages/entry'
+    end
+  end
+
   def mail_send
     setting_birth_info
     setting_adress_info
@@ -79,7 +105,11 @@ class StaticPagesController < ApplicationController
 
       flash[:success] = 'エントリが完了しました。'
       
-      redirect_to entry_url
+      if @_entry_id=='entry'
+        redirect_to entry_url
+      elsif @_entry_id=='career_entry'
+        redirect_to career_entry_url
+      end
     else
       render 'static_pages/entry'
     end
@@ -126,5 +156,8 @@ class StaticPagesController < ApplicationController
     end
     def setting_adress_info()
        @_prefecture = ["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","山梨県","新潟県","富山県","石川県","福井県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"]
+    end
+    def setting_entry_info()
+      @_entry_id = "entry"
     end
 end
