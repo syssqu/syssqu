@@ -5629,6 +5629,20 @@ article.inquiry_send .alert-box.error {
 
 article.inquiry_send li.bullet-item {
   color: #D91A1A; }
+
+/* =============================================================================
+   社員紹介
+   ========================================================================== */
+article.member h2 {
+  border-left: 6px solid #A59888;
+  letter-spacing: 0.2em;
+  margin: 20px 0px; }
+
+article.member section {
+  padding: 1% 0%; }
+
+article.member p {
+  margin-bottom: 10px; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
