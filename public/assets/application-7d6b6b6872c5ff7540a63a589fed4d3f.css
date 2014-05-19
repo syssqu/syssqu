@@ -5563,7 +5563,7 @@ article.access .container {
 article.access h2 a {
   display: none; }
 
-article.access #map {
+article.access #map_canvas {
   width: 400px;
   height: 360px; }
 
