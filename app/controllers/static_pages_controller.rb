@@ -88,20 +88,27 @@ class StaticPagesController < ApplicationController
   def entry_confirm
     setting_birth_info
     setting_adress_info
+    @_entry_id = params[:entry_id]
 
     @entry = Entry.new(params[:entry])
+
 
     if @entry.valid?
       # redirect_to entry_confirm_url
     else
-      render 'static_pages/entry'
+      if @_entry_id == 'entry'
+        render 'static_pages/entry'
+      elsif @_entry_id == 'career_entry'
+        render 'static_pages/career_entry'
+      end
     end
   end
 
   def mail_send
     setting_birth_info
     setting_adress_info
-
+    @_entry_id = params[:entry_id]
+    
     @entry = Entry.new(params[:entry])
 
     if @entry.valid?
