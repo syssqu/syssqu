@@ -23,7 +23,7 @@ initialize = ->
 
 
   #地図オブジェクト生成
-  map = new google.maps.Map(document.getElementById("map"), myOptions)
+  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
 
   #マーカー
   m_latlng = new google.maps.LatLng(34.689166, 135.506073)
@@ -32,7 +32,7 @@ initialize = ->
     map: map
   )
   google.maps.event.addListener marker, "click", ->
-    infowindow = new google.maps.InfoWindow(content: "<b>株式会社システム・スクゥェアー</b><br>大阪市中央区伏見町2丁目1-1<br>三井住友銀行高麗橋ビル7階")
+    infowindow = new google.maps.InfoWindow(content: "<div style='width : 220px;height : 70px;'><b>株式会社システム・スクゥェアー</b><br/><br/>大阪市中央区伏見町2丁目1-1<br/>三井住友銀行高麗橋ビル7階</div>")
     infowindow.open map, marker
     return
 
