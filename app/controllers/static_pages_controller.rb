@@ -45,6 +45,15 @@ class StaticPagesController < ApplicationController
   end
 
   def inquiry_confirm
+
+    @inquiry = Inquiry.new(params[:inquiry])
+
+    if @inquiry.valid?
+      
+      redirect_to inquiry_confirm_url
+    else
+      render 'static_pages/inquiry_page'
+    end
   end
 
   def entry
@@ -137,9 +146,9 @@ class StaticPagesController < ApplicationController
     if @inquiry.valid?
       @mail = SendMailer.send_inquiry(params[:inquiry]).deliver
 
-      flash[:success] = '送信完了しました。'
+      flash[:success] = '送信完了しました。お問い合わせありがとうございました。'
       
-      redirect_to inquiry_page_url
+      redirect_to inquiry_confirm_url
     else
       render 'static_pages/inquiry_page'
     end
