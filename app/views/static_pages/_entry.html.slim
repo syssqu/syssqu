@@ -12,9 +12,10 @@ article.entry
             h2 新卒採用　エントリーフォーム
           -elsif @_entry_id == "career_entry"
             h2 キャリア採用　エントリーフォーム
-        = form_for @entry, url: {:action => 'mail_send'} do |f|
+        = form_for @entry, url: {:action => 'entry_confirm'} do |f|
           = render 'shared/error_messages', object: f.object
           section
+            = hidden_field_tag :entry_id, @_entry_id
             .row
               .small-12.column
                 span_non 下記のエントリーフォームより、必要事項(
@@ -259,7 +260,5 @@ article.entry
                         span 600字以内
                       = f.text_area :pr, 'placeholder' => "ご記入下さい。",size: "x5"
             .row
-              .small-6.small-centered.columns
+              .small-3.small-centered.columns
                 = f.submit "入力を確認する", class: "button radius"
-                |&nbsp;&nbsp;&nbsp;
-                = link_to "戻る", :back, class: "button radius gray"
