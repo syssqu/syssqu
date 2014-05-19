@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   match '/jouhouhogo',         to: 'static_pages#jouhouhogo',        via: :get
   match '/contact',            to: 'static_pages#contact',           via: :get
   match '/inquiry_page',       to: 'static_pages#inquiry_page',      via: :get
-  match '/inquiry_confirm',    to: 'static_pages#inquiry_confirm',    via: :get
+  match '/inquiry_confirm',    to: 'static_pages#inquiry_confirm',   via: :post
   match '/inquiry_send',       to: 'static_pages#inquiry_send',      via: :post
   match '/zisseki',            to: 'static_pages#zisseki',           via: :get
   match '/sitemap',            to: 'static_pages#sitemap',           via: :get

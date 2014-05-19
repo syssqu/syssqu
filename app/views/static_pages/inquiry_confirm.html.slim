@@ -5,29 +5,38 @@
       dd >>
       dd.active
         a href="#" お問い合わせ
-.row
-  .large-12.columns
-    - flash.each do |key, value|
-      .alert-box.success.radius data-alert=""
-        = value
-article.inquiry_confirm
+
+article.inquiry
   .row
     .large-12.columns
       .panel.radius.clearfix
         .container
           h2 入力内容確認
           p 以下の入力内容を確認し、「送信する」ボタンを押してください。
-          = form_for @inquiry, url: {:action => 'inquiry_confirm'} do |f|
-            = render 'shared/error_messages', object: f.object
+          = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
 
 
+          / p
+          /   = f.label :inquiry
+          /   = h @inquiry.inquiry
+          / p
+          /   = f.label :mail
+          /   = h @inquiry.mail
+
+          / = hidden_field("", "family_name", "value" => @inquiry.send(“family_name”))
+          / = hidden_field("", "mail", "value" => @inquiry.send(“mail”))
+          / = hidden_field("", "inquiry", "value" => @inquiry.send(“inquiry”))
 
 
+          / | お名前 ： #{h @inquiry.send("family_name")}
 
+          / | メールアドレス ： #{h @inquiry.send("mail")}
+
+          / | お問合せ内容 ： #{h @inquiry.send("inquiry")}
 
 
             .row
               .small-6.small-centered.columns
-                = f.submit "送信する", inquiry_send_path, class: "button radius"
+                = f.submit "送信する", class: "button radius"
                 |&nbsp;&nbsp;&nbsp;
                 = link_to "戻る", :back, class: "button radius gray"

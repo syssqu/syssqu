@@ -28,5 +28,4 @@ $("select#day_select").change ->
     error: (data) ->
       alert "errror"
       return
-
   return

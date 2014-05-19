@@ -5,17 +5,280 @@
       dd >>
       dd =link_to "採用情報", recruit_path
       dd >>
+      dd
+        -if @_entry_id == 'entry'
+          a href="#"  新卒採用　募集要項
+        -elsif @_entry_id == 'career_entry'
+          a href="#"  キャリア採用　募集要項
+      dd >>
       dd.active
-        a href="#"  新卒採用　募集要項
+        a href="#"  エントリー内容確認
 article.entry
-	.row
-	  .large-12.columns
-	    .panel.radius.clearfix
-	      .container
-					= form_for @entry, url: {:action => 'mail_send'} do |f|
-						
-						.row
-							.small-6.small-centered.columns
-								= f.submit "入力を確認する", class: "button redius"
-								|&nbsp;&nbsp;&nbsp;
-								= link_to "戻る", :back, class: "button radius gray"
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          =form_for @entry, url: {:action => 'mail_send'} do |f|
+            section
+              = hidden_field_tag :entry_id, @_entry_id
+              .row
+                .small-8
+                  label 
+                    strong 個人情報
+              / 氏名============================
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 (漢字)
+                        span *
+                    .small-1.columns
+                      label.right.inline 姓
+                    .small-4.columns
+                      = f.hidden_field :family_name,value: @entry.family_name
+                      label.left.inline 
+                       strong =@entry.family_name
+                    .small-1.columns
+                      label.right.inline 名
+                    .small-4.columns
+                      = f.hidden_field :first_name,value: @entry.first_name
+                      label.left.inline 
+                       strong =@entry.first_name
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 (フリガナ)
+                        span *
+                    .small-1.columns
+                      label.right.inline セイ
+                    .small-4.columns
+                      = f.hidden_field :kana_family_name,value: @entry.kana_family_name
+                      label.left.inline 
+                       strong =@entry.kana_family_name
+                    .small-1.columns
+                      label.right.inline メイ
+                    .small-4.columns
+                      = f.hidden_field :kana_first_name,value: @entry.kana_first_name
+                      label.left.inline 
+                        strong =@entry.kana_first_name
+          
+              / 性別============================
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | 性別
+                        span *
+                    .small-9.columns
+                      = f.hidden_field :gender,value: @entry.gender
+                      label.left.inline
+                        - if @entry.gender == "man"
+                          strong 男
+                        - elsif @entry.gender == "woman"
+                          strong　女
+              / 生年月日============================
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 生年月日
+                        span *
+                    .small-1.columns
+                      label.left.inline
+                    .small-1.columns
+                      = f.hidden_field :birth_year,value: @entry.birth_year
+                      label.left.inline 
+                        strong =@entry.birth_year
+                    .small-1.columns
+                      label.left.inline 年
+                    .small-1.columns 
+                      = f.hidden_field :birth_month,value: @entry.birth_month
+                      label.left.inline 
+                        strong =@entry.birth_month
+                    .small-1.columns
+                      label.left.inline 月
+                    .small-1.columns
+                      = f.hidden_field :birth_day,value: @entry.birth_day
+                      label.left.inline 
+                        strong =@entry.birth_day
+                    .small-4.columns
+                      label.lect.inline 日
+              / メールアドレス============================
+              .row
+                .small-8
+                    label 
+                      strong 連絡先
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | メールアドレス
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :email,value: @entry.email
+                      label.left.inline 
+                        strong =@entry.email
+              / 住所============================
+            section
+              .row
+                .small-8
+                  label 
+                    strong 住所
+                .small-12
+                  .row
+                    .small-1.columns
+                      label.left.inline
+                        | 住所
+                        span *
+                    .small-2.columns
+                      label.right.inline
+                        | 郵便番号
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :postal_code,value: @entry.postal_code
+                      label.left.inline 
+                        strong =@entry.postal_code
+              .row
+                .small-12
+                  .row
+                    .small-1.columns
+                      label.left.inline
+                    .small-2.columns
+                      label.right.inline
+                        | 都道府県
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :prefecture,value: @entry.prefecture
+                      label.left.inline 
+                        strong =@entry.prefecture
+              .row
+                .small-12
+                  .row
+                    .small-1.columns
+                      label.left.inline
+                    .small-2.columns
+                      label.right.inline
+                        | 市区町村
+                        span*
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :city,value: @entry.city
+                      label.left.inline 
+                        strong =@entry.city
+              .row
+                .small-12
+                  .row
+                    .small-1.columns
+                      label.left.inline
+                    .small-2.columns
+                      label.right.inline
+                        | 番地
+                        span
+                          |&nbsp;&nbsp;
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :house_number,value: @entry.house_number
+                      label.left.inline 
+                        strong =@entry.house_number
+
+              .row
+                .small-12
+                  .row
+                    .small-1.columns
+                      label.left.inline
+                    .small-2.columns
+                      label.right.inline
+                        | 建物
+                        span
+                          |&nbsp;&nbsp;
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :building,value: @entry.building
+                      label.left.inline 
+                        strong =@entry.building
+              / 電話番号============================
+            section
+              .row
+                .small-8
+                  label 
+                    strong 電話番号
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | 電話番号
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :phone,value: @entry.phone
+                      label.left.inline 
+                        strong =@entry.phone
+              / 最終学歴============================
+            section
+              .row
+                .small-8
+                  label 
+                    strong 学歴
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 最終学歴
+                    .small-9.columns
+                      label 
+                        |大学名、専門学校名、学部、学科、主な専門分野
+                        span 600字以内
+                      = f.hidden_field :gakureki,value: @entry.gakureki
+                      label.left.inline 
+                        strong =@entry.gakureki
+              -if @_entry_id == 'career_entry'
+                .row
+                  .small-8
+                    label 
+                      strong 職歴
+                  .small-12
+                    .row
+                      .small-3.columns
+                        label.left.inline 職歴
+                      .small-9.columns
+                        label
+                          |会社名、在籍期間、事業内容、主な業務内容
+                          span 600字以内
+                        = f.hidden_field :career,value: @entry.career
+                        label.left.inline 
+                          strong =@entry.career
+            
+              / 志望動機============================
+              .row
+                .small-8
+                  label 
+                    strong 自己PR
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 志望動機
+                    .small-9.columns
+                      label
+                        |
+                        span 600字以内
+                      = f.hidden_field :motive,value: @entry.motive
+                      label.left.inline 
+                        strong =@entry.motive
+              / 自己PR============================
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 自己PR
+                    .small-9.columns
+                      label
+                        |
+                        span 600字以内
+                      = f.hidden_field :pr,value: @entry.pr
+                      label.left.inline 
+                        strong =@entry.pr
+            .row
+              .small-6.small-centered.columns
+                = f.submit "エントリー", class: "button redius"
+                |&nbsp;&nbsp;&nbsp;
+                = link_to "戻る", "javascript:history.back()", class: "button radius gray",id: "back"
