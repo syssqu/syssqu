@@ -13,11 +13,11 @@ article.member
     .large-12.columns
       .panel.radius
         a data-orbit-link="headline-1"
-          img src="/assets/member1_mini.png"
+          = image_tag("member1_mini.png", alt: "")
         a data-orbit-link="headline-2" 
-          img src="/assets/member2_mini.png"
-        a data-orbit-link="headline-3" 
-          img src="/assets/member3_mini.png"
+          = image_tag("member2_mini.png", alt: "")
+        a data-orbit-link="headline-3"
+          = image_tag("member3_mini.png", alt: "")
         ul data-orbit="" data-options="animation:fade;navigation_arrows:false;swipe:true;bullets:false;slide_number_class:hide;circular:false;next_on_click:false;"
           li data-orbit-slide="headline-1"
             div
