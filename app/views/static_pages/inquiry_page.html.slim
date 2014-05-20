@@ -17,8 +17,9 @@ article.inquiry_page
       .panel.radius.clearfix
         .container
           h2 お問い合わせ
-          p 以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
-          = form_for @inquiry, url: {:action => 'inquiry_confirm'} do |f|
+          .remarks
+            |以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
+          = form_for @inquiry, url: {:action => 'inquiry_confirm'}, :html => { :method => 'GET' } do |f|
             = render 'shared/error_messages', object: f.object
 
             section
@@ -61,6 +62,26 @@ article.inquiry_page
                 .small-8
                   label 
                     strong 連絡先
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 会社名
+                    .small-5.columns
+                      = f.text_field :company_name
+                    .small-4.columns
+                      label.left.inline
+                        |例) 株式会社システム・スクゥェアー
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 部署名
+                    .small-5.columns
+                      = f.text_field :dep_name
+                    .small-4.columns
+                      label.left.inline
+                        |例) 営業部
               .row
                 .small-12
                   .row
