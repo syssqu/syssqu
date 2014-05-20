@@ -5602,9 +5602,10 @@ article.entry span {
   margin-left: 10px;
   color: red; }
 
-article.entry span.example {
-  margin-left: 10px;
-  color: blue; }
+article.entry .remarks {
+  padding: 8px 25px;
+  font-size: 14px;
+  color: #333; }
 
 article.entry span_aster {
   color: red; }
