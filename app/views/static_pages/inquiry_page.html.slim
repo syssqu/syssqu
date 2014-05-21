@@ -1,11 +1,10 @@
-/ お問い合わせ
 .row
   .large-12.columns
     dl.sub-nav
       dt =link_to "ホーム", root_path
       dd >>
       dd.active
-        a href="#"  お問い合わせ
+        a href="#" お問い合わせ
 .row
   .large-12.columns
     - flash.each do |key, value|
@@ -20,8 +19,8 @@ article.inquiry_page
           p 以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
           = form_for @inquiry, url: {:action => 'inquiry_confirm'} do |f|
             = render 'shared/error_messages', object: f.object
-
             section
+              = hidden_field_tag :inquiry_id, @inquiry_id
               .row
                 .small-8
                   label 
@@ -95,6 +94,6 @@ article.inquiry_page
                       = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
             .row
               .small-6.small-centered.columns
-                = f.submit "入力を確認する", class: "button radius"
+                = f.submit "入力内容を確認する", class: "button radius"
                 |&nbsp;&nbsp;&nbsp;
                 = link_to "戻る", :back, class: "button radius gray"
