@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   match '/inquiry_page',       to: 'static_pages#inquiry_page',      via: :get
   match '/inquiry_confirm',    to: 'static_pages#inquiry_confirm',   via: :post
   match '/inquiry_send',       to: 'static_pages#inquiry_send',      via: :post
+  match '/inquiry_comp',       to: 'static_pages#inquiry_comp',      via: :get
   match '/zisseki',            to: 'static_pages#zisseki',           via: :get
   match '/sitemap',            to: 'static_pages#sitemap',           via: :get
   match '/change_day_select',  to: 'static_pages#change_day_select', via: :get
