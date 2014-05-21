@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class StaticPagesController < ApplicationController
   def home
   end
@@ -46,11 +47,13 @@ class StaticPagesController < ApplicationController
 
   def inquiry_confirm
 
+    @inquiry_id = params[:inquiry_id]
+
     @inquiry = Inquiry.new(params[:inquiry])
 
     if @inquiry.valid?
       
-      redirect_to inquiry_confirm_url
+      # redirect_to inquiry_confirm_url
     else
       render 'static_pages/inquiry_page'
     end
@@ -113,6 +116,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def entry_comp
+    @_entry_id = params[:entry_id]
+  end
+
   def mail_send
     setting_birth_info
     setting_adress_info
@@ -123,13 +130,12 @@ class StaticPagesController < ApplicationController
     if @entry.valid?
       @mail = SendMailer.send_entry(params[:entry]).deliver
 
-      flash[:success] = 'エントリが完了しました。'
-      
-      if @_entry_id=='entry'
-        redirect_to entry_url
-      elsif @_entry_id=='career_entry'
-        redirect_to career_entry_url
-      end
+      redirect_to entry_comp_url(entry_id: @_entry_id)
+      # if @_entry_id=='entry'
+      #   redirect_to entry_url
+      # elsif @_entry_id=='career_entry'
+      #   redirect_to career_entry_url
+      # end
     else
       if @_entry_id=='entry'
         render 'static_pages/entry'
@@ -141,17 +147,25 @@ class StaticPagesController < ApplicationController
 
   def inquiry_send
 
+    @inquiry_id = params[:inquiry_id]
+
     @inquiry = Inquiry.new(params[:inquiry])
 
     if @inquiry.valid?
       @mail = SendMailer.send_inquiry(params[:inquiry]).deliver
 
-      flash[:success] = '送信完了しました。お問い合わせありがとうございました。'
+      # flash[:success] = '送信完了しました。お問い合わせありがとうございました。'
       
-      redirect_to inquiry_confirm_url
+      redirect_to inquiry_comp_url(inquiry_id: @inquiry_id)
     else
       render 'static_pages/inquiry_page'
     end
+  end
+
+  def inquiry_comp
+
+    @inquiry_id = params[:inquiry_id]
+
   end
 
   def history

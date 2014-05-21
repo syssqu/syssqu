@@ -1,11 +1,10 @@
-/ お問い合わせ
 .row
   .large-12.columns
     dl.sub-nav
       dt =link_to "ホーム", root_path
       dd >>
       dd.active
-        a href="#"  お問い合わせ
+        a href="#" お問い合わせ
 .row
   .large-12.columns
     - flash.each do |key, value|
@@ -17,11 +16,12 @@ article.inquiry_page
       .panel.radius.clearfix
         .container
           h2 お問い合わせ
-          p 以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
-          = form_for @inquiry, url: {:action => 'inquiry_confirm'} do |f|
+          .remarks
+            |以下の項目をすべて入力し、「入力内容を確認する」ボタンを押してください。
+          = form_for @inquiry, url: {:action => 'inquiry_confirm'}, :html => { :method => 'GET' } do |f|
             = render 'shared/error_messages', object: f.object
-
             section
+              = hidden_field_tag :inquiry_id, @inquiry_id
               .row
                 .small-8
                   label 
@@ -65,6 +65,26 @@ article.inquiry_page
                 .small-12
                   .row
                     .small-3.columns
+                      label.left.inline 会社名
+                    .small-5.columns
+                      = f.text_field :company_name
+                    .small-4.columns
+                      label.left.inline
+                        |例) 株式会社システム・スクゥェアー
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline 部署名
+                    .small-5.columns
+                      = f.text_field :dep_name
+                    .small-4.columns
+                      label.left.inline
+                        |例) 営業部
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
                       label.left.inline
                         | メールアドレス
                         span *
@@ -95,6 +115,6 @@ article.inquiry_page
                       = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
             .row
               .small-6.small-centered.columns
-                = f.submit "入力を確認する", class: "button radius"
+                = f.submit "入力内容を確認する", class: "button radius"
                 |&nbsp;&nbsp;&nbsp;
                 = link_to "戻る", :back, class: "button radius gray"

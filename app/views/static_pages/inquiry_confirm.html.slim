@@ -1,12 +1,11 @@
 .row
   .large-12.columns
     dl.sub-nav
-      dt =link_to "トップ", root_path
+      dt =link_to "ホーム", root_path
       dd >>
       dd.active
-        a href="#" お問い合わせ
-
-article.inquiry
+        a href="#" 入力内容確認
+article.inquiry_page
   .row
     .large-12.columns
       .panel.radius.clearfix
@@ -14,29 +13,94 @@ article.inquiry
           h2 入力内容確認
           p 以下の入力内容を確認し、「送信する」ボタンを押してください。
           = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
-
-
-          / p
-          /   = f.label :inquiry
-          /   = h @inquiry.inquiry
-          / p
-          /   = f.label :mail
-          /   = h @inquiry.mail
-
-          / = hidden_field("", "family_name", "value" => @inquiry.send(“family_name”))
-          / = hidden_field("", "mail", "value" => @inquiry.send(“mail”))
-          / = hidden_field("", "inquiry", "value" => @inquiry.send(“inquiry”))
-
-
-          / | お名前 ： #{h @inquiry.send("family_name")}
-
-          / | メールアドレス ： #{h @inquiry.send("mail")}
-
-          / | お問合せ内容 ： #{h @inquiry.send("inquiry")}
-
-
-            .row
-              .small-6.small-centered.columns
-                = f.submit "送信する", class: "button radius"
-                |&nbsp;&nbsp;&nbsp;
-                = link_to "戻る", :back, class: "button radius gray"
+            section
+              = hidden_field_tag :inquiry_id, @inquiry_id
+              .row
+                .small-8
+                  label 
+                    strong 個人情報
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 (漢字)
+                        span *
+                    .small-1.columns
+                      label.right.inline 姓
+                    .small-4.columns
+                      = f.hidden_field :family_name,value: @inquiry.family_name
+                      label.left.inline 
+                       strong = @inquiry.family_name
+                    .small-1.columns
+                      label.right.inline 名
+                    .small-4.columns
+                      = f.hidden_field :first_name,value: @inquiry.first_name
+                      label.left.inline
+                       strong = @inquiry.first_name
+              .row
+                .small-12
+                  .row
+                    .small-2.columns
+                      label.left.inline
+                        | 氏名 (フリガナ)
+                        span *
+                    .small-1.columns
+                      label.right.inline セイ
+                    .small-4.columns
+                      = f.hidden_field :kana_family_name,value: @inquiry.kana_family_name
+                      label.left.inline
+                       strong = @inquiry.kana_family_name
+                    .small-1.columns
+                      label.right.inline メイ
+                    .small-4.columns
+                      = f.hidden_field :kana_first_name,value: @inquiry.kana_first_name
+                      label.left.inline
+                        strong = @inquiry.kana_first_name
+              .row
+                .small-8
+                    label 
+                      strong 連絡先
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | メールアドレス
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :mail,value: @inquiry.mail
+                      label.left.inline
+                        strong = @inquiry.mail
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | メールアドレス (確認用)
+                        span *
+                    .small-5.small-pull-4.columns
+                      = f.hidden_field :mail_confirmation,value: @inquiry.mail_confirmation
+                      label.left.inline 
+                        strong = @inquiry.mail_confirmation
+            section
+              .row
+                .small-8
+                  label 
+                    strong お問い合わせ内容
+              .row
+                .small-12
+                  .row
+                    .small-3.columns
+                      label.left.inline
+                        | お問い合わせ内容
+                        span *
+                    .small-9.columns
+                      label
+                      = f.hidden_field :inquiry,value: @inquiry.inquiry
+                      label.left.inline
+                        strong = @inquiry.inquiry
+                  .row
+                    .small-6.small-centered.columns
+                      = f.submit "送信する", class: "button radius"
+                      |&nbsp;&nbsp;&nbsp;
+                      = link_to "戻る", "javascript:history.back()", class: "button radius gray",id: "back" 

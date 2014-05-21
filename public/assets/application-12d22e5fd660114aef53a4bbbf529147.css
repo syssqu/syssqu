@@ -5484,7 +5484,13 @@ article.zisseki h5 {
    ========================================================================== */
 article.executive p {
   font-size: 14px;
-  margin-bottom: 15px; }
+  margin-bottom: 10px;
+  margin-left: 10px; }
+
+article.executive .signature {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 10px; }
 
 /* =============================================================================
    採用情報
@@ -5512,6 +5518,9 @@ article.fresh table td strong {
 article.fresh h2 {
   margin-bottom: 25px; }
 
+article.fresh h2 {
+  margin-bottom: 25px; }
+
 /* =============================================================================
    キャリア採用
    ========================================================================== */
@@ -5528,9 +5537,6 @@ article.career table .large_width {
 
 article.career table td strong {
   color: #6E6E6E; }
-
-article.fresh h2 {
-  margin-bottom: 25px; }
 
 /* =============================================================================
    お問い合わせ
@@ -5596,15 +5602,19 @@ article.entry span {
   margin-left: 10px;
   color: red; }
 
-article.entry span.example {
-  margin-left: 10px;
-  color: blue; }
+article.entry .remarks {
+  padding: 8px 25px;
+  font-size: 14px;
+  color: #333; }
 
 article.entry span_aster {
   color: red; }
 
+article.entry section {
+  margin-bottom: 10px; }
+
 /* =============================================================================
-   お問い合わせページ、送信ぺージ
+   お問い合わせページ
    ========================================================================== */
 article.inquiry_page .alert-box.error {
   background: #D01E29;
@@ -5617,18 +5627,43 @@ article.inquiry_page span {
   margin-left: 10px;
   color: red; }
 
-/* =============================================================================
-   サイトマップ
-   ========================================================================== */
-article.sitemap li {
-  margin-left: 60px; }
+article.inquiry_page section {
+  margin-bottom: 10px; }
 
+article.inquiry_page .remarks {
+  padding: 8px 11px;
+  font-size: 14px;
+  color: #333; }
+
+/* =============================================================================
+   お問い合わせ送信ぺージ
+   ========================================================================== */
 article.inquiry_send .alert-box.error {
   background: #D01E29;
   border-color: #D01E29; }
 
 article.inquiry_send li.bullet-item {
   color: #D91A1A; }
+
+/* =============================================================================
+   サイトマップ
+   ========================================================================== */
+article.sitemap li {
+  margin-left: 60px; }
+
+/* =============================================================================
+   社員紹介
+   ========================================================================== */
+article.member h2 {
+  border-left: 6px solid #A59888;
+  letter-spacing: 0.2em;
+  margin: 20px 0px; }
+
+article.member section {
+  padding: 1% 0%; }
+
+article.member p {
+  margin-bottom: 10px; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
