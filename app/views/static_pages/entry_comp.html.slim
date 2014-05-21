@@ -1,0 +1,35 @@
+.row
+  .large-12.columns
+    dl.sub-nav
+      dt =link_to "ホーム", root_path
+      dd >>
+      dd =link_to "採用情報", recruit_path
+      dd >>
+      dd
+        -if @_entry_id == 'entry'
+          a href="#"  新卒採用　エントリー
+        -elsif @_entry_id == 'career_entry'
+          a href="#"  キャリア採用　エントリー
+      dd >>
+      dd.active
+        a href="#"  エントリー内容確認
+article.entry_comp   
+  .row
+    .large-12.columns
+      .panel.radius.clearfix
+        .container
+          section
+            .row
+              .small-12
+                -if @_entry_id == 'entry'
+                  p 新卒採用エントリーを受け付けいたしました
+                -elsif @_entry_id == 'career_entry'
+                  p キャリア採用エントリーを受け付けいたしました
+            .row
+              .small-12 
+                p ３営業日以内に弊社より返信差し上げますまでしばらくお待ち下さい。
+          section
+          section
+            .row
+              .small-3.small-centered.columns
+                =link_to "ホームへ戻る",root_path,class: "button redius"

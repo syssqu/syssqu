@@ -4,9 +4,11 @@ describe Inquiry do
 
   before do
     @inquiry = Inquiry.new(family_name: "f", first_name: "fi", kana_family_name: "kf",
-                           kana_first_name: "kfi", mail: "inquiry@example.com",
+                           kana_first_name: "kfi", company_name: "com", dep_name: "dep", mail: "inquiry@example.com",
                            mail_confirmation: "inquiry_c@example.com", inquiry: "inq")
   end
+
+  subject { @inquiry }
 
   describe "when name is too long" do
 
@@ -15,6 +17,16 @@ describe Inquiry do
              @inquiry.kana_family_name  = "a" * 21,
              @inquiry.kana_first_name   = "a" * 21 }
 
+    it { should_not be_valid }
+  end
+
+  describe "when company_name is too long" do
+    before { @inquiry.company_name = "a" * 61 }
+    it { should_not be_valid }
+  end
+
+  describe "when dep_name is too long" do
+    before { @inquiry.dep_name = "a" * 61 }
     it { should_not be_valid }
   end
 

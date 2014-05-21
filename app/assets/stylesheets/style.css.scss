@@ -25,10 +25,11 @@ header ul{margin-bottom:0px;}
 .logo{width:100%;height:100%;}
 nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;margin-top:20px;overflow:visible;}
 
+
 /* =============================================================================
    トップページ
    ========================================================================== */
-article.home .new_container{margin-bottom:1px;}
+article.home .new_container{margin-bottom:1px;vertical-align: middle;}
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
 article.home #top_image_slide{visibility:hidden};
 
@@ -82,7 +83,8 @@ article.zisseki h5{color:#768C34;}
 /* =============================================================================
    役員紹介
    ========================================================================== */
-article.executive p{font-size:14px;margin-bottom:15px;}
+article.executive p{font-size:14px;margin-bottom:10px;margin-left:10px;}
+article.executive .signature{font-size:14px;margin-bottom:5px;margin-left:10px;}
 
 /* =============================================================================
    採用情報
@@ -97,6 +99,7 @@ article.fresh table td {background-color:#fff;border-bottom: 1px solid #ECECEC;h
 article.fresh table .large_width{width: 200px;}
 article.fresh table td strong{color:#6E6E6E;}
 article.fresh h2{margin-bottom:25px;}
+article.fresh h2{margin-bottom:25px;}
 
 /* =============================================================================
    キャリア採用
@@ -105,7 +108,6 @@ article.career table {border:0;}
 article.career table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
 article.career table .large_width{width: 200px;}
 article.career table td strong{color:#6E6E6E;}
-article.fresh h2{margin-bottom:25px;}
 
 /* =============================================================================
    お問い合わせ
@@ -134,23 +136,32 @@ article.access h2{font-weight: normal;}
 article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.entry li.bullet-item {color:#D91A1A;}
 article.entry span{margin-left:10px;color:red;}
-
-article.entry span.example{margin-left:10px;color:blue;}
+article.entry .remarks{padding:8px 25px; font-size:14px;color:#333;}
 article.entry span_aster{color:red;}
+article.entry section{margin-bottom:10px;}
+
+article.entry_comp p{margin-bottom: 10px;font-size: 18px;}
+
 /* =============================================================================
-   お問い合わせページ、送信ぺージ
+   お問い合わせページ
    ========================================================================== */
 article.inquiry_page .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.inquiry_page li.bullet-item {color:#D91A1A;}
 article.inquiry_page span{margin-left:10px;color:red;}
+article.inquiry_page section{margin-bottom:10px;}
+article.inquiry_page .remarks{padding:8px 11px; font-size:14px;color:#333;}
+
+article.inquiry_comp p{margin-bottom: 10px;font-size: 18px;}
+/* =============================================================================
+   お問い合わせ送信ぺージ
+   ========================================================================== */
+article.inquiry_send .alert-box.error{background:#D01E29;border-color:#D01E29;}
+article.inquiry_send li.bullet-item {color:#D91A1A;}
 
 /* =============================================================================
    サイトマップ
    ========================================================================== */
 article.sitemap li{margin-left:60px;}
-
-article.inquiry_send .alert-box.error{background:#D01E29;border-color:#D01E29;}
-article.inquiry_send li.bullet-item {color:#D91A1A;}
 
 /* =============================================================================
    社員紹介
