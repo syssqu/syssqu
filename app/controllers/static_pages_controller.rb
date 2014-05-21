@@ -113,6 +113,11 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def entry_comp
+    @_entry_id = params[:entry_id]
+
+  end
+
   def mail_send
     setting_birth_info
     setting_adress_info
@@ -122,14 +127,13 @@ class StaticPagesController < ApplicationController
 
     if @entry.valid?
       @mail = SendMailer.send_entry(params[:entry]).deliver
-
-      flash[:success] = 'エントリが完了しました。'
       
-      if @_entry_id=='entry'
-        redirect_to entry_url
-      elsif @_entry_id=='career_entry'
-        redirect_to career_entry_url
-      end
+      redirect_to entry_comp_url(entry_id: @_entry_id)
+      # if @_entry_id=='entry'
+      #   redirect_to entry_url
+      # elsif @_entry_id=='career_entry'
+      #   redirect_to career_entry_url
+      # end
     else
       if @_entry_id=='entry'
         render 'static_pages/entry'

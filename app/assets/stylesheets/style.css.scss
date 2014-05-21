@@ -31,7 +31,13 @@ nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;ma
 article.home .new_container{margin-bottom:1px;}
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
 article.home #top_image_slide{visibility:hidden};
+article.home span#subicon{font-size:30px;background-color:rgba(255,255,255,0.5);border-radius: 20px;}
 
+a:hover img {
+-moz-opacity:0.5;
+opacity:0.5;
+filter:alpha(opacity=50);
+}
 /* =============================================================================
    会社概要
    ========================================================================== */
@@ -137,6 +143,8 @@ article.entry span{margin-left:10px;color:red;}
 
 article.entry span.example{margin-left:10px;color:blue;}
 article.entry span_aster{color:red;}
+
+article.entry_comp p{margin-bottom: 10px;font-size: 18px;}
 /* =============================================================================
    お問い合わせページ、送信ぺージ
    ========================================================================== */
