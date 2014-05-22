@@ -139,6 +139,8 @@ article.entry span{margin-left:10px;color:red;}
 article.entry .remarks{padding:8px 25px; font-size:14px;color:#333;}
 article.entry span_aster{color:red;}
 article.entry section{margin-bottom:10px;}
+article.entry section{word-break: break-all;}
+article.entry .strong_text{font-weight: bold;}
 
 article.entry_comp p{margin-bottom: 10px;font-size: 18px;}
 

@@ -230,7 +230,7 @@ article.entry
                         span 600字以内
                       = f.hidden_field :gakureki,value: @entry.gakureki
                       label.left.inline 
-                        strong =@entry.gakureki
+                        strong =simple_format(@entry.gakureki,:class => "strong_text")
               -if @_entry_id == 'career_entry'
                 .row
                   .small-8
@@ -246,7 +246,7 @@ article.entry
                           span 600字以内
                         = f.hidden_field :career,value: @entry.career
                         label.left.inline 
-                          strong =@entry.career
+                          strong =simple_format(@entry.career,:class => "strong_text")
             
               / 志望動機============================
               .row
@@ -263,7 +263,7 @@ article.entry
                         span 600字以内
                       = f.hidden_field :motive,value: @entry.motive
                       label.left.inline 
-                        strong =@entry.motive
+                        strong =simple_format(@entry.motive,:class => "strong_text")
               / 自己PR============================
               .row
                 .small-12
@@ -276,7 +276,7 @@ article.entry
                         span 600字以内
                       = f.hidden_field :pr,value: @entry.pr
                       label.left.inline 
-                        strong =@entry.pr
+                        strong =simple_format(@entry.pr,:class => "strong_text")
             .row
               .small-6.small-centered.columns
                 = f.submit "エントリー", class: "button redius"
