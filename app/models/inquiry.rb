@@ -6,13 +6,15 @@ class Inquiry
   extend  ActiveModel::Naming      # オブジェクトをform_forで使えるようにする
   extend  ActiveModel::Translation # リデーション時のエラーメッセージに日本語の属性名を使用できるようにする
    
-  attr_accessor :family_name, :first_name, :kana_family_name, :kana_first_name,
+  attr_accessor :family_name, :first_name, :kana_family_name, :kana_first_name, :company_name, :dep_name,
                 :mail, :mail_confirmation, :inquiry
 
   validates :family_name,       presence: true, length: { maximum: 20 }
   validates :first_name,        presence: true, length: { maximum: 20 }
   validates :kana_family_name,  presence: true, length: { maximum: 20 }
   validates :kana_first_name,   presence: true, length: { maximum: 20 }
+  validates :company_name,      length: { maximum: 60 }
+  validates :dep_name,          length: { maximum: 60 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :mail,              presence: true, format: { with: VALID_EMAIL_REGEX }, length: { maximum: 90 }
   validates :mail_confirmation, presence: true, format: { with: VALID_EMAIL_REGEX }, length: { maximum: 90 }

@@ -1,10 +1,10 @@
 / トップページ
 article.home
-  top_image_slide_area
+  #top_image_slide_area
     ul#top_image_slide data-orbit="" data-options="pause_on_hover:false;timer_speed:5800;animation_speed:600;"
       /! 画像サイズは1000x300
       li
-        = image_tag("top_image1.png", alt: "システム・スクゥェアーの使命",size:"3000x900")
+        = image_tag("top_image7.png", alt: "システム・スクゥェアーの使命",size:"3000x900")
         .orbit-caption
           | システム・スクゥェアーの使命
       li
@@ -20,22 +20,25 @@ article.home
       .row
         .large-4.columns
           .row
-            .large-12.small-12.columns
+            .large-10.small-10.columns  
               p style="position: relative;"
-                = link_to image_tag('zigyou.jpg', :alt => '新規登録',size:"1000x660"), service_path
                 span#subicon style="position: absolute; top:5px;left:5px;" 事業内容
+                = link_to image_tag('zigyou.png', :alt => '事業内容',size:"500x500"), service_path
+                
         .large-4.columns
           .row
-            .large-12.small-12.columns
+            .large-10.small-10.columns
               p style="position: relative;"
-                = link_to image_tag('kaihatu.jpg',:alt=> '開発実績',size:"1000x660"),zisseki_path
                 span#subicon style="position: absolute; top:5px;left:5px" 開発実績
+                = link_to image_tag('kaihatu2.png',:alt=> '開発実績',size:"500x500"),zisseki_path
+                
         .large-4.columns
           .row
-            .large-12.small-12.columns
+            .large-10.small-10.columns
               p style="position: relative;"
-                = link_to image_tag('entry.png',:alt=> '開発実績',size:"1000x660"),recruit_path
                 span#subicon style="position: absolute; top:5px;left:5px" エントリー
+                = link_to image_tag('entry2.png',:alt=> 'エントリー',size:"500x500"),recruit_path
+                
   br
   .row
     .large-12.columns
@@ -49,12 +52,14 @@ article.home
                 hr/
                 .new_container 
                   | 2014.05.19 
-                  span.radius.label プレリリース
+                  .radius.label プレリリース
                   = link_to "本社移転しました。", access_path
                 .new_container 
                   | 2013.08.01 
-                  span.success.radius.label ニュース
+                  .success.radius.label ニュース
                   |  おかげ様で30期を迎えました。
+                .new_container
+                  |aaaa
         .large-4.columns.hide-for-small
           h6
             = link_to image_tag("recruit_banner.png", alt: "システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。"), recruit_path

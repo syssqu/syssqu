@@ -3,7 +3,7 @@
     - flash.each do |key, value|
       .alert-box.success.radius data-alert=""
         = value
-article.entry    
+article.entry
   .row
     .large-12.columns
       .panel.radius.clearfix
@@ -15,15 +15,15 @@ article.entry
         = form_for @entry, url: {:action => 'entry_confirm'} do |f|
           = render 'shared/error_messages', object: f.object
           section
-            = hidden_field_tag :entry_id, @_entry_id
             .row
-              .small-12.column
-                span_non 下記のエントリーフォームより、必要事項(
+              .remarks
+                |下記のエントリーフォームより、必要事項(
                 span_aster *
-                span_non )をご記入下さい。
-              .small-12.column
-                section
-                span_non エントリ内容を確認した上で、メールにて返信致します。
+                |)をご記入下さい。
+                br
+                |エントリ内容を確認した上で、メールにて返信致します。
+          section
+            = hidden_field_tag :entry_id, @_entry_id
             section
               .row
                 .small-8

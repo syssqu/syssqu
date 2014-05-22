@@ -1,20 +1,20 @@
-.row
-  .large-12.columns
-    dl.sub-nav
-      dt =link_to "ホーム", root_path
-      dd >>
-      dd.active
-        a href="#" お問い合わせ
-.row
-  .large-12.columns
-    - flash.each do |key, value|
-      .alert-box.success.radius data-alert=""
-        = value
-article.inquiry_send
-  .row
-    .large-12.columns
-      .panel.radius.clearfix
-        .container
-          h2 送信完了
-          = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
-            = render 'shared/error_messages', object: f.object
+/ .row
+/   .large-12.columns
+/     dl.sub-nav
+/       dt =link_to "ホーム", root_path
+/       dd >>
+/       dd.active
+/         a href="#" 入力内容確認
+/ .row
+/   .large-12.columns
+/     - flash.each do |key, value|
+/       .alert-box.success.radius data-alert=""
+/         = value
+/ article.inquiry_send
+/   .row
+/     .large-12.columns
+/       .panel.radius.clearfix
+/         .container
+/           h2 送信完了
+/           = form_for @inquiry, url: {:action => 'inquiry_send'} do |f|
+/             = render 'shared/error_messages', object: f.object
