@@ -172,6 +172,7 @@ class StaticPagesController < ApplicationController
   end
 
   def jouhouhogo
+    @target_info=params[:target_info]
   end
 
   def zisseki
