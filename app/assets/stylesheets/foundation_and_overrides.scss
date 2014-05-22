@@ -640,11 +640,11 @@ $inline-list-bottom-margin: 10;
 // $include-html-label-classes: $include-html-classes;
 
 // We use these to style the labels
-// $label-padding: rem-calc(4 8 6);
+$label-padding: rem-calc(6 4 3);
 // $label-radius: $global-radius;
 
 // We use these to style the label text
-// $label-font-sizing: rem-calc(11);
+$label-font-sizing: rem-calc(11);
 // $label-font-weight: normal;
 // $label-font-color: #333;
 // $label-font-color-alt: #fff;
@@ -729,8 +729,8 @@ $inline-list-bottom-margin: 10;
 // $orbit-caption-bg: rgba(51,51,51, 0.8);
 // $orbit-caption-font-color: #fff;
 // $orbit-caption-font-size: rem-calc(14);
-// $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
-// $orbit-caption-padding: rem-calc(10 14);
+$orbit-caption-position: "under"; // Supported values: "bottom", "under"
+$orbit-caption-padding: rem-calc(3 4);
 // $orbit-caption-height: auto;
 
 // We use these to control the left/right nav styles
