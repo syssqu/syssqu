@@ -2780,7 +2780,7 @@ kbd {
   display: inline-block;
   position: relative;
   margin-bottom: inherit;
-  padding: 0.25rem 0.5rem 0.375rem;
+  padding: 0.375rem 0.25rem 0.1875rem;
   font-size: 0.6875rem;
   background-color: #008cba;
   color: white; }
@@ -2948,12 +2948,11 @@ kbd {
         -o-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0); }
       .orbit-container .orbit-slides-container li .orbit-caption {
-        position: absolute;
-        bottom: 0;
+        position: relative;
         background-color: rgba(51, 51, 51, 0.8);
         color: white;
         width: 100%;
-        padding: 0.625rem 0.875rem;
+        padding: 0.1875rem 0.25rem;
         font-size: 0.875rem; }
   .orbit-container .orbit-slide-number {
     position: absolute;
@@ -5334,7 +5333,8 @@ nav.top-bar ul.title-area li.toggle-topbar.menu-icon a {
    トップページ
    ========================================================================== */
 article.home .new_container {
-  margin-bottom: 1px; }
+  margin-bottom: 1px;
+  vertical-align: middle; }
 
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
 article.home #top_image_slide {
@@ -5603,7 +5603,7 @@ article.entry span {
   color: red; }
 
 article.entry .remarks {
-  padding: 8px 25px;
+  padding: 0px 25px;
   font-size: 14px;
   color: #333; }
 
@@ -5611,7 +5611,11 @@ article.entry span_aster {
   color: red; }
 
 article.entry section {
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
+
+article.entry_comp p {
+  margin-bottom: 10px;
+  font-size: 18px; }
 
 /* =============================================================================
    お問い合わせページ
@@ -5633,7 +5637,12 @@ article.inquiry_page section {
 article.inquiry_page .remarks {
   padding: 8px 11px;
   font-size: 14px;
-  color: #333; }
+  color: #333;
+  margin-bottom: 10px; }
+
+article.inquiry_comp p {
+  margin-bottom: 10px;
+  font-size: 18px; }
 
 /* =============================================================================
    お問い合わせ送信ぺージ
@@ -5664,6 +5673,18 @@ article.member section {
 
 article.member p {
   margin-bottom: 10px; }
+
+/* =============================================================================
+   開発環境のデバッグ情報
+   ========================================================================== */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
