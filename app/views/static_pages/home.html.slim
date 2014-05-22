@@ -26,18 +26,16 @@ article.home
           .panel.radius
             .row
               .large-12.small-12.columns
-                h6 ニュース news
+                h6 ニュース
                 hr/
                 .new_container 
                   | 2014.05.19 
-                  .radius.label プレリリース
-                  = link_to "本社移転しました。", access_path
+                  span.radius.label プレリリース
+                  = link_to " 本社移転しました。", access_path
                 .new_container 
                   | 2013.08.01 
-                  .success.radius.label ニュース
+                  span.success.radius.label ニュース
                   |  おかげ様で30期を迎えました。
-                .new_container
-                  |aaaa
         .large-4.columns.hide-for-small
           h6
             = link_to image_tag("recruit_banner.png", alt: "システム・スクゥェアーでは、一緒にビジョン実現のために取り組んでくれる方を募集しています。"), recruit_path

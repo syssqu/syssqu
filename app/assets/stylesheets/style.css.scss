@@ -3,6 +3,7 @@
    ========================================================================== */
 @mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 1%;}
 @mixin _section{width: 360px; height: 38px; padding: 1%; margin-bottom: 10px; @include _left_block;}
+@mixin box_sizing {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 
 .title{@include _section;}
 h2{@include _section;width:800px;color:#333;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;letter-spacing: 0.2em;}
@@ -31,7 +32,8 @@ nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;ma
    ========================================================================== */
 article.home .new_container{margin-bottom:1px;vertical-align: middle;}
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
-article.home #top_image_slide{visibility:hidden};
+article.home #top_image_slide{visibility:hidden;}
+article.home .label{width:80px;}
 
 /* =============================================================================
    会社概要
@@ -136,9 +138,11 @@ article.access h2{font-weight: normal;}
 article.entry .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.entry li.bullet-item {color:#D91A1A;}
 article.entry span{margin-left:10px;color:red;}
-article.entry .remarks{padding:8px 25px; font-size:14px;color:#333;}
+article.entry .remarks{padding:0px 25px; font-size:14px;color:#333;}
 article.entry span_aster{color:red;}
-article.entry section{margin-bottom:10px;}
+article.entry section{margin-bottom:5px;}
+article.entry section{word-break: break-all;}
+article.entry .strong_text{font-weight: bold;}
 
 article.entry_comp p{margin-bottom: 10px;font-size: 18px;}
 
@@ -149,7 +153,9 @@ article.inquiry_page .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.inquiry_page li.bullet-item {color:#D91A1A;}
 article.inquiry_page span{margin-left:10px;color:red;}
 article.inquiry_page section{margin-bottom:10px;}
-article.inquiry_page .remarks{padding:8px 11px; font-size:14px;color:#333;}
+article.inquiry_page .remarks{padding:8px 11px; font-size:14px;color:#333;margin-bottom:10px;}
+article.inquiry_page section{word-break: break-all;}
+article.inquiry_page .strong_text{font-weight: bold;}
 
 article.inquiry_comp p{margin-bottom: 10px;font-size: 18px;}
 /* =============================================================================
@@ -169,3 +175,8 @@ article.sitemap li{margin-left:60px;}
 article.member h2{border-left: 6px solid #A59888;letter-spacing: 0.2em;margin:20px 0px;}
 article.member section{padding:1% 0%;}
 article.member p{margin-bottom:10px;}
+
+/* =============================================================================
+   開発環境のデバッグ情報
+   ========================================================================== */
+.debug_dump {clear: both;float: left;width: 100%;margin-top: 45px;@include box_sizing;}
