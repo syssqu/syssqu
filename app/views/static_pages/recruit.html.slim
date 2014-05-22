@@ -16,14 +16,14 @@ article.recruit
             li
               = link_to '募集要項', fresh_path
             li
-              = link_to 'エントリ', entry_path
+              = link_to 'エントリ', jouhouhogo_path(target_info: "fresh_entry")
         section
           h2 キャリア採用
           ul.inline-list
             li
               = link_to '募集要項', career_path
             li
-              = link_to 'エントリ', career_entry_path
+              = link_to 'エントリ', jouhouhogo_path(target_info: "career_entry")
         section
           h2 社員紹介
           ul.inline-list

@@ -13,7 +13,6 @@ article.entry
           -elsif @_entry_id == "career_entry"
             h2 キャリア採用　エントリーフォーム
         = form_for @entry, url: {:action => 'entry_confirm'} do |f|
-          = render 'shared/error_messages', object: f.object
           section
             .row
               .remarks
@@ -22,6 +21,7 @@ article.entry
                 |)をご記入下さい。
                 br
                 |エントリ内容を確認した上で、メールにて返信致します。
+          = render 'shared/error_messages', object: f.object
           section
             = hidden_field_tag :entry_id, @_entry_id
             section
@@ -260,5 +260,10 @@ article.entry
                         span 600字以内
                       = f.text_area :pr, 'placeholder' => "ご記入下さい。",size: "x5"
             .row
-              .small-3.small-centered.columns
+              .small-6.small-centered.columns
                 = f.submit "入力を確認する", class: "button radius"
+                |&nbsp;&nbsp;&nbsp;
+                - if @_entry_id == "entry"
+                  = link_to "戻る", jouhouhogo_path(target_info: "fresh_entry"),class: "button radius gray"
+                - elsif @_entry_id == "career_entry"
+                  = link_to "戻る", jouhouhogo_path(target_info: "career_entry"),class: "button radius gray"
