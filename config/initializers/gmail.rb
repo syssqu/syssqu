@@ -4,6 +4,6 @@ ActionMailer::Base.smtp_settings = {
   :domain               => 'syssqu.herokuapp.com',
   :user_name            => 'syssqu@gmail.com', # full email address (user@your.host.name.com)
   :password             => 'Squareadm11#',
-  :authentication       => 'plain',
+  :authentication       => 'login',
   :enable_starttls_auto => true
 }
