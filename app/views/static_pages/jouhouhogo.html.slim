@@ -3,6 +3,9 @@
   .large-12.columns
     dl.sub-nav
       dt =link_to "ホーム", root_path
+      - if @target_info == "fresh_entry" or @target_info == "career_entry"
+        dd >>
+        dd =link_to "採用情報", recruit_path
       dd >>
       dd.active
         - if @target_info == "jouhouhogo"
