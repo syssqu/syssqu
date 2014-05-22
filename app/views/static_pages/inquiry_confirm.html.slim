@@ -98,7 +98,7 @@ article.inquiry_page
                       label
                       = f.hidden_field :inquiry,value: @inquiry.inquiry
                       label.left.inline
-                        strong = @inquiry.inquiry
+                        strong =simple_format(@inquiry.inquiry, :class => "strong_text")
                   .row
                     .small-6.small-centered.columns
                       = f.submit "送信する", class: "button radius"

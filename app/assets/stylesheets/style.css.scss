@@ -149,6 +149,8 @@ article.inquiry_page .alert-box.error{background:#D01E29;border-color:#D01E29;}
 article.inquiry_page li.bullet-item {color:#D91A1A;}
 article.inquiry_page span{margin-left:10px;color:red;}
 article.inquiry_page section{margin-bottom:10px;}
+article.inquiry_page section{word-break: break-all;}
+article.inquiry_page .strong_text{font-weight: bold;}
 article.inquiry_page .remarks{padding:8px 11px; font-size:14px;color:#333;}
 
 article.inquiry_comp p{margin-bottom: 10px;font-size: 18px;}
