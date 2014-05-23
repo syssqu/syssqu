@@ -5684,10 +5684,6 @@ article.member .dummy_high_row {
   /* small */
   article.access #map_canvas {
     width: 15em;
-    height: 20.5em; }
-
-  article.access #s_view {
-    width: 15em;
     height: 20.5em; } }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
