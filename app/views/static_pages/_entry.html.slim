@@ -38,8 +38,12 @@ article.entry
                         | 氏名 (漢字)
                         span *
                     .large-1.columns
-                      label.right.inline.hide-for-small.hide-for-medium 姓
-                      label.inline.hide-for-large 姓
+                      .hide-for-small
+                        label.right.inline 姓
+                      .hide-for-medium
+                        label.right.inline 姓
+                      .hide-for-large
+                        label.inline 姓
                     .large-4.columns
                       = f.text_field :family_name
                     .large-1.columns
