@@ -181,3 +181,10 @@ article.member .dummy_high_row{height:30px;}
    開発環境のデバッグ情報
    ========================================================================== */
 .debug_dump {clear: both;float: left;width: 100%;margin-top: 45px;@include box_sizing;}
+
+
+@media only screen and (max-width: 40em) { /* small */
+  article.access #map_canvas{width:15em;height:20.5em;}
+  article.access #s_view{width:15em;height:20.5em;}
+}
+
