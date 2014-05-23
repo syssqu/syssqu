@@ -10,6 +10,9 @@ h2{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;f
 .gray {background:#3E4C59;}
 .remarks{font-size:14px;}       /* 会社概要ページ上部の紹介文 */
 .button{margin-right:10px;}     /* ボタンとボタンの隙間 */
+.dummy_row{height:15px;}
+.dummy_high_row{height:30px;}
+.dummy_highest_row{height:50px;}
 
 article section{background:#fff;padding:1% 3%;}
 article section p{font-size:14px;margin-bottom:15px;}
@@ -176,8 +179,7 @@ article.sitemap li{margin-left:60px;}
 article.member h2{border-left: 6px solid #A59888;letter-spacing: 0.2em;margin:20px 0px;}
 article.member section{padding:1% 0%;}
 article.member p{margin-bottom:10px;}
-article.member .dummy_row{height:15px;}
-article.member .dummy_high_row{height:30px;}
+
 
 /* =============================================================================
    開発環境のデバッグ情報
