@@ -1,5 +1,6 @@
 @charset "UTF-8";/* $row-width: rem-calc(1000); */
 /* $total-columns: 12; */
+/* $topbar-dropdown-link-bg: #333; */
 meta.foundation-version {
   font-family: "/5.2.2/"; }
 
@@ -4005,7 +4006,7 @@ meta.foundation-mq-topbar {
         line-height: 33px;
         padding: 0;
         padding-right: 25px;
-        color: white;
+        color: black;
         position: relative; }
         .top-bar .toggle-topbar.menu-icon a::after {
           content: "";
@@ -4015,7 +4016,7 @@ meta.foundation-mq-topbar {
           width: 16px;
           top: 0;
           height: 0;
-          box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white; }
+          box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -4035,7 +4036,7 @@ meta.foundation-mq-topbar {
     width: 100%;
     height: auto;
     display: block;
-    background: #333333;
+    background: #decba2;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -4054,7 +4055,7 @@ meta.foundation-mq-topbar {
     font-size: 0.8125rem;
     font-weight: normal;
     text-transform: none;
-    background: #333333; }
+    background: #decba2; }
     .top-bar-section ul li > a.button {
       font-size: 0.8125rem;
       padding-right: 21.66667px;
@@ -4881,7 +4882,7 @@ blockquote p {
   display: block;
   line-height: 2.0625rem;
   padding: 0;
-  color: white;
+  color: black;
   position: relative;
   -ms-transform: translate(0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -5267,7 +5268,6 @@ th.hide-for-touch {
    ページ共通
    ========================================================================== */
 .title {
-  width: 360px;
   height: 38px;
   padding: 1%;
   margin-bottom: 10px;
@@ -5275,13 +5275,11 @@ th.hide-for-touch {
   padding-left: 1%; }
 
 h2 {
-  width: 360px;
   height: 38px;
   padding: 1%;
   margin-bottom: 10px;
   border-left: 6px solid yellowgreen;
   padding-left: 1%;
-  width: 800px;
   color: #333;
   font-size: 16px;
   font-weight: normal;
@@ -5292,6 +5290,14 @@ h2 {
 .gray {
   background: #3E4C59; }
 
+.remarks {
+  font-size: 14px; }
+
+/* 会社概要ページ上部の紹介文 */
+.button {
+  margin-right: 10px; }
+
+/* ボタンとボタンの隙間 */
 article section {
   background: #fff;
   padding: 1% 3%; }
@@ -5324,11 +5330,8 @@ header ul {
   width: 100%;
   height: 100%; }
 
-nav.top-bar ul.title-area li.toggle-topbar.menu-icon a {
-  background-color: #000;
-  margin-top: 20px;
-  overflow: visible; }
-
+/* nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;margin-top:20px;overflow:visible;} */
+/* nav.top-bar ul.title-area li.toggle-topbar.menu-icon{height:200px;} */
 /* =============================================================================
    トップページ
    ========================================================================== */
@@ -5347,7 +5350,6 @@ article.home .label {
    会社概要
    ========================================================================== */
 article.profile_company h4 {
-  width: 360px;
   height: 38px;
   padding: 1%;
   margin-bottom: 10px;
@@ -5357,56 +5359,27 @@ article.profile_company h4 {
   font-size: 16px;
   font-weight: normal;
   padding: 10px;
-  width: 110px;
+  width: 95px;
   height: 40px;
   padding: 10px;
   margin-bottom: 20px; }
 
 article.profile_company p {
-  width: 295px;
-  height: 40px;
+  width: 290px;
   font-size: 14px;
   text-indent: 1em;
-  padding: 10px;
-  margin-bottom: 20px; }
+  padding: 10px; }
 
-article.profile_company p {
-  width: 295px;
-  height: 40px;
-  font-size: 14px;
-  text-indent: 1em;
-  padding: 10px;
-  margin-bottom: 20px; }
+article.profile_company .address_contents {
+  padding: 16px 25px; }
 
-article.profile_company .higher {
-  height: 140px; }
-
-article.profile_company .lower {
-  height: 20px;
-  margin-bottom: 0px; }
-
-article.profile_company .lower2 {
-  height: 20px;
-  margin-bottom: 10px; }
-
-article.profile_company .content_high {
-  width: 295px;
-  height: 60px;
-  padding: 10px;
-  margin-bottom: 20px; }
-
-article.profile_company .content_high2 {
-  width: 295px;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 20px; }
+article.profile_company .service_contents {
+  padding: 12px 25px; }
 
 article.profile_company img {
   margin-left: 30px; }
 
-article.profile_company .container {
-  margin-left: 20px; }
-
+/* article.profile_company .container{margin-left:20px;} */
 article.profile_company h2 {
   font-weight: normal; }
 
@@ -5513,7 +5486,7 @@ article.fresh table td {
   height: 60px; }
 
 article.fresh table .large_width {
-  width: 200px; }
+  width: 40%; }
 
 article.fresh table td strong {
   color: #6E6E6E; }
@@ -5536,7 +5509,7 @@ article.career table td {
   height: 60px; }
 
 article.career table .large_width {
-  width: 200px; }
+  width: 40%; }
 
 article.career table td strong {
   color: #6E6E6E; }
@@ -5688,6 +5661,12 @@ article.member section {
 
 article.member p {
   margin-bottom: 10px; }
+
+article.member .dummy_row {
+  height: 15px; }
+
+article.member .dummy_high_row {
+  height: 30px; }
 
 /* =============================================================================
    開発環境のデバッグ情報
