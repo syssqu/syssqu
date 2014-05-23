@@ -5546,12 +5546,12 @@ article.access h2 a {
   display: none; }
 
 article.access #map_canvas {
-  width: 400px;
-  height: 360px; }
+  width: 25em;
+  height: 22.5em; }
 
 article.access #s_view {
-  width: 400px;
-  height: 360px;
+  width: 25em;
+  height: 22.5em;
   margin-bottom: 20px; }
 
 article.access .address_access {
