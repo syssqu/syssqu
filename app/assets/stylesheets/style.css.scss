@@ -38,16 +38,13 @@ article.home .label{width:80px;}
 /* =============================================================================
    会社概要
    ========================================================================== */
-article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 110px;height: 40px;padding: 10px;margin-bottom: 20px;}
-article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
-article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
-article.profile_company .higher{height:140px;}
-article.profile_company .lower{height:20px;margin-bottom: 0px;}
-article.profile_company .lower2{height:20px;margin-bottom: 10px;}
-article.profile_company .content_high{width: 295px; height: 60px; padding: 10px; margin-bottom: 20px; }
-article.profile_company .content_high2{width: 295px; height: 100px; padding: 10px; margin-bottom: 20px; }
+article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 95px;height: 40px;padding: 10px;margin-bottom: 20px;}
+article.profile_company p{width: 290px; font-size:14px;text-indent: 1em;padding: 10px;}
+article.profile_company .higher{height:140px;width:95px;}
+article.profile_company .address_contents{padding:0px 25px;}
+article.profile_company .service_contents{padding:12px 25px;}
 article.profile_company img{margin-left:30px;}
-article.profile_company .container{margin-left:20px;}
+/* article.profile_company .container{margin-left:20px;} */
 article.profile_company h2{font-weight: normal;}
 
 /* =============================================================================
