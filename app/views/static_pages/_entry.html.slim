@@ -38,17 +38,13 @@ article.entry
                         | 氏名 (漢字)
                         span *
                     .large-1.columns
-                      .hide-for-small
-                        label.right.inline 姓
-                      .hide-for-medium
-                        label.right.inline 姓
-                      .hide-for-large
-                        label.inline 姓
+                      label.right.inline.show-for-large-up 姓
+                      label.inline.show-for-medium-down 姓
                     .large-4.columns
                       = f.text_field :family_name
                     .large-1.columns
-                      label.right.inline.hide-for-small.hide-for-medium 名
-                      label.inline.hide-for-large 名
+                      label.right.inline.show-for-large-up 名
+                      label.inline.show-for-medium-down 名
                     .large-4.columns
                       = f.text_field :first_name
               .row
@@ -59,13 +55,13 @@ article.entry
                         | 氏名 (フリガナ)
                         span *
                     .large-1.columns
-                      label.right.inline.hide-for-small.hide-for-medium セイ
-                      label.inline.hide-for-large セイ
+                      label.right.inline.show-for-large-up セイ
+                      label.inline.show-for-medium-down セイ
                     .large-4.columns
                       = f.text_field :kana_family_name
                     .large-1.columns
-                      label.right.inline.hide-for-small.hide-for-medium メイ
-                      label.inline.hide-for-large メイ
+                      label.right.inline.show-for-large-up メイ
+                      label.inline.show-for-medium-down メイ
                     .large-4.columns
                       = f.text_field :kana_first_name
           
@@ -137,12 +133,11 @@ article.entry
                     .large-1.columns
                       label.left.inline.hide-for-small.hide-for-medium
                         | 住所
-                        span *
                     .large-2.columns
-                      label.right.inline.hide-for-small.hide-for-medium
+                      label.right.inline.show-for-large-up
                         | 郵便番号
                         span *
-                      label.inline.hide-for-large
+                      label.inline.show-for-medium-down
                         | 郵便番号
                         span *
                     .large-5.columns
@@ -156,10 +151,10 @@ article.entry
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.hide-for-small.hide-for-medium
+                      label.right.inline.show-for-large-up
                         | 都道府県
                         span *
-                      label.inline.hide-for-large
+                      label.inline.show-for-medium-down
                         | 都道府県
                         span *
                     .large-5.large-pull-4.columns
@@ -170,10 +165,10 @@ article.entry
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.hide-for-small.hide-for-medium
+                      label.right.inline.show-for-large-up
                         | 市区町村
                         span *
-                      label.inline.hide-for-large
+                      label.inline.show-for-medium-down
                         | 市区町村
                         span *
                     .large-5.large-pull-4.columns
@@ -184,9 +179,9 @@ article.entry
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.hide-for-small.hide-for-medium
+                      label.right.inline.show-for-large-up
                         | 番地
-                      label.inline.hide-for-large
+                      label.inline.show-for-medium-down
                         | 番地
                     .large-5.large-pull-4.columns
                       = f.text_field :house_number
@@ -196,9 +191,9 @@ article.entry
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.hide-for-small.hide-for-medium
+                      label.right.inline.show-for-large-up
                         | 建物
-                      label.inline.hide-for-large
+                      label.inline.show-for-medium-down
                         | 建物
                     .large-5.large-pull-4.columns
                       = f.text_field :building
