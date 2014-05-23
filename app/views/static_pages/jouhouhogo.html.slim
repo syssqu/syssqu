@@ -37,7 +37,7 @@ article.inquiry
             = render 'hogo_convention'
           br
           .row
-            .small-3.small-centered.columns
+            .large-3.large-centered.columns
               - if @target_info == "inquiry"
                 = link_to "同意する", inquiry_page_path, {class: "button radius"}
               - elsif @target_info == "fresh_entry"

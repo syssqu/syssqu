@@ -7,15 +7,14 @@
       dd.active
         a href="#"  会社概要
       dd |
-      dd
-        = link_to "代表メッセージ", executive_path
+      dd = link_to "代表メッセージ", executive_path
       dd |
-      dd
-        = link_to "企業理念", policy_path
+      dd = link_to "企業理念", policy_path
       dd |
-      dd
-        = link_to "沿革", history_path
-    p みなさまのお陰で創業30年目を迎えることができました。弊社の概要をご覧下さい。
+      dd = link_to "沿革", history_path
+    p.remarks
+      |みなさまのお陰で創業30周年を迎えることができました。これもひとえに皆様のご支援の賜物と深く感謝申し上げます。
+      br それでは弊社の概要をご覧下さい。
 article.profile_company
   .row
     .large-12.columns
@@ -71,8 +70,7 @@ article.profile_company
         .row
           section
             .large-1.columns
-              .higher
-                h4.left 所在地
+              h4.left 所在地
             .large-5.columns
               .address_contents
                 | 〒541-0044
@@ -86,7 +84,7 @@ article.profile_company
                 br
                 | ・北浜駅（地下鉄堺筋線/京阪電車）
             .large-6.columns
-              = image_tag("bldg.png", alt: "本社")   
+              = image_tag("bldg.png", alt: "本社")
   .row
     .large-12.columns
       .panel.radius.clearfix
