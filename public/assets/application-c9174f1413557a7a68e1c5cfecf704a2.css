@@ -5679,6 +5679,16 @@ article.member .dummy_high_row {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+@media only screen and (max-width: 40em) {
+  /* small */
+  article.access #map_canvas {
+    width: 15em;
+    height: 20.5em; }
+
+  article.access #s_view {
+    width: 15em;
+    height: 20.5em; } }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
