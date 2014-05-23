@@ -5346,6 +5346,9 @@ article.home #top_image_slide {
 article.home .label {
   width: 80px; }
 
+article.home ul#top_image_slide li img {
+  min-width: 100%; }
+
 /* =============================================================================
    会社概要
    ========================================================================== */
@@ -5467,6 +5470,9 @@ article.executive .signature {
   font-size: 14px;
   margin-bottom: 5px;
   margin-left: 10px; }
+
+article.executive img {
+  min-width: 100%; }
 
 /* =============================================================================
    採用情報
