@@ -37,6 +37,7 @@ article.home .new_container{margin-bottom:1px;vertical-align: middle;}
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
 article.home #top_image_slide{visibility:hidden;}
 article.home .label{width:80px;}
+article.home ul#top_image_slide li img{min-width:100%;}
 
 /* =============================================================================
    会社概要
@@ -86,6 +87,7 @@ article.zisseki h5{color:#768C34;}
    ========================================================================== */
 article.executive p{font-size:14px;margin-bottom:10px;margin-left:10px;}
 article.executive .signature{font-size:14px;margin-bottom:5px;margin-left:10px;}
+article.executive img{min-width:100%;}
 
 /* =============================================================================
    採用情報
