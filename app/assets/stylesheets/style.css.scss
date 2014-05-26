@@ -136,17 +136,10 @@ article.access #s_view{width:25em;height:22.5em;margin-bottom: 20px;}
 article.access .address_access{clear:both;margin-bottom:0px;}
 article.access h6{font-size:12px;}
 article.access h2{font-weight: normal;}
-// article.access #myFlexbox
-// {
-//   display:-webkit-box;
-//   display:-moz-box;
-//   display:-ms-flexbox;
-//   display:-webkit-flex;
-//   flex:2 auto;
-//   flex-basis: 100px;
-//   justify-content:center;
-//   align-items:center;
-// }
+#s_view img {
+    border: none !important;
+    max-width: none !important;
+}
 
 /* =============================================================================
    エントリ
