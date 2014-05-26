@@ -5708,6 +5708,9 @@ article.member p {
   article.profile_company p {
     padding: 0px; }
 
+  article.service table {
+    width: 100%; }
+
   article.history table tr td {
     font-size: 14px; }
 
