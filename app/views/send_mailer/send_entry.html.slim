@@ -25,14 +25,13 @@ h5 電話番号
 p #{@info[:phone]}
 
 h5 最終学歴
-p #{@info[:gakureki]}
+p =simple_format(@info[:gakureki])
 
 h5 職歴
-p #{@info[:career]}
+p =simple_format(@info[:career])
 
 h5 志望動機
-p #{@info[:motive]}
+p =simple_format(@info[:motive])
 
 h5 自己PR
-p #{@info[:pr]}
-
+p =simple_format(@info[:pr])
