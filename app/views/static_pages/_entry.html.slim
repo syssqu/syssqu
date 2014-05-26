@@ -32,43 +32,62 @@ article.entry
               / 氏名============================
               .row
                 .large-12
-                  .row
+                  / PC版
+                  .row.show-for-large-up
                     .large-2.columns
                       label.left.inline
                         | 氏名 (漢字)
                         span *
                     .large-1.columns
-                      label.right.inline.show-for-large-up 姓
-                      label.inline.show-for-medium-down 姓
+                      label.right.inline 姓
                     .large-4.columns
                       = f.text_field :family_name
                     .large-1.columns
-                      label.right.inline.show-for-large-up 名
-                      label.inline.show-for-medium-down 名
+                      label.right.inline 名
                     .large-4.columns
                       = f.text_field :first_name
+                  / スマホ版
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 氏名 (漢字)
+                        span *
+                      label
+                        |姓
+                        = f.text_field :family_name
+                      label
+                        |名
+                        = f.text_field :first_name
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-2.columns
                       label.left.inline
                         | 氏名 (フリガナ)
                         span *
                     .large-1.columns
-                      label.right.inline.show-for-large-up セイ
-                      label.inline.show-for-medium-down セイ
+                      label.right.inline セイ
                     .large-4.columns
                       = f.text_field :kana_family_name
                     .large-1.columns
-                      label.right.inline.show-for-large-up メイ
-                      label.inline.show-for-medium-down メイ
+                      label.right.inline メイ
                     .large-4.columns
                       = f.text_field :kana_first_name
-          
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 氏名 (フリガナ)
+                        span *
+                      label
+                        |セイ
+                        = f.text_field :kana_family_name
+                      label
+                        |メイ
+                        = f.text_field :kana_first_name
               / 性別============================
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | 性別
@@ -78,10 +97,19 @@ article.entry
                       label.left.inline style="width:40px;" for="man"  男
                       label.left.inline style="width:20px;" = f.radio_button :gender, :woman
                       label.left.inline style="width:40px;" for="woman"  女
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 性別
+                        span *
+                      label.left.inline style="width:20px;" = f.radio_button :gender, :man
+                      label.left.inline style="width:40px;" for="man"  男
+                      label.left.inline style="width:20px;" = f.radio_button :gender, :woman
+                      label.left.inline style="width:40px;" for="woman"  女
               / 生年月日============================
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-2.columns
                       label.left.inline
                         | 生年月日
@@ -100,28 +128,52 @@ article.entry
                       = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"change_day"}
                     .large-3.columns
                       label.lect.inline 日
+                .row.show-for-medium-down
+                    .large-2.columns
+                      label
+                        | 生年月日
+                        span *
+                      label
+                        |年
+                        = f.select :birth_year, @_birth_year, :include_blank => true
+                      label
+                        |月
+                        = f.select :birth_month, @_birth_month,{:include_blank => true},{:id=>"day_select"}
+                      label
+                        |日
+                        = f.select :birth_day, @_birth_day, {:include_blank => true},{:id=>"change_day"}
               / メールアドレス============================
               .row
                 .large-8
                     label 
                       strong 連絡先
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | メールアドレス
                         span *
                     .large-5.large-pull-4.columns
                       = f.text_field :email
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |メールアドレス
+                        = f.text_field :email
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
-                        |メールアドレス (確認用)
+                        | メールアドレス (確認用)
                         span *
                     .large-5.large-pull-4.columns
                       = f.text_field :email_confirmation
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |メールアドレス (確認用)
+                        = f.text_field :email_confirmation
               / 住所============================
             section
               .row
@@ -129,7 +181,7 @@ article.entry
                   label 
                     strong 住所
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-1.columns
                       label.left.inline.hide-for-small.hide-for-medium
                         | 住所
@@ -145,58 +197,79 @@ article.entry
                     .large-4.columns
                       label.left.inline
                         span ※半角で記入 例) 123-4567
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 住所
+                    .large-12.columns
+                      label
+                        | 郵便番号
+                        span * ※半角で記入 例) 123-4567
+                        = f.text_field :postal_code
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.show-for-large-up
-                        | 都道府県
-                        span *
-                      label.inline.show-for-medium-down
+                      label.right.inline
                         | 都道府県
                         span *
                     .large-5.large-pull-4.columns
                       = f.select :prefecture, @_prefecture, :include_blank => true
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 都道府県
+                        span *
+                        = f.select :prefecture, @_prefecture, :include_blank => true
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.show-for-large-up
-                        | 市区町村
-                        span *
-                      label.inline.show-for-medium-down
+                      label.right.inline
                         | 市区町村
                         span *
                     .large-5.large-pull-4.columns
                       = f.text_field :city
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 市区町村
+                        span *
+                        = f.text_field :city
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.show-for-large-up
-                        | 番地
-                      label.inline.show-for-medium-down
+                      label.right.inline
                         | 番地
                     .large-5.large-pull-4.columns
                       = f.text_field :house_number
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 番地
+                        = f.text_field :house_number
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-1.columns
                       label.left.inline
                     .large-2.columns
-                      label.right.inline.show-for-large-up
-                        | 建物
-                      label.inline.show-for-medium-down
+                      label.right.inline
                         | 建物
                     .large-5.large-pull-4.columns
                       = f.text_field :building
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 建物
+                        = f.text_field :building
               / 電話番号============================
             section
               .row
@@ -204,7 +277,7 @@ article.entry
                   label 
                     strong 電話番号
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | 電話番号
@@ -214,6 +287,14 @@ article.entry
                     .large-4.columns
                       label.left.inline
                         span ※半角で記入 例) 012-3456-7890
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 電話番号
+                        span * ※半角で記入 例) 012-3456-7890    
+                        = f.text_field :phone
+                      label
+                        
               / 最終学歴============================
             section
               .row
@@ -221,7 +302,7 @@ article.entry
                   label 
                     strong 学歴
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline 最終学歴
                     .large-9.columns
@@ -229,29 +310,39 @@ article.entry
                         |大学名、専門学校名、学部、学科、主な専門分野
                         span 600字以内
                       = f.text_area :gakureki, 'placeholder' => "ご記入下さい。 ",size: "x5"
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |最終学歴
+                        span 600字以内
+                        = f.text_area :gakureki, 'placeholder' => "大学名、専門学校名、学部、学科、主な専門分野をご記入下さい。 ",size: "x5"    
               -if @_entry_id == 'career_entry'
                 .row
                   .large-8
                     label 
                       strong 職歴
                   .large-12
-                    .row
+                    .row.show-for-large-up
                       .large-3.columns
                         label.left.inline 職歴
                       .large-9.columns
                         label
                           |会社名、在籍期間、事業内容、主な業務内容
                           span 600字以内
-                        
                         = f.text_area :career, 'placeholder' => "ご記入下さい。 ",size: "x5"
-            
+                    .row.show-for-medium-down
+                      .large-12.columns
+                        label 
+                          |職歴
+                          span 600字以内
+                        = f.text_area :career, 'placeholder' => "会社名、在籍期間、事業内容、主な業務内容をご記入下さい。 ",size: "x5"
               / 志望動機============================
               .row
                 .large-8
                   label 
                     strong 自己PR
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline 志望動機
                     .large-9.columns
@@ -259,15 +350,27 @@ article.entry
                         |
                         span 600字以内
                       = f.text_area :motive, 'placeholder' => "ご記入下さい。 ",size: "x5"
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |志望動機
+                        span 600字以内
+                      = f.text_area :motive, 'placeholder' => "ご記入下さい。 ",size: "x5"
               / 自己PR============================
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline 自己PR
                     .large-9.columns
                       label
                         |
+                        span 600字以内
+                      = f.text_area :pr, 'placeholder' => "ご記入下さい。",size: "x5"
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |自己PR
                         span 600字以内
                       = f.text_area :pr, 'placeholder' => "ご記入下さい。",size: "x5"
             .row
