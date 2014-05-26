@@ -1,11 +1,13 @@
 var contents = "<select id='change_day' name='entry[birth_day]'><option value=''></option>";
-
+alert(<%= @year %>);
+alert(<%= @month %>);
+alert(<%= @_day %>);
 <%= @_birth_day.each do |day| %>
   contents += " <option value='<%= day %>'><%= day %></option>";
 <% end %>
 
 contents += "</select>";
 
-$('#change_day').html(contents);
+$('#change_day').replaceWith(contents);
 
 $('#change_day')[0].selectedIndex=<%= @_day %>;
