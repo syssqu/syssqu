@@ -5579,6 +5579,10 @@ article.access h6 {
 article.access h2 {
   font-weight: normal; }
 
+#s_view img {
+  border: none !important;
+  max-width: none !important; }
+
 /* =============================================================================
    エントリ
    ========================================================================== */
