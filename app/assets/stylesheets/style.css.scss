@@ -2,12 +2,17 @@
    ページ共通
    ========================================================================== */
 @mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 1%;}
-@mixin _section{width: 360px; height: 38px; padding: 1%; margin-bottom: 10px; @include _left_block;}
+@mixin _section{height: 38px; padding: 1%; margin-bottom: 10px; @include _left_block;}
 @mixin box_sizing {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 
 .title{@include _section;}
-h2{@include _section;width:800px;color:#333;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;letter-spacing: 0.2em;}
+h2{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;letter-spacing: 0.2em;}
 .gray {background:#3E4C59;}
+.remarks{font-size:14px;}       /* 会社概要ページ上部の紹介文 */
+.button{margin-right:10px;}     /* ボタンとボタンの隙間 */
+.dummy_row{height:15px;}
+.dummy_high_row{height:30px;}
+.dummy_highest_row{height:50px;}
 
 article section{background:#fff;padding:1% 3%;}
 article section p{font-size:14px;margin-bottom:15px;}
@@ -26,8 +31,9 @@ header ul{margin-bottom:0px;}
    ナビゲーション
    ========================================================================== */
 .logo{width:100%;height:100%;}
-nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;margin-top:20px;overflow:visible;}
+/* nav.top-bar ul.title-area li.toggle-topbar.menu-icon a{background-color: #000;margin-top:20px;overflow:visible;} */
 
+/* nav.top-bar ul.title-area li.toggle-topbar.menu-icon{height:200px;} */
 
 /* =============================================================================
    トップページ
@@ -36,20 +42,17 @@ article.home .new_container{margin-bottom:1px;vertical-align: middle;}
 /* article.home #top_image_slide_area{width:100%;height:20%;display: block;} */
 article.home #top_image_slide{visibility:hidden;}
 article.home .label{width:80px;}
+article.home ul#top_image_slide li img{min-width:100%;}
 
 /* =============================================================================
    会社概要
    ========================================================================== */
-article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 110px;height: 40px;padding: 10px;margin-bottom: 20px;}
-article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
-article.profile_company p{width: 295px; height: 40px; font-size:14px;text-indent: 1em;padding: 10px; margin-bottom: 20px; }
-article.profile_company .higher{height:140px;}
-article.profile_company .lower{height:20px;margin-bottom: 0px;}
-article.profile_company .lower2{height:20px;margin-bottom: 10px;}
-article.profile_company .content_high{width: 295px; height: 60px; padding: 10px; margin-bottom: 20px; }
-article.profile_company .content_high2{width: 295px; height: 100px; padding: 10px; margin-bottom: 20px; }
+article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 95px;height: 40px;padding: 10px;margin-bottom: 20px;}
+article.profile_company p{width: 290px; font-size:14px;text-indent: 1em;padding: 10px;}
+article.profile_company .address_contents{padding:16px 25px;}
+article.profile_company .service_contents{padding:12px 25px;}
 article.profile_company img{margin-left:30px;}
-article.profile_company .container{margin-left:20px;}
+/* article.profile_company .container{margin-left:20px;} */
 article.profile_company h2{font-weight: normal;}
 
 /* =============================================================================
@@ -89,6 +92,7 @@ article.zisseki h5{color:#768C34;}
    ========================================================================== */
 article.executive p{font-size:14px;margin-bottom:10px;margin-left:10px;}
 article.executive .signature{font-size:14px;margin-bottom:5px;margin-left:10px;}
+article.executive img{min-width:100%;}
 
 /* =============================================================================
    採用情報
@@ -100,7 +104,7 @@ article.recruit li{margin-left:40px;}
    ========================================================================== */
 article.fresh table {border:0;}
 article.fresh table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
-article.fresh table .large_width{width: 200px;}
+article.fresh table .large_width{width: 40%;}
 article.fresh table td strong{color:#6E6E6E;}
 article.fresh h2{margin-bottom:25px;}
 article.fresh h2{margin-bottom:25px;}
@@ -110,7 +114,7 @@ article.fresh h2{margin-bottom:25px;}
    ========================================================================== */
 article.career table {border:0;}
 article.career table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
-article.career table .large_width{width: 200px;}
+article.career table .large_width{width: 40%;}
 article.career table td strong{color:#6E6E6E;}
 
 /* =============================================================================
@@ -128,9 +132,9 @@ article.inquiry section h6 {margin-bottom: 5px;}
    ========================================================================== */
 article.access .container{padding:1% 3%;}
 article.access h2 a{display:none;}
-// article.access #map_canvas{width:400px;height:360px;}
+
 article.access #map_canvas{width:25em;height:22.5em;}
-article.access #s_view{width:25em;height:22.5em;margin-bottom: 1.25em;}
+article.access #s_view{width:25em;height:22.5em;margin-bottom: 20px;}
 article.access .address_access{clear:both;margin-bottom:0px;}
 article.access h6{font-size:12px;}
 article.access h2{font-weight: normal;}
@@ -192,7 +196,13 @@ article.member h2{border-left: 6px solid #A59888;letter-spacing: 0.2em;margin:20
 article.member section{padding:1% 0%;}
 article.member p{margin-bottom:10px;}
 
+
 /* =============================================================================
    開発環境のデバッグ情報
    ========================================================================== */
 .debug_dump {clear: both;float: left;width: 100%;margin-top: 45px;@include box_sizing;}
+
+@media only screen and (max-width: 40em) { /* small */
+  article.access #map_canvas{width:15em;height:20.5em;}
+}
+

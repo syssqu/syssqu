@@ -7,14 +7,20 @@ br
           = link_to "サイトマップ", sitemap_path
         li
           = link_to "ホーム", root_path
+.row.show-for-medium-down
+  .large-12.columns
+    .logo
+      = link_to image_tag("systemsquare_logo.png", alt: "SystemSquare"), root_path
 .row
   .large-12.columns
     /! Navigation
     nav.top-bar data-topbar="" 
       ul.title-area
         li
-          .logo
+          .logo.show-for-large-up
             = link_to image_tag("systemsquare_logo.png", alt: "SystemSquare"), root_path
+          .logo.show-for-medium-down
+            = link_to image_tag("top_menu_area.png", alt: "SystemSquare"), root_path
         li.toggle-topbar.menu-icon
           a href="#" 
             span.off_menu Menu
