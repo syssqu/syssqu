@@ -14,6 +14,8 @@ article section p{font-size:14px;margin-bottom:15px;}
 article .container{background:#fff;padding:1% 3%;}
 article .container p{font-size:14px;margin-bottom:15px;}
 
+// .img{width: 100%;height: 100%}
+// body,header{min-width: 640px;}
 /* =============================================================================
    ヘッダー (サイトマップとホームへのリンク)
    ========================================================================== */
@@ -126,11 +128,25 @@ article.inquiry section h6 {margin-bottom: 5px;}
    ========================================================================== */
 article.access .container{padding:1% 3%;}
 article.access h2 a{display:none;}
-article.access #map_canvas{width:400px;height:360px;}
-article.access #s_view{width:400px;height:360px;margin-bottom: 20px;}
+// article.access #map_canvas{width:400px;height:360px;}
+article.access #map_canvas{width:25em;height:22.5em;}
+article.access #s_view{width:25em;height:22.5em;margin-bottom: 1.25em;}
 article.access .address_access{clear:both;margin-bottom:0px;}
 article.access h6{font-size:12px;}
 article.access h2{font-weight: normal;}
+article.access #myFlexbox
+{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  flex:2 auto;
+  flex-basis: 100px;
+  background: grey;
+  border: blue;
+  justify-content:center;
+  align-items:center;
+}
 
 /* =============================================================================
    エントリ

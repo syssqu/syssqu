@@ -1,4 +1,5 @@
 $("select#entry_birth_year").change ->
+  alert $.fn.jquery
   $.ajax
     url: "/change_day_select"
     type: "GET"
