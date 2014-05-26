@@ -23,12 +23,9 @@ $("select#day_select").change ->
       month: $("#day_select option:selected").val()
       day: $("#change_day option:selected").val()
     dataType: "script"
-    alert "er2"
     success: (data) ->
-      alert "er3"
       return data
     error: (data) ->
       alert "errror"
       return
-    alert "er4"
   return

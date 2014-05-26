@@ -1,7 +1,4 @@
 var contents = "<select id='change_day' name='entry[birth_day]'><option value=''></option>";
-alert(<%= @year %>);
-alert(<%= @month %>);
-alert(<%= @_day %>);
 <%= @_birth_day.each do |day| %>
   contents += " <option value='<%= day %>'><%= day %></option>";
 <% end %>
