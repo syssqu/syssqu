@@ -23,98 +23,101 @@ article.inquiry_page
             section
               = hidden_field_tag :inquiry_id, @inquiry_id
               .row
-                .small-8
+                .large-8
                   label 
                     strong 個人情報
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-2.columns
+                    .large-2.columns
                       label.left.inline
                         | 氏名 (漢字)
                         span *
-                    .small-1.columns
-                      label.right.inline 姓
-                    .small-4.columns
+                    .large-1.columns
+                      label.right.inline.show-for-large-up 姓
+                      label.inline.show-for-medium-down 姓
+                    .large-4.columns
                       = f.text_field :family_name
-                    .small-1.columns
-                      label.right.inline 名
-                    .small-4.columns
+                    .large-1.columns
+                      label.right.inline.show-for-large-up 名
+                      label.inline.show-for-medium-down 名
+                    .large-4.columns
                       = f.text_field :first_name
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-2.columns
+                    .large-2.columns
                       label.left.inline
                         | 氏名 (フリガナ)
                         span *
-                    .small-1.columns
-                      label.right.inline セイ
-                    .small-4.columns
+                    .large-1.columns
+                      label.right.inline.show-for-large-up セイ
+                      label.inline.show-for-medium-down セイ
+                    .large-4.columns
                       = f.text_field :kana_family_name
-                    .small-1.columns
-                      label.right.inline メイ
-                    .small-4.columns
+                    .large-1.columns
+                      label.right.inline.show-for-large-up メイ
+                      label.inline.show-for-medium-down メイ
+                    .large-4.columns
                       = f.text_field :kana_first_name
             section
               .row
-                .small-8
+                .large-8
                   label 
                     strong 連絡先
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-3.columns
+                    .large-3.columns
                       label.left.inline 会社名
-                    .small-5.columns
+                    .large-5.columns
                       = f.text_field :company_name
-                    .small-4.columns
+                    .large-4.columns
                       label.left.inline
                         |※法人のお客様の場合は入力して下さい
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-3.columns
+                    .large-3.columns
                       label.left.inline 部署名
-                    .small-5.columns
+                    .large-5.columns
                       = f.text_field :dep_name
-                    .small-4.columns
+                    .large-4.columns
                       label.left.inline
                         |※法人のお客様の場合は入力して下さい
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-3.columns
+                    .large-3.columns
                       label.left.inline
                         | メールアドレス
                         span *
-                    .small-5.small-pull-4.columns
+                    .large-5.large-pull-4.columns
                       = f.text_field :mail
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-3.columns
+                    .large-3.columns
                       label.left.inline
                         | メールアドレス (確認用)
                         span *
-                    .small-5.small-pull-4.columns
+                    .large-5.large-pull-4.columns
                       = f.text_field :mail_confirmation
             section
               .row
-                .small-8
+                .large-8
                   label 
                     strong お問い合わせ内容
               .row
-                .small-12
+                .large-12
                   .row
-                    .small-3.columns
+                    .large-3.columns
                       label.left.inline
                         | お問い合わせ内容
                         span *
-                    .small-9.columns
+                    .large-9.columns
                       = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
             .row
-              .small-6.small-centered.columns
+              .large-6.large-centered.small-12.small-centered.columns
                 = f.submit "入力内容を確認する", class: "button radius"
-                |&nbsp;&nbsp;&nbsp;
                 = link_to "戻る", jouhouhogo_path(target_info: "inquiry"),class: "button radius gray"
