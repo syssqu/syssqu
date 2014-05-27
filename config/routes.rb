@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   match '/career_entry',       to: 'static_pages#career_entry',      via: :get
   match '/entry_confirm',      to: 'static_pages#entry_confirm',     via: :post
   match '/entry_comp',         to: 'static_pages#entry_comp',        via: :get
+  match '/index.html',         to: 'static_pages#home',              via: :get
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
