@@ -127,22 +127,25 @@ class StaticPagesController < ApplicationController
     
     @entry = Entry.new(params[:entry])
 
-    if @entry.valid?
+    # if @entry.valid?
+    begin
       @mail = SendMailer.send_entry(params[:entry]).deliver
-
       redirect_to entry_comp_url(entry_id: @_entry_id)
+    rescue => e
+      raise e
+    end
       # if @_entry_id=='entry'
       #   redirect_to entry_url
       # elsif @_entry_id=='career_entry'
       #   redirect_to career_entry_url
       # end
-    else
-      if @_entry_id=='entry'
-        render 'static_pages/entry'
-      elsif @_entry_id=='career_entry'
-        render 'static_pages/career_entry'
-      end
-    end
+    # else
+    #   if @_entry_id=='entry'
+    #     render 'static_pages/entry'
+    #   elsif @_entry_id=='career_entry'
+    #     render 'static_pages/career_entry'
+    #   end
+    # end
   end
 
   def inquiry_send
@@ -151,15 +154,21 @@ class StaticPagesController < ApplicationController
 
     @inquiry = Inquiry.new(params[:inquiry])
 
-    if @inquiry.valid?
+    # if @inquiry.valid?
+    begin
       @mail = SendMailer.send_inquiry(params[:inquiry]).deliver
+      redirect_to inquiry_comp_url(inquiry_id: @inquiry_id)
+    rescue => e
+      raise e
+    end
+    
 
       # flash[:success] = '送信完了しました。お問い合わせありがとうございました。'
       
-      redirect_to inquiry_comp_url(inquiry_id: @inquiry_id)
-    else
-      render 'static_pages/inquiry_page'
-    end
+    
+    # else
+    #   render 'static_pages/inquiry_page'
+    # end
   end
 
   def inquiry_comp

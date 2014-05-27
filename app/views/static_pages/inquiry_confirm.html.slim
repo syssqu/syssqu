@@ -7,7 +7,7 @@
         a href="#" 入力内容確認
 article.inquiry_page
   .row
-    .large-12.columns
+    .large-12.small-12.columns
       .panel.radius.clearfix
         .container
           h2 入力内容確認
@@ -16,91 +16,123 @@ article.inquiry_page
             section
               = hidden_field_tag :inquiry_id, @inquiry_id
               .row
-                .small-8
+                .large-8.small-12
                   label 
                     strong 個人情報
               .row
-                .small-12
+                .large-12.small-12
                   .row
-                    .small-2.columns
+                    .large-2.columns.show-for-large-up
                       label.left.inline
                         | 氏名 (漢字)
                         span *
-                    .small-1.columns
+                    .large-2.columns.show-for-medium-down
+                      label
+                        | 氏名 (漢字)
+                        span *
+                    .large-1.small-2.columns
                       label.right.inline 姓
-                    .small-4.columns
+                    .large-4.small-4.columns
                       = f.hidden_field :family_name,value: @inquiry.family_name
                       label.left.inline 
                        strong = @inquiry.family_name
-                    .small-1.columns
+                    .large-1.small-2.columns
                       label.right.inline 名
-                    .small-4.columns
+                    .large-4.small-4.columns
                       = f.hidden_field :first_name,value: @inquiry.first_name
                       label.left.inline
                        strong = @inquiry.first_name
               .row
-                .small-12
+                .large-12.small-12
                   .row
-                    .small-2.columns
+                    .large-2.columns.show-for-large-up
                       label.left.inline
                         | 氏名 (フリガナ)
                         span *
-                    .small-1.columns
+                    .large-2.columns.show-for-medium-down
+                      label
+                        | 氏名 (フリガナ)
+                        span *
+                    .large-1.small-2.columns
                       label.right.inline セイ
-                    .small-4.columns
+                    .large-4.small-4.columns
                       = f.hidden_field :kana_family_name,value: @inquiry.kana_family_name
                       label.left.inline
                        strong = @inquiry.kana_family_name
-                    .small-1.columns
+                    .large-1.small-2.columns
                       label.right.inline メイ
-                    .small-4.columns
+                    .large-4.small-4.columns
                       = f.hidden_field :kana_first_name,value: @inquiry.kana_first_name
                       label.left.inline
                         strong = @inquiry.kana_first_name
               .row
-                .small-8
+                .large-8
+                    label 
+                      strong 連絡先(法人)
+              .row
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline
+                        | 会社名
+                        span *
+                    .large-5.large-pull-4.small-9.columns
+                      = f.hidden_field :company_name,value: @inquiry.company_name
+                      label.left.inline
+                        strong = @inquiry.company_name
+              .row
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline
+                        | 部署名
+                        span *
+                    .large-5.large-pull-4.small-9.columns
+                      = f.hidden_field :dep_name,value: @inquiry.dep_name
+                      label.left.inline
+                        strong = @inquiry.dep_name
+              .row
+                .large-8
                     label 
                       strong 連絡先
-                .small-12
+              .row
+                .large-12.small-12
                   .row
-                    .small-3.columns
-                      label.left.inline
+                    .large-3.small-3.columns
+                      label.left.inline.show-for-large-up
                         | メールアドレス
                         span *
-                    .small-5.small-pull-4.columns
+                      label.left.inline.show-for-medium-down
+                        | Email
+                        span *
+                    .large-5.large-pull-4.small-9.columns
                       = f.hidden_field :mail,value: @inquiry.mail
                       label.left.inline
                         strong = @inquiry.mail
-              .row
-                .small-12
-                  .row
-                    .small-3.columns
-                      label.left.inline
-                        | メールアドレス (確認用)
-                        span *
-                    .small-5.small-pull-4.columns
-                      = f.hidden_field :mail_confirmation,value: @inquiry.mail_confirmation
-                      label.left.inline 
-                        strong = @inquiry.mail_confirmation
             section
               .row
-                .small-8
+                .large-8.small-12
                   label 
                     strong お問い合わせ内容
               .row
-                .small-12
+                .large-12.small-12
                   .row
-                    .small-3.columns
-                      label.left.inline
+                    .large-3.small-3.columns
+                      label.left.inline.show-for-large-up
                         | お問い合わせ内容
                         span *
-                    .small-9.columns
+                      label.left.inline.show-for-medium-down
+                        | 内容
+                        span *
+                    .large-9.small-9.columns
                       label
                       = f.hidden_field :inquiry,value: @inquiry.inquiry
-                      label.left.inline
+                      label.left.inline.show-for-large-up
                         strong =simple_format(@inquiry.inquiry, :class => "strong_text")
+                      label.left.inline.show-for-medium-down
+                        = simple_format(@inquiry.inquiry)
                   .row
-                    .small-6.small-centered.columns
+                    .large-6.large-centered.columns
                       = f.submit "送信する", class: "button radius"
                       |&nbsp;&nbsp;&nbsp;
                       = link_to "戻る", "javascript:history.back()", class: "button radius gray",id: "back"

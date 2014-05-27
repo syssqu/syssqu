@@ -12,7 +12,7 @@
         = value
 article.inquiry_page
   .row
-    .large-12.columns
+    .large-12.small-12.columns
       .panel.radius.clearfix
         .container
           h2 お問い合わせ
@@ -23,146 +23,119 @@ article.inquiry_page
             section
               = hidden_field_tag :inquiry_id, @inquiry_id
               .row
-                .large-8
+                .large-8.small-8
                   label 
                     strong 個人情報
               .row
-                .large-12
-                  / PC版
-                  .row.show-for-large-up
-                    .large-2.columns
+                .large-12.small-12
+                  .row
+                    .large-2.columns.show-for-large-up
                       label.left.inline
                         | 氏名 (漢字)
                         span *
-                    .large-1.columns
+                    .small-12.columns.show-for-medium-down
+                      label
+                        | 氏名 (漢字)
+                        span *
+                    .large-1.small-2.columns
                       label.right.inline 姓
-                    .large-4.columns
+                    .large-4.small-4.columns
                       = f.text_field :family_name
-                    .large-1.columns
+                    .large-1.small-2.columns
                       label.right.inline 名
-                    .large-4.columns
+                    .large-4.small-4.columns
                       = f.text_field :first_name
-                  / スマホ版
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label
-                        | 氏名 (漢字)
-                        span *
-                      label
-                        |姓
-                        = f.text_field :family_name
-                      label
-                        |名
-                        = f.text_field :first_name
               .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-2.columns
+                .large-12.small-12
+                  .row
+                    .large-2.columns.show-for-large-up
                       label.left.inline
                         | 氏名 (フリガナ)
                         span *
-                    .large-1.columns
-                      label.right.inline セイ
-                    .large-4.columns
-                      = f.text_field :kana_family_name
-                    .large-1.columns
-                      label.right.inline メイ
-                    .large-4.columns
-                      = f.text_field :kana_first_name
-                  .row.show-for-medium-down
-                    .large-12.columns
+                    .small-12.columns.show-for-medium-down
                       label
                         | 氏名 (フリガナ)
                         span *
-                      label
-                        |セイ
-                        = f.text_field :kana_family_name
-                      label
-                        |メイ
-                        = f.text_field :kana_first_name
+                    .large-1.small-2.columns
+                      label.right.inline セイ
+                    .large-4.small-4.columns
+                      = f.text_field :kana_family_name
+                    .large-1.small-2.columns
+                      label.right.inline メイ
+                    .large-4.small-4.columns
+                      = f.text_field :kana_first_name
             section
               .row
-                .large-8
-                  label 
+                .large-8.small-12
+                  label.show-for-large-up
+                    strong 連絡先
+                  label.show-for-medium-down
+                    strong 連絡先 ( 法人 ) ※法人のお客様の場合は入力下さい
+              .row
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline 会社名
+                    .large-5.small-9.columns
+                      = f.text_field :company_name
+                    .large-4.columns.show-for-large-up
+                      label.left.inline
+                        |※法人のお客様の場合は入力して下さい
+              .row
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline 部署名
+                    .large-5.small-9.columns
+                      = f.text_field :dep_name
+                    .large-4.columns.show-for-large-up
+                      label.left.inline
+                        |※法人のお客様の場合は入力して下さい
+              .row
+                .large-8.small-12
+                  label.show-for-medium-down
                     strong 連絡先
               .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-3.columns
-                      label.left.inline 会社名
-                    .large-5.columns
-                      = f.text_field :company_name
-                    .large-4.columns
-                      label.left.inline
-                        |※法人のお客様の場合は入力して下さい
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label
-                        |会社名 ※法人のお客様の場合は入力下さい
-                        = f.text_field :company_name
-              .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-3.columns
-                      label.left.inline 部署名
-                    .large-5.columns
-                      = f.text_field :dep_name
-                    .large-4.columns
-                      label.left.inline
-                        |※法人のお客様の場合は入力して下さい
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label
-                        |部署名 ※法人のお客様の場合は入力下さい
-                        = f.text_field :dep_name
-              .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-3.columns
-                      label.left.inline
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline.show-for-large-up
                         | メールアドレス
                         span *
-                    .large-5.large-pull-4.columns
+                      label.left.inline.show-for-medium-down
+                        | Email
+                        span *
+                    .large-5.large-pull-4.small-9.columns
                       = f.text_field :mail
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label
-                        |メールアドレス
-                        = f.text_field :mail
               .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-3.columns
-                      label.left.inline
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline.show-for-large-up
                         | メールアドレス (確認用)
                         span *
-                    .large-5.large-pull-4.columns
+                      label.left.inline.show-for-medium-down
+                        | Email (確認用)
+                        span *
+                    .large-5.large-pull-4.small-9.columns
                       = f.text_field :mail_confirmation
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label
-                        |メールアドレス (確認用)
-                        = f.text_field :mail_confirmation
             section
               .row
-                .large-8
+                .large-8.small-12
                   label 
                     strong お問い合わせ内容
               .row
-                .large-12
-                  .row.show-for-large-up
-                    .large-3.columns
-                      label.left.inline
+                .large-12.small-12
+                  .row
+                    .large-3.small-3.columns
+                      label.left.inline.show-for-large-up
                         | お問い合わせ内容
                         span *
-                    .large-9.columns
+                      label.left.inline.show-for-medium-down
+                        | 内容
+                        span *
+                    .large-9.small-9.columns
                       = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
-                  .row.show-for-medium-down
-                    .large-12.columns
-                      label.left.inline
-                        | お問い合わせ内容
-                        span *
-                        = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "32x10"
             .row
               .large-6.large-centered.small-12.small-centered.columns
                 = f.submit "入力内容を確認する", class: "button radius"
