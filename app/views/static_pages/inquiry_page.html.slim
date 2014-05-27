@@ -28,38 +28,58 @@ article.inquiry_page
                     strong 個人情報
               .row
                 .large-12
-                  .row
+                  / PC版
+                  .row.show-for-large-up
                     .large-2.columns
                       label.left.inline
                         | 氏名 (漢字)
                         span *
                     .large-1.columns
-                      label.right.inline.show-for-large-up 姓
-                      label.inline.show-for-medium-down 姓
+                      label.right.inline 姓
                     .large-4.columns
                       = f.text_field :family_name
                     .large-1.columns
-                      label.right.inline.show-for-large-up 名
-                      label.inline.show-for-medium-down 名
+                      label.right.inline 名
                     .large-4.columns
                       = f.text_field :first_name
+                  / スマホ版
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 氏名 (漢字)
+                        span *
+                      label
+                        |姓
+                        = f.text_field :family_name
+                      label
+                        |名
+                        = f.text_field :first_name
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-2.columns
                       label.left.inline
                         | 氏名 (フリガナ)
                         span *
                     .large-1.columns
-                      label.right.inline.show-for-large-up セイ
-                      label.inline.show-for-medium-down セイ
+                      label.right.inline セイ
                     .large-4.columns
                       = f.text_field :kana_family_name
                     .large-1.columns
-                      label.right.inline.show-for-large-up メイ
-                      label.inline.show-for-medium-down メイ
+                      label.right.inline メイ
                     .large-4.columns
                       = f.text_field :kana_first_name
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        | 氏名 (フリガナ)
+                        span *
+                      label
+                        |セイ
+                        = f.text_field :kana_family_name
+                      label
+                        |メイ
+                        = f.text_field :kana_first_name
             section
               .row
                 .large-8
@@ -67,7 +87,7 @@ article.inquiry_page
                     strong 連絡先
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline 会社名
                     .large-5.columns
@@ -75,9 +95,15 @@ article.inquiry_page
                     .large-4.columns
                       label.left.inline
                         |※法人のお客様の場合は入力して下さい
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |会社名
+                        = f.text_field :company_name
+                        |※法人のお客様の場合は入力して下さい
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline 部署名
                     .large-5.columns
@@ -85,24 +111,40 @@ article.inquiry_page
                     .large-4.columns
                       label.left.inline
                         |※法人のお客様の場合は入力して下さい
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |部署名
+                        = f.text_field :dep_name
+                        |※法人のお客様の場合は入力して下さい
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | メールアドレス
                         span *
                     .large-5.large-pull-4.columns
                       = f.text_field :mail
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |メールアドレス
+                        = f.text_field :mail
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | メールアドレス (確認用)
                         span *
                     .large-5.large-pull-4.columns
                       = f.text_field :mail_confirmation
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label
+                        |メールアドレス (確認用)
+                        = f.text_field :mail_confirmation
             section
               .row
                 .large-8
@@ -110,13 +152,19 @@ article.inquiry_page
                     strong お問い合わせ内容
               .row
                 .large-12
-                  .row
+                  .row.show-for-large-up
                     .large-3.columns
                       label.left.inline
                         | お問い合わせ内容
                         span *
                     .large-9.columns
                       = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "x10"
+                  .row.show-for-medium-down
+                    .large-12.columns
+                      label.left.inline
+                        | お問い合わせ内容
+                        span *
+                        = f.text_area :inquiry, 'placeholder' => "ご記入下さい。", size: "32x10"
             .row
               .large-6.large-centered.small-12.small-centered.columns
                 = f.submit "入力内容を確認する", class: "button radius"

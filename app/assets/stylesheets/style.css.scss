@@ -61,12 +61,9 @@ article.policy ol li{font-size:14px;}
 /* =============================================================================
    沿革
    ========================================================================== */
-article.profile_history .container{background:#FFF;padding:1% 3%;zoom:1;}
-article.profile_history .title{width: 110px;}
-article.profile_history .content{width: 295px; height: 38px; padding: 1%; margin-bottom: 40px; }
-article.profile_history .box{width:412px;}
-article.profile_history .box section{margin-bottom:15px;}
-article.profile_history .large_height{height: 120px; padding: 1%;}
+article.history table {width:100%; font-size:20px;}
+article.history table tr td.nengetu{width:25%;}
+article.history table tr td{font-size:16px;color:#32393E;height:5em;}
 
 /* =============================================================================
    サービス
@@ -130,11 +127,16 @@ article.inquiry section h6 {margin-bottom: 5px;}
    ========================================================================== */
 article.access .container{padding:1% 3%;}
 article.access h2 a{display:none;}
+
 article.access #map_canvas{width:25em;height:22.5em;}
 article.access #s_view{width:25em;height:22.5em;margin-bottom: 20px;}
 article.access .address_access{clear:both;margin-bottom:0px;}
 article.access h6{font-size:12px;}
 article.access h2{font-weight: normal;}
+#s_view img {
+    border: none !important;
+    max-width: none !important;
+}
 
 /* =============================================================================
    エントリ
@@ -187,6 +189,15 @@ article.member p{margin-bottom:10px;}
 .debug_dump {clear: both;float: left;width: 100%;margin-top: 45px;@include box_sizing;}
 
 @media only screen and (max-width: 40em) { /* small */
+  .title{padding-left:0;}
+  h2{padding-left:5px;}
+  article section{background:#fff;padding:1% 0%;}
+  article section p{font-size:14px;margin-bottom:10px;}
+  article .container{background:#fff;padding:1% 0%;}
+  article .container p{font-size:14px;margin-bottom:15px;}
+  article.profile_company p{padding:0px;}
+  article.inquiry_page .remarks{padding:8px 0px;margin-bottom:5px;}
+  article.entry .remarks{padding:8px 10px;margin-bottom:5px;}
   article.access #map_canvas{width:15em;height:20.5em;}
 }
 
