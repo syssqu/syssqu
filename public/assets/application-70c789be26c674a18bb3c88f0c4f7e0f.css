@@ -5740,6 +5740,8 @@ article.member p {
 
   article.inquiry_comp p {
     font-size: 12px; } }
+article.home ul li {
+  margin-bottom: 10px; }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
