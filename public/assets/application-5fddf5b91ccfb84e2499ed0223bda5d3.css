@@ -5404,7 +5404,7 @@ article.profile_company table .large_width {
   width: 55%; }
 
 article.profile_company table td strong {
-  color: #6E6E6E; }
+  color: #3E4C59; }
 
 /* =============================================================================
    企業理念
@@ -5747,7 +5747,10 @@ article.member p {
     font-size: 10px; }
 
   article.inquiry_comp p {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  article.profile_company table .large_width {
+    width: 40%; } }
 article.home ul li {
   margin-bottom: 10px; }
 /*
