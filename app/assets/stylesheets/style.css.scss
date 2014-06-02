@@ -200,6 +200,8 @@ article.member p{margin-bottom:10px;}
    ========================================================================== */
 .debug_dump {clear: both;float: left;width: 100%;margin-top: 45px;@include box_sizing;}
 
+._bottom {margin-top:40%;margin-left:5%;}
+
 @media only screen and (max-width: 40em) { /* small */
   .title{padding-left:0;}
   h2{padding-left:5px;}
@@ -219,6 +221,7 @@ article.member p{margin-bottom:10px;}
   article.inquiry_confirm label{font-size:10px;}
   article.inquiry_comp p{font-size:12px;}
   article.profile_company table .large_width{width: 40%;}
+  ._bottom {margin-top:0%;margin-left:5%;}
 }
 
 article.home ul li {margin-bottom:10px;}
