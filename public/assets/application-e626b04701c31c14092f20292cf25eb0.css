@@ -5699,6 +5699,10 @@ article.member p {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+._bottom {
+  margin-top: 40%;
+  margin-left: 5%; }
+
 @media only screen and (max-width: 40em) {
   /* small */
   .title {
@@ -5760,7 +5764,11 @@ article.member p {
     font-size: 12px; }
 
   article.profile_company table .large_width {
-    width: 40%; } }
+    width: 40%; }
+
+  ._bottom {
+    margin-top: 0%;
+    margin-left: 5%; } }
 article.home ul li {
   margin-bottom: 10px; }
 /*
