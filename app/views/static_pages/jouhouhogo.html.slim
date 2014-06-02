@@ -24,16 +24,17 @@ article.inquiry
           .container
             h2
               | 個人情報保護方針
+            hr
             = render 'hogo_convention'
         - else
           - if @target_info == "inquiry"
-            p
+            p style="font-size:14px;"
               |お問い合わせのためには本規約に同意していただく必要があります。
               br
               |ご了承の上、「同意する」ボタンを押してください。
           - else
-            p
-              |応募を行なうためには本規約に同意していただく必要があります。
+            p style="font-size:14px;"
+              |応募のためには本規約に同意していただく必要があります。
               br
               |ご了承の上、「同意する」ボタンを押してください。
           .container
@@ -41,7 +42,7 @@ article.inquiry
               | 個人情報取り扱いについて
               br
               small 株式会社システム・スクゥェアー 個人情報保護管理者 代表取締役 川西 日吉
-            br
+            hr
             .dummy_high_row.hide-for-large
             .dummy_row.hide-for-large
             p 個人情報保護に関する法律及び本規約を遵守の上、応募者の皆様からご提供頂いた個人情報の適切な取り扱い及び保護に努めます。
