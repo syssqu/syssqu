@@ -5669,7 +5669,10 @@ article.sitemap li {
 article.member h2 {
   border-left: 6px solid #A59888;
   letter-spacing: 0.2em;
-  margin: 20px 0px; }
+  margin: 20px 0px;
+  padding-top: 1.3%;
+  padding-left: 10px;
+  height: 5%; }
 
 article.member section {
   padding: 1% 0%; }
