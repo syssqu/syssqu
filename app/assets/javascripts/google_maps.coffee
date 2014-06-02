@@ -44,8 +44,8 @@ initialize = ->
   # ストリートビューオブジェクト詳細設定
   s_view.setPov
     heading: 310
-    pitch: 30
-    zoom: 1
+    pitch: 18
+    zoom: 1.1
 
 
   # マップとストリートビューを一致させる為の記述
