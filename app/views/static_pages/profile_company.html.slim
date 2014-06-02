@@ -19,72 +19,61 @@ article.profile_company
   .row
     .large-12.columns
       .panel.radius.clearfix
-        .row
-          section
-            .large-1.columns
-              h4.left 社名
-            .large-5.columns
-              p.left
-                |株式会社システム・スクゥェアー
-                / br
-                / |（SystemSquare Inc.）
-            .large-1.columns
-              h4.left TEL
-            .large-5.columns
-              p.left 06-6222-9101
-        .row
-          section
-            .large-1.columns
-              h4.left 資本金
-            .large-5.columns
-              p.left 1,000万円
-            .large-1.columns
-              h4.left FAX
-            .large-5.columns
-              p.left 06-6222-0955
-        .row
-          section
-            .large-1.columns
-              h4.left 代表者名
-            .large-5.columns
-              p.left 代表取締役　川西 日吉
-            .large-1.columns
-              h4.left 設立
-            .large-5.columns
-              p.left 1984年9月
-        .row
-          section
-            .large-1.columns
-              h4.left 従業員数
-            .large-5.columns
-              p.left 38名 ※2014年4月1日現在
-            .large-1.columns
-              h4.left 事業内容
-            .large-5.columns
-              .service_contents
-                | システムインテグレーションサービス
-                br
-                | システム企画・設計
-                br
-                | アプリケーション開発
-        .row
-          section
-            .large-1.columns
-              h4.left 所在地
-            .large-5.columns
-              .address_contents
-                | 〒541-0044
-                br
-                | 大阪市中央区伏見町2丁目1-1
-                br
-                | 三井住友銀行高麗橋ビル7階
-                br
-                br
-                | 最寄り駅
-                br
-                | ・北浜駅（地下鉄堺筋線/京阪電車）
-            .large-6.columns
-              = image_tag("bldg.jpg", alt: "本社")
+        .container
+          table
+            tbody
+              tr
+                td.large_width
+                  strong 社名
+                td 株式会社システム・スクゥェアー
+              tr
+                td
+                  strong 資本金
+                td 1,000万円
+              tr
+                td
+                  strong 代表者名代表取締役
+                td 川西 日吉
+              tr
+                td
+                  strong 設立
+                td 1984年9月
+              tr
+                td
+                  strong 従業員数
+                td 38名 ※2014年4月1日現在
+              tr
+                td
+                  strong TEL
+                td 06-6222-9101
+              tr
+                td
+                  strong FAX
+                td 06-6222-0955
+              tr
+                td
+                  strong 事業内容
+                td
+                  |システムインテグレーションサービス
+                  br
+                  |システム企画・設計
+                  br
+                  |アプリケーション開発
+              tr
+                td
+                  strong 所在地
+                td
+                  |〒541-0044
+                  br
+                  |大阪市中央区伏見町2丁目1-1
+                  br
+                  |三井住友銀行高麗橋ビル7階
+                  br
+                  br
+                  |最寄り駅
+                  br
+                  |・北浜駅（地下鉄堺筋線/京阪電車）
+          = image_tag("bldg.jpg", alt: "本社")
   .row
     .large-12.columns
       .panel.radius.clearfix

@@ -1,12 +1,13 @@
 /* =============================================================================
    ページ共通
    ========================================================================== */
-@mixin _left_block{ border-left: 6px solid yellowgreen;padding-left: 1%;}
-@mixin _section{height: 38px; padding: 1%; margin-bottom: 10px; @include _left_block;}
+@mixin _left_block{}
+@mixin _section{height: 0px; padding: 1%; margin-bottom: 10px; @include _left_block;}
 @mixin box_sizing {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 
 .title{@include _section;}
-h2{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;letter-spacing: 0.2em;}
+h2{@include _section;color:#333 !important;font-size:16px;font-weight:normal;padding:10px;font-weight: bold;letter-spacing: 0.2em;padding-left: 0px;margin-bottom: 30px !important;}
+h1{color:#555555 !important;font-weight:bold;}
 .gray {background:#3E4C59;}
 .remarks{font-size:14px;}       /* 会社概要ページ上部の紹介文 */
 .button{margin-right:10px;}     /* ボタンとボタンの隙間 */
@@ -45,14 +46,18 @@ article.home ul#top_image_slide li img{min-width:100%;}
 /* =============================================================================
    会社概要
    ========================================================================== */
-article.profile_company h4{@include _section;color:#333;font-size:16px;font-weight:normal;padding:10px;width: 95px;height: 40px;padding: 10px;margin-bottom: 20px;}
+article.profile_company h4{color:#333;font-size:16px;font-weight:normal;padding:10px;width: 95px;height: 40px;padding: 10px;margin-bottom: 20px;}
 article.profile_company p{width: 290px; font-size:14px;text-indent: 1em;padding: 10px;}
 article.profile_company .address_contents{padding:16px 25px;}
 article.profile_company .service_contents{padding:12px 25px;}
 article.profile_company img{margin-left:30px;}
 /* article.profile_company .container{margin-left:20px;} */
-article.profile_company h2{font-weight: normal;}
 
+article.profile_company hr{color: #BFBFBF;}
+article.profile_company table {border:0;}
+article.profile_company table td {background-color:#fff;border-bottom: 1px solid #ECECEC;height:60px;}
+article.profile_company table .large_width{width: 55%;}
+article.profile_company table td strong{color:#6E6E6E;}
 /* =============================================================================
    企業理念
    ========================================================================== */
@@ -64,7 +69,6 @@ article.policy ol li{font-size:14px;}
 article.history table {width:100%; font-size:20px;}
 article.history table tr td.nengetu{width:25%;}
 article.history table tr td{font-size:16px;color:#32393E;height:5em;}
-
 /* =============================================================================
    サービス
    ========================================================================== */
@@ -115,8 +119,8 @@ article.career table td strong{color:#6E6E6E;}
 /* =============================================================================
    お問い合わせ
    ========================================================================== */
-article.inquiry .container{border:1px solid #DDD;height:320px;overflow-y:scroll;}
-article.inquiry .container h2 {border-left: 6px solid #3E4C59;}
+article.inquiry .container{border:1px solid #BABABA;height:320px;overflow-y:scroll;}
+article.inquiry .container h2 {}
 article.inquiry section{padding:0px;margin-bottom: 20px;}
 article.inquiry section p{margin-bottom:0px;}
 article.inquiry section h6 {margin-bottom: 5px;}
