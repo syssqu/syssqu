@@ -139,7 +139,8 @@ article.access .address_access{clear:both;margin-bottom:0px;background-color: #f
 article.access h6{font-size:12px;}
 article.access h2{font-weight: normal;}
 article.access h2{
-  background-image: url("002.png");
+  background-image: image-url("002.png");
+  //background-image: url("002.png");
   background-size: 25px 25px;
   background-repeat: no-repeat;
   padding: 5px 20px 20px 35px;
